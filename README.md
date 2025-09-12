@@ -1,6 +1,8 @@
-# Webpack-Template
+# Portfolio Site
 
-Template for future projects using webpack created by me.
+## Requirements
+
+- WAI-ARIA
 
 ## Useful Commands
 
