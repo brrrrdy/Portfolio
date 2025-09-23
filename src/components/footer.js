@@ -3,7 +3,7 @@ import footerContent from "../content/footer.json";
 export function FooterNav() {
   const footer = document.createElement("footer");
   footer.className =
-    "w-full text-black py-4 mt-8 flex justify-between items-center px-8 text-sm";
+    "fixed bottom-0 left-0 w-full bg-gray-800 text-white py-10 px-12 flex justify-between items-center";
 
   const text1 = document.createElement("div");
   text1.textContent = footerContent.footerText1;

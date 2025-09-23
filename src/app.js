@@ -5,6 +5,8 @@ import { FooterNav } from "./components/footer.js";
 
 export function renderHomepage() {
   const main = document.createElement("main");
+  main.className = "min-h-screen flex flex-col";
+
   main.appendChild(TopNavBar());
   main.appendChild(header());
   main.appendChild(cardBox());
