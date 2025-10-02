@@ -1,8 +1,8 @@
-import cardContent from "../content/card.json";
+import cardContent from "../content/toolkit.json";
 
-export function cardBox() {
-  const cardBox = document.createElement("div");
-  cardBox.className = "w-full flex justify-center px-8";
+export function toolkit() {
+  const toolkit = document.createElement("div");
+  toolkit.className = "w-full flex justify-center px-8";
 
   const textContainer = document.createElement("div");
   textContainer.className = "flex flex-col items-center";
@@ -17,7 +17,7 @@ export function cardBox() {
 
   textContainer.appendChild(text1);
   textContainer.appendChild(text2);
-  cardBox.appendChild(textContainer);
+  toolkit.appendChild(textContainer);
 
-  return cardBox;
+  return toolkit;
 }

@@ -1,6 +1,6 @@
 import { TopNavBar } from "./components/topNav.js";
 import { header } from "./components/header.js";
-import { cardBox } from "./components/card.js";
+import { toolkit } from "./components/toolkit.js";
 import { FooterNav } from "./components/footer.js";
 
 export function renderHomepage() {
@@ -9,7 +9,7 @@ export function renderHomepage() {
 
   main.appendChild(TopNavBar());
   main.appendChild(header());
-  main.appendChild(cardBox());
+  main.appendChild(toolkit());
   main.appendChild(FooterNav());
   document.body.appendChild(main);
 }
