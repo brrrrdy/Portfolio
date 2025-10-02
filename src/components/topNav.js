@@ -15,7 +15,7 @@ export function TopNavBar() {
   linksContainer.className = "flex gap-6 justify-center items-center";
   navLinks.forEach((link) => {
     const a = document.createElement("a");
-    a.className = "hover:text-blue-600 font-medium";
+    a.className = "text-black-600 hover:text-blue-600 font-medium";
     a.textContent = link.text;
     a.href = link.href;
     linksContainer.appendChild(a);
