@@ -11,14 +11,14 @@
       "id": 2,
       "title": "Admin Dashboard",
       "description": "An admin dashboard.",
-      "image": "https://via.placeholder.com/400x250/6b7280/ffffff?text=Task+Manager",
+      "image": "src/assets/images/AdminDash.png",
       "tags": ["Vue.js", "Firebase", "CSS Grid", "PWA"]
     },
     {
       "id": 3,
       "title": "Calculator",
       "description": "A scientific calculator.",
-      "image": "https://via.placeholder.com/400x250/6b7280/ffffff?text=Weather+App",
+      "image": "calculator.png",
       "tags": ["JavaScript", "API Integration", "Charts.js", "Responsive"]
     }
   ]

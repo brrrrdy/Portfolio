@@ -10,18 +10,18 @@ export function createProjectCard({
 
   // Left half - Image
   const imageContainer = document.createElement("div");
-  imageContainer.className = "w-1/2 h-full";
+  imageContainer.className = "w-[500px] h-[300px] flex-shrink-0";
 
   const img = document.createElement("img");
   img.src = image;
   img.alt = title;
-  img.className = "w-full h-full object-cover";
+  img.className = "w-full h-full object-contain";
 
   imageContainer.appendChild(img);
 
   // Right half - Content
   const contentContainer = document.createElement("div");
-  contentContainer.className = "w-1/2 p-6 flex flex-col justify-between";
+  contentContainer.className = "flex-1 p-6 flex flex-col";
 
   // Title section
   const titleElement = document.createElement("h3");
@@ -31,7 +31,7 @@ export function createProjectCard({
   // Text section
   const textElement = document.createElement("p");
   textElement.textContent = description;
-  textElement.className = "text-gray-600 text-sm leading-relaxed mb-4 flex-grow";
+  textElement.className = "text-gray-600 text-sm leading-relaxed mb-4";
 
   // Metadata tags section
   const tagsContainer = document.createElement("div");
