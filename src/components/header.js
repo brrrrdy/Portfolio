@@ -32,6 +32,7 @@ export function header() {
 
   // Typing animation logic
   const phrases = ['full-stack developer', 'basketball player', 'pulpo enjoyer'];
+  const colors = ['text-red-600', 'text-orange-400', 'text-purple-600']; // Different color for each phrase
   let currentPhraseIndex = 0;
   let currentCharIndex = 0;
   let isTyping = true;
@@ -39,6 +40,10 @@ export function header() {
 
   function typeAnimation() {
     const currentPhrase = phrases[currentPhraseIndex];
+    const currentColor = colors[currentPhraseIndex];
+    
+    // Update color for current phrase
+    typingText.className = `${currentColor} font-bold min-w-[200px]`;
     
     if (isTyping && !isDeleting) {
       // Typing forward
