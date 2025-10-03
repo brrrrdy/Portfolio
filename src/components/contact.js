@@ -2,10 +2,10 @@ import cardContent from "../content/contact.json";
 
 export function contact() {
   const contact = document.createElement("div");
-  contact.className = "w-full flex justify-center px-8 mb-20";
+  contact.className = "w-full flex justify-start px-20 mb-20";
 
   const textContainer = document.createElement("div");
-  textContainer.className = "flex flex-col items-center";
+  textContainer.className = "flex flex-col items-start";
 
   const text1 = document.createElement("div");
   text1.textContent = cardContent.cardTitle;

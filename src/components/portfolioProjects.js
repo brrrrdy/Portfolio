@@ -2,10 +2,10 @@ import cardContent from "../content/portfolioText.json";
 
 export function portfolio() {
   const portfolio = document.createElement("div");
-  portfolio.className = "w-full flex justify-center px-8 mb-20";
+  portfolio.className = "w-full flex justify-start px-20 mb-20";
 
   const textContainer = document.createElement("div");
-  textContainer.className = "flex flex-col items-center";
+  textContainer.className = "flex flex-col items-start";
 
   const text1 = document.createElement("div");
   text1.textContent = cardContent.cardTitle;

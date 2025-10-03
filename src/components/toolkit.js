@@ -3,10 +3,10 @@ import { toolkitCard } from "./toolkitCard.js";
 
 export function toolkit() {
   const toolkit = document.createElement("div");
-  toolkit.className = "w-full flex justify-center px-8 mb-20";
+  toolkit.className = "w-full flex justify-start px-20 mb-20";
 
   const textContainer = document.createElement("div");
-  textContainer.className = "flex flex-col items-center";
+  textContainer.className = "flex flex-col items-start";
 
   const text1 = document.createElement("div");
   text1.textContent = cardContent.cardTitle;

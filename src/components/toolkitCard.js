@@ -15,8 +15,10 @@ import wpImg from '../assets/images/webpack-plain.svg';
 
 const tools = [
   { image: htmlImg, subtitle: "HTML" },
+  { image: xmlImg, subtitle: "XML" },
   { image: cssImg, subtitle: "CSS" },
   { image: figmaImg, subtitle: "Figma" },
+  { image: jsImg, subtitle: "JavaScript" },
   { image: gitImg, subtitle: "Git" },
   { image: gitHubImg, subtitle: "Github" },
   { image: jestImg, subtitle: "Jest" },
