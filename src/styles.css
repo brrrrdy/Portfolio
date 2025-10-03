@@ -1,5 +1,10 @@
 @import "tailwindcss";
 
+/* Page background */
+body {
+  @apply bg-red-100;
+}
+
 .section-container {
   @apply w-full flex justify-start px-20 mb-10;
 }

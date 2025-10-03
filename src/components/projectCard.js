@@ -6,7 +6,7 @@ export function createProjectCard({
 }) {
   
   const card = document.createElement("div");
-  card.className = "flex bg-white overflow-hidden mb-6 max-w-4xl h-64";
+  card.className = "flex bg-transparent overflow-hidden mb-6 max-w-4xl h-64";
 
   // Left half - Image
   const imageContainer = document.createElement("div");
