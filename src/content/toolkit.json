@@ -1,4 +1,11 @@
 {
   "cardTitle": "toolkit",
-  "cardText": "I use all these things"
+  "cardText": "I use all these things",
+  "tools": [
+    { "image": "src/assets/images/html5-plain-wordmark.svg", "subtitle": "HTML" },
+    { "image": "src/assets/images/css3-plain.svg", "subtitle": "CSS" },
+    { "image": "src/assets/images/javascript-plain.svg", "subtitle": "JavaScript" }
+  ]
 }
+
+

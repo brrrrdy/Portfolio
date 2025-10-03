@@ -1,4 +1,5 @@
 import cardContent from "../content/toolkit.json";
+import { toolkitCard } from "./toolkitCard.js";
 
 export function toolkit() {
   const toolkit = document.createElement("div");
@@ -17,6 +18,10 @@ export function toolkit() {
 
   textContainer.appendChild(text1);
   textContainer.appendChild(text2);
+
+  // Add toolkit cards below title/subtitle
+  const cards = toolkitCard();
+  textContainer.appendChild(cards);
   toolkit.appendChild(textContainer);
 
   return toolkit;
