@@ -2,18 +2,18 @@ import cardContent from "../content/contact.json";
 
 export function contact() {
   const contact = document.createElement("div");
-  contact.className = "w-full flex justify-start px-20 mb-20";
+  contact.className = "section-container";
 
   const textContainer = document.createElement("div");
-  textContainer.className = "flex flex-col items-start";
+  textContainer.className = "section-content";
 
   const text1 = document.createElement("div");
   text1.textContent = cardContent.cardTitle;
-  text1.className = "text-4xl font-bold mb-4";
+  text1.className = "section-title";
 
   const text2 = document.createElement("div");
   text2.textContent = cardContent.cardText;
-  text2.className = "text-sm text-gray-500";
+  text2.className = "section-subtitle";
 
   textContainer.appendChild(text1);
   textContainer.appendChild(text2);

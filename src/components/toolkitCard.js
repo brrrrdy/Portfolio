@@ -38,12 +38,12 @@ export function toolkitCard(customTools) {
 
   renderTools.forEach(tool => {
     const card = document.createElement("div");
-    card.className = "flex flex-col items-center mb-4";
+    card.className = "flex flex-col items-center mb-1";
 
     const img = document.createElement("img");
     img.src = tool.image;
     img.alt = tool.subtitle;
-    img.className = "w-[50px] h-[50px] object-contain mb-2";
+    img.className = "w-[50px] h-[50px] object-contain mb-4";
 
     const subtitle = document.createElement("div");
     subtitle.textContent = tool.subtitle;
