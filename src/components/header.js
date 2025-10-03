@@ -2,7 +2,7 @@ import headerContent from "../content/header.json";
 
 export function header() {
   const header = document.createElement("header");
-  header.className = "w-full flex justify-center py-4 mb-20";
+  header.className = "w-full pl-50 flex justify-start items-start mb-20";
 
   const textContainer = document.createElement("div");
   textContainer.className = "flex flex-col items-center";
