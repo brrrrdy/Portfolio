@@ -28,7 +28,7 @@ export function TopNavBar() {
   languages.forEach((lang) => {
     const btn = document.createElement("button");
     btn.className =
-      "px-2 py-1 rounded bg-gray-200 hover:bg-blue-200 font-semibold";
+      "px-2 py-1 rounded bg-transparent hover:bg-red-200 font-semibold";
     btn.textContent = lang;
     langContainer.appendChild(btn);
   });
@@ -40,7 +40,7 @@ export function TopNavBar() {
   darkModeToggleButton.forEach((switchBtn) => {
     const DarkBtn = document.createElement("lightBulb");
     DarkBtn.className =
-      "px-2 py-1 rounded bg-gray-200 hover:bg-blue-200 font-semibold";
+      "px-2 py-1 rounded bg-transparent hover:bg-orange-200 font-semibold";
     DarkBtn.textContent = switchBtn;
     darkModeToggle.appendChild(DarkBtn);
   });
