@@ -1,6 +1,9 @@
 import cardContent from "../content/portfolioText.json";
 import projectsData from "../content/projects.json";
 import { createProjectCard } from "./projectCard.js";
+import weatherAppImg from "../assets/images/WeatherApp.png";
+import adminDashboardImg from "../assets/images/AdminDash.png";
+import calcImg from "../assets/images/calculator.png";
 
 export function portfolio() {
   const portfolio = document.createElement("div");
@@ -24,12 +27,19 @@ export function portfolio() {
   const projectsContainer = document.createElement("div");
   projectsContainer.className = "mt-8 space-y-6";
 
+  // Image mapping for projects
+  const imageMap = {
+    1: weatherAppImg, // Weather App
+    2: adminDashboardImg,
+    3: calcImg,
+  };
+
   // Generate project cards from JSON data
   projectsData.projects.forEach(project => {
     const projectCard = createProjectCard({
       title: project.title,
       description: project.description,
-      image: project.image,
+      image: imageMap[project.id] || project.image,
       tags: project.tags
     });
     projectsContainer.appendChild(projectCard);

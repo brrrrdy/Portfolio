@@ -4,7 +4,7 @@
       "id": 1,
       "title": "Weather App",
       "description": "I made my own weather app that grabs data from a weather UPI and changes background according to whether it is night or day in the location.",
-      "image": "https://via.placeholder.com/400x250/6b7280/ffffff?text=E-Commerce",
+      "image": "src/assets/images/WeatherApp.png",
       "tags": ["JavaScript", "Node.js", "CSS", "HTML"]
     },
     {
