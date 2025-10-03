@@ -32,7 +32,7 @@ export function header() {
 
   // Typing animation logic
   const phrases = ['full-stack developer', 'basketball player', 'pulpo enjoyer'];
-  const colors = ['text-red-600', 'text-orange-400', 'text-purple-600']; // Different color for each phrase
+  const colors = ['text-red-600', 'text-orange-400', 'text-purple-600'];
   let currentPhraseIndex = 0;
   let currentCharIndex = 0;
   let isTyping = true;

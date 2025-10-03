@@ -1,4 +1,5 @@
 import navLinks from "../content/links.json";
+import darkSwitchIcon from "../assets/images/darkswitchsvg.svg";
 
 export function TopNavBar() {
   // Main nav container
@@ -33,17 +34,20 @@ export function TopNavBar() {
     langContainer.appendChild(btn);
   });
 
-  // Light/Dark Mode Switch
+  // Light/Dark Mode Switch with SVG
   const darkModeToggle = document.createElement("div");
-  darkModeToggle.className = "flex gap-2 absolute left-4";
-  const darkModeToggleButton = ["dark mode"];
-  darkModeToggleButton.forEach((switchBtn) => {
-    const DarkBtn = document.createElement("lightBulb");
-    DarkBtn.className =
-      "px-2 py-1 rounded bg-transparent hover:bg-orange-200 font-semibold";
-    DarkBtn.textContent = switchBtn;
-    darkModeToggle.appendChild(DarkBtn);
-  });
+  darkModeToggle.className = "flex gap-2 absolute left-4 pt-10";
+  
+  const darkModeButton = document.createElement("button");
+  darkModeButton.className = "p-2 rounded bg-transparent hover:bg-orange-200 transition-colors duration-200";
+  
+  const darkModeIcon = document.createElement("img");
+  darkModeIcon.src = darkSwitchIcon;
+  darkModeIcon.alt = "Dark Mode Toggle";
+  darkModeIcon.className = "w-[80px] h-[80px] object-contain";
+  
+  darkModeButton.appendChild(darkModeIcon);
+  darkModeToggle.appendChild(darkModeButton);
 
   mainContainer.appendChild(linksContainer);
   mainContainer.appendChild(langContainer);
