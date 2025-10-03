@@ -3,7 +3,7 @@ import navLinks from "../content/links.json";
 export function TopNavBar() {
   // Main nav container
   const nav = document.createElement("nav");
-  nav.className = "w-full bg-gray-100 text-black p-4";
+  nav.className = "w-full text-black p-4";
 
   // Flex container for links and language buttons
   const mainContainer = document.createElement("div");

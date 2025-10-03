@@ -2,6 +2,5 @@
   { "text": "home", "href": "#" },
   { "text": "about me", "href": "#about" },
   { "text": "projects", "href": "#projects" },
-  { "text": "contact", "href": "#contact" },
-  { "text": "hobbies", "href": "#myHobbies" }
+  { "text": "contact", "href": "#contact" }
 ]

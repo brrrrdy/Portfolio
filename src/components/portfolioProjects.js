@@ -1,8 +1,8 @@
-import cardContent from "../content/toolkit.json";
+import cardContent from "../content/portfolioText.json";
 
-export function toolkit() {
-  const toolkit = document.createElement("div");
-  toolkit.className = "w-full flex justify-center px-8 mb-20";
+export function portfolio() {
+  const portfolio = document.createElement("div");
+  portfolio.className = "w-full flex justify-center px-8 mb-20";
 
   const textContainer = document.createElement("div");
   textContainer.className = "flex flex-col items-center";
@@ -17,7 +17,7 @@ export function toolkit() {
 
   textContainer.appendChild(text1);
   textContainer.appendChild(text2);
-  toolkit.appendChild(textContainer);
+  portfolio.appendChild(textContainer);
 
-  return toolkit;
+  return portfolio;
 }
