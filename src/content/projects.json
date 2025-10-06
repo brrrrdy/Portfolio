@@ -26,6 +26,79 @@
       "tags": ["JavaScript", "CSS", "HTML"],
       "HTMLlink" : ["https://github.com/brrrrdy/Calculator"],
       "featured": ["y"]
+    },
+
+    {
+      "id": 4,
+      "title": "Library",
+      "description": "A library management system.",
+      "image": "",
+      "tags": ["JavaScript", "CSS", "HTML"],
+      "HTMLlink" : ["https://github.com/brrrrdy/Library"],
+      "featured": ["n"]
+    },
+
+        {
+      "id": 5,
+      "title": "Sign-up Form",
+      "description": "A sign up form page.",
+      "image": "",
+      "tags": ["JavaScript", "CSS", "HTML"],
+      "HTMLlink" : ["https://github.com/brrrrdy/Sign-up-Form"],
+      "featured": ["n"]
+    },
+
+            {
+      "id": 6,
+      "title": "To-Do-List",
+      "description": "A to-do-list application.",
+      "image": "",
+      "tags": ["JavaScript", "CSS", "HTML"],
+      "HTMLlink" : ["https://github.com/brrrrdy/To-Do-List/tree/main"],
+      "featured": ["n"]
+    },
+
+                {
+      "id": 7,
+      "title": "Smiling Salads Restaurant",
+      "description": "A restaurant website I made to practice using webpack.",
+      "image": "",
+      "tags": ["JavaScript", "CSS", "HTML"],
+      "HTMLlink" : ["https://github.com/brrrrdy/restaurant-webpack"],
+      "featured": ["n"]
+    },
+
+                    {
+      "id": 8,
+      "title": "Noughts and Crosses",
+      "description": "I recreated the classic game Tic tac toe.",
+      "image": "",
+      "tags": ["JavaScript", "CSS", "HTML"],
+      "HTMLlink" : ["https://github.com/brrrrdy/Tic-Tac-Toe"],
+      "featured": ["n"]
+    },
+
+                        {
+      "id": 9,
+      "title": "Rock, Paper, Scissors",
+      "description": "A Rock-Paper-Scissors game.",
+      "image": "",
+      "tags": ["JavaScript", "CSS", "HTML"],
+      "HTMLlink" : ["https://github.com/brrrrdy/Rock-Paper-Scissors"],
+      "featured": ["n"]
+    },
+                            {
+      "id": 10,
+      "title": "Etch-a-Sketch",
+      "description": "Etch a sketch game.",
+      "image": "",
+      "tags": ["JavaScript", "CSS", "HTML"],
+      "HTMLlink" : ["https://github.com/brrrrdy/Etch-a-Sketch"],
+      "featured": ["n"]
     }
+
+    
+
+    
   ]
 }

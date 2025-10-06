@@ -24,16 +24,16 @@ export function allProjects() {
 
   // Create table
   const table = document.createElement("table");
-  table.className = "w-full border-collapse border border-gray-300";
+  table.className = "w-full border-collapse";
 
   // Table header
   const thead = document.createElement("thead");
   thead.innerHTML = `
     <tr class="bg-transparent">
-      <th class="border border-gray-300 px-4 py-2 text-left font-semibold">Project Name</th>
-      <th class="border border-gray-300 px-4 py-2 text-left font-semibold">Description</th>
-      <th class="border border-gray-300 px-4 py-2 text-left font-semibold">Technologies</th>
-      <th class="border border-gray-300 px-4 py-2 text-left font-semibold">Link</th>
+      <th class="border-b border-gray-300 px-4 py-2 text-left font-semibold">Project Name</th>
+      <th class="border-b border-gray-300 px-4 py-2 text-left font-semibold">Description</th>
+      <th class="border-b border-gray-300 px-4 py-2 text-left font-semibold">Technologies</th>
+      <th class="border-b border-gray-300 px-4 py-2 text-left font-semibold">GitHub repo</th>
     </tr>
   `;
 
@@ -49,14 +49,14 @@ export function allProjects() {
     const technologies = project.tags ? project.tags.join(", ") : "";
     
     row.innerHTML = `
-      <td class="border border-gray-300 px-4 py-2 font-medium">${project.title}</td>
-      <td class="border border-gray-300 px-4 py-2">${project.description}</td>
-      <td class="border border-gray-300 px-4 py-2">
+      <td class="border-b border-gray-300 px-4 py-2 font-medium">${project.title}</td>
+      <td class="border-b border-gray-300 px-4 py-2">${project.description}</td>
+      <td class="border-b border-gray-300 px-4 py-2">
         <div class="flex flex-wrap gap-1">
           ${project.tags.map(tag => `<span class="px-2 py-1 bg-blue-100 text-blue-800 text-xs rounded">${tag}</span>`).join('')}
         </div>
       </td>
-      <td class="border border-gray-300 px-4 py-2">
+      <td class="border-b border-gray-300 px-4 py-2">
         <a href="${projectLink}" target="_blank" class="text-blue-600 hover:text-blue-800 underline">View Project</a>
       </td>
     `;
