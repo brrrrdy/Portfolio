@@ -5,15 +5,11 @@ import { toolkit } from "./components/toolkit.js";
 import { contact } from "./components/contact.js"
 import { FooterNav } from "./components/footer.js";
 
-export function renderHomepage() {
-  const main = document.createElement("main");
-  main.className = "min-h-screen flex flex-col pt-24"; // Added pt-24 for fixed nav spacing
-
+export function renderHomepage(main) {
   main.appendChild(TopNavBar());
   main.appendChild(header());
-    main.appendChild(portfolio());
+  main.appendChild(portfolio());
   main.appendChild(toolkit());
   main.appendChild(contact());
   main.appendChild(FooterNav());
-  document.body.appendChild(main);
 }
