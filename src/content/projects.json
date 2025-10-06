@@ -5,21 +5,27 @@
       "title": "Weather App",
       "description": "I made my own weather app that grabs data from a weather UPI and changes background according to whether it is night or day in the location.",
       "image": "src/assets/images/WeatherApp.png",
-      "tags": ["JavaScript", "Node.js", "CSS", "HTML"]
+      "tags": ["JavaScript", "API Integration", "CSS", "HTML", "Responsive"],
+      "HTMLlink" : ["https://github.com/brrrrdy/Weather-App"],
+      "featured": ["y"]
     },
     {
       "id": 2,
       "title": "Admin Dashboard",
       "description": "An admin dashboard.",
       "image": "src/assets/images/AdminDash.png",
-      "tags": ["Vue.js", "Firebase", "CSS Grid", "PWA"]
+      "tags": ["HTML", "CSS", "JavaScript", "Responsive"],
+      "HTMLlink" : ["https://github.com/brrrrdy/Dashboard"],
+      "featured": ["y"]
     },
     {
       "id": 3,
       "title": "Calculator",
       "description": "A scientific calculator.",
       "image": "calculator.png",
-      "tags": ["JavaScript", "API Integration", "Charts.js", "Responsive"]
+      "tags": ["JavaScript", "CSS", "HTML"],
+      "HTMLlink" : ["https://github.com/brrrrdy/Calculator"],
+      "featured": ["y"]
     }
   ]
 }

@@ -2,7 +2,8 @@ import cardContent from "../content/contact.json";
 
 export function contact() {
   const contact = document.createElement("div");
-  contact.className = "section-container";
+  contact.className = "section-container scroll-mt-24";
+  contact.id = "contact";
 
   const textContainer = document.createElement("div");
   textContainer.className = "section-content";

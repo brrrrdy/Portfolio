@@ -7,7 +7,8 @@ import calcImg from "../assets/images/calculator.png";
 
 export function portfolio() {
   const portfolio = document.createElement("div");
-  portfolio.className = "section-container";
+  portfolio.className = "section-container scroll-mt-24";
+  portfolio.id = "projects";
 
   const textContainer = document.createElement("div");
   textContainer.className = "section-content";
@@ -34,16 +35,25 @@ export function portfolio() {
     3: calcImg,
   };
 
-  // Generate project cards from JSON data
-  projectsData.projects.forEach(project => {
-    const projectCard = createProjectCard({
-      title: project.title,
-      description: project.description,
-      image: imageMap[project.id] || project.image,
-      tags: project.tags
+  // Generate project cards from JSON data - only show featured projects
+  projectsData.projects
+    .filter(project => project.featured && project.featured.includes("y"))
+    .forEach(project => {
+      const projectCard = createProjectCard({
+        title: project.title,
+        description: project.description,
+        image: imageMap[project.id] || project.image,
+        tags: project.tags
+      });
+      projectsContainer.appendChild(projectCard);
     });
-    projectsContainer.appendChild(projectCard);
-  });
+
+  // Add "view all my projects" link at the bottom
+  const viewAllLink = document.createElement("a");
+  viewAllLink.textContent = "view all my projects";
+  viewAllLink.href = "#"; 
+  viewAllLink.className = "block text-center font-semibold text-lg text-red-600 hover:text-orange-300 transition-colors duration-300";
+  projectsContainer.appendChild(viewAllLink);
 
   textContainer.appendChild(projectsContainer);
   portfolio.appendChild(textContainer);
