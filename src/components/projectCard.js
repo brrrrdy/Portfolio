@@ -40,7 +40,12 @@ export function createProjectCard({
   tags.forEach(tag => {
     const tagElement = document.createElement("span");
     tagElement.textContent = tag;
-    tagElement.className = "px-3 py-1 bg-blue-100 text-blue-800 text-xs font-medium rounded-full";
+    // Special styling for Game tag
+    if (tag.toLowerCase() === 'game') {
+      tagElement.className = "px-3 py-1 bg-green-100 text-green-800 text-xs font-medium rounded-full";
+    } else {
+      tagElement.className = "px-3 py-1 bg-blue-100 text-blue-800 text-xs font-medium rounded-full";
+    }
     tagsContainer.appendChild(tagElement);
   });
 

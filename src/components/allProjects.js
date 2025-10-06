@@ -65,7 +65,7 @@ export function allProjects() {
       <td class="border-b border-gray-300 px-4 py-4">${project.description}</td>
       <td class="border-b border-gray-300 px-4 py-4">
         <div class="flex flex-wrap gap-1">
-          ${project.tags.map(tag => `<span class="px-2 py-1 bg-blue-100 text-blue-800 text-xs rounded">${tag}</span>`).join('')}
+          ${project.tags.map(tag => `<span class="px-2 py-1 ${tag.toLowerCase() === 'game' ? 'bg-green-100 text-green-800' : 'bg-blue-100 text-blue-800'} text-xs rounded">${tag}</span>`).join('')}
         </div>
       </td>
       <td class="border-b border-gray-300 px-4 py-4">

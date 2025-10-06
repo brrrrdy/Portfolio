@@ -80,7 +80,7 @@
       "title": "Noughts and Crosses",
       "description": "I recreated the classic game Tic tac toe.",
       "image": "",
-      "tags": ["JavaScript", "CSS", "HTML"],
+      "tags": ["JavaScript", "CSS", "HTML", "Game"],
       "HTMLlink" : ["https://github.com/brrrrdy/Tic-Tac-Toe"],
       "ghPage" : ["https://brrrrdy.github.io/Tic-Tac-Toe/"],
       "featured": ["n"]
@@ -91,7 +91,7 @@
       "title": "Rock, Paper, Scissors",
       "description": "A Rock-Paper-Scissors game.",
       "image": "",
-      "tags": ["JavaScript", "CSS", "HTML"],
+      "tags": ["JavaScript", "CSS", "HTML", "Game"],
       "HTMLlink" : ["https://github.com/brrrrdy/Rock-Paper-Scissors"],
       "ghPage" : ["https://brrrrdy.github.io/Rock-Paper-Scissors/"],
       "featured": ["n"]
@@ -101,7 +101,7 @@
       "title": "Etch-a-Sketch",
       "description": "Etch a sketch game.",
       "image": "",
-      "tags": ["JavaScript", "CSS", "HTML"],
+      "tags": ["JavaScript", "CSS", "HTML", "Game"],
       "HTMLlink" : ["https://github.com/brrrrdy/Etch-a-Sketch"],
       "ghPage" : ["https://brrrrdy.github.io/Etch-a-Sketch/"],
       "featured": ["n"]
