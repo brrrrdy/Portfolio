@@ -1,14 +1,13 @@
 import navLinks from "../content/links.json";
 
 export function TopNavBar() {
-  // Main nav container - Fixed at top
+  // Main nav container - Fixed at top with flex layout
   const nav = document.createElement("nav");
-  nav.className = "fixed top-0 left-0 w-full text-black p-4 bg-red-100 z-50";
+  nav.className = "fixed top-0 left-0 w-full text-black p-4 bg-red-100 z-50 flex justify-center items-center";
 
-  // Flex container for links and language buttons
-  const mainContainer = document.createElement("div");
-  mainContainer.className =
-    "flex justify-center p-4  items-center w-full relative";
+  // Create a relative container for absolute positioned elements
+  const container = document.createElement("div");
+  container.className = "relative w-full flex justify-center items-center";
 
   // Nav links container
   const linksContainer = document.createElement("div");
@@ -40,10 +39,10 @@ export function TopNavBar() {
 
   // Light/Dark Mode Switch with SVG
   const darkModeToggle = document.createElement("div");
-  darkModeToggle.className = "flex gap-2 absolute left-12 pt-2";
+  darkModeToggle.className = "flex absolute left-0 top-1/2 transform -translate-y-1/2";
   
   const darkModeButton = document.createElement("button");
-  darkModeButton.className = "p-1 rounded bg-transparent ";
+  darkModeButton.className = "";
   
   // Create inline SVG for black color control
   const darkModeSvg = document.createElement("div");
@@ -56,9 +55,9 @@ export function TopNavBar() {
   darkModeButton.appendChild(darkModeSvg);
   darkModeToggle.appendChild(darkModeButton);
 
-  mainContainer.appendChild(linksContainer);
-  mainContainer.appendChild(langContainer);
-  mainContainer.appendChild(darkModeToggle);
-  nav.appendChild(mainContainer);
+  container.appendChild(linksContainer);
+  container.appendChild(langContainer);
+  container.appendChild(darkModeToggle);
+  nav.appendChild(container);
   return nav;
 }

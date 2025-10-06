@@ -5,6 +5,10 @@ body {
   @apply bg-red-100;
 }
 
+nav {
+  @apply w-full flex justify-start px-20 mb-10;
+}
+
 .section-container {
   @apply w-full flex justify-start px-20 mb-10;
 }
@@ -20,3 +24,8 @@ body {
 .section-subtitle {
   @apply text-sm text-gray-500;
 }
+
+/* Debug rule - green borders for flexbox visualization */
+/* * {
+  border: 1px solid green !important;
+} */
