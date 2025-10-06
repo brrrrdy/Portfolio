@@ -43,7 +43,7 @@ export function toolkitCard(customTools) {
     const img = document.createElement("img");
     img.src = tool.image;
     img.alt = tool.subtitle;
-    img.className = "w-[50px] h-[50px] object-contain mb-4";
+    img.className = "w-[50px] h-[50px] object-contain mb-4 transition-transform duration-200 hover:scale-150 ";
 
     const subtitle = document.createElement("div");
     subtitle.textContent = tool.subtitle;
