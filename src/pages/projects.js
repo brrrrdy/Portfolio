@@ -1,7 +1,7 @@
-import "./styles.css";
-import { TopNavBar } from "./components/topNav.js";
-import { allProjects } from "./components/allProjects.js";
-import { FooterNav } from "./components/footer.js";
+import "../styles.css";
+import { TopNavBar } from "../components/topNav.js";
+import { allProjects } from "../components/allProjects.js";
+import { FooterNav } from "../components/footer.js";
 
 // Create the projects page layout
 function createProjectsPage() {

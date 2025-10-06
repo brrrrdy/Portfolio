@@ -4,8 +4,8 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 module.exports = {
   mode: "development",
   entry: {
-    index: "./src/index.js",
-    projects: "./src/projects.js",
+    index: "./src/pages/index.js",
+    projects: "./src/pages/projects.js",
   },
   output: {
     filename: "[name].js",
@@ -15,7 +15,7 @@ module.exports = {
   devtool: "eval-source-map",
   devServer: {
     static: "./dist",
-    watchFiles: ["./src/*.html"],
+    watchFiles: ["./src/pages/*.html"],
     historyApiFallback: {
       rewrites: [
         { from: /^\/projects\.html$/, to: '/projects.html' },
@@ -25,12 +25,12 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: "./src/index.html",
+      template: "./src/pages/index.html",
       filename: "index.html",
       chunks: ["index"],
     }),
     new HtmlWebpackPlugin({
-      template: "./src/projects.html",
+      template: "./src/pages/projects.html",
       filename: "projects.html", 
       chunks: ["projects"],
     }),
