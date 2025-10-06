@@ -18,7 +18,7 @@ export function contact() {
 
   // Social links container
   const socialContainer = document.createElement("div");
-  socialContainer.className = "mt-6 flex items-center gap-4";
+  socialContainer.className = "mt-6 flex pl-2 items-center gap-4";
 
   // LinkedIn link with inline SVG
   const linkedinLink = document.createElement("a");

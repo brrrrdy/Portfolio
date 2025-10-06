@@ -32,13 +32,13 @@ const tools = [
 
 export function toolkitCard(customTools) {
   const toolkitDiv = document.createElement("div");
-  toolkitDiv.className = "flex flex-wrap gap-8 justify-center items-start mt-8";
+  toolkitDiv.className = "flex flex-wrap gap-8 justify-center items-center mt-8";
 
   const renderTools = customTools && Array.isArray(customTools) ? customTools : tools;
 
   renderTools.forEach(tool => {
     const card = document.createElement("div");
-    card.className = "flex flex-col items-center mb-1";
+    card.className = "flex flex-col items-center justify-center mb-1";
 
     const img = document.createElement("img");
     img.src = tool.image;
