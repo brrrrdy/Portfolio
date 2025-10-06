@@ -1,19 +1,20 @@
 import headerContent from "../content/header.json";
+import heroTomImage from "../assets/images/heroTom.webp";
 
 export function header() {
   const header = document.createElement("header");
-  header.className = "w-full pl-50 flex justify-start items-start mb-20";
+  header.className = "w-full relative flex items-start px-20 mb-48";
 
   const textContainer = document.createElement("div");
   textContainer.className = "flex flex-col items-start";
 
   const text1 = document.createElement("div");
   text1.textContent = headerContent.headerTitle;
-  text1.className = "text-6xl font-bold mb-10 self-center";
+  text1.className = "text-6xl font-bold mb-10 self-left";
 
   // Create animated subtitle container
   const animatedContainer = document.createElement("div");
-  animatedContainer.className = "text-lg text-gray-500 flex items-center gap-2 self-center";
+  animatedContainer.className = "text-lg text-gray-500 pl-20 flex items-center gap-2 self-left";
 
   const staticText = document.createElement("span");
   staticText.textContent = "I am a ";
@@ -100,7 +101,19 @@ export function header() {
   downloadContainer.appendChild(downloadLink);
   textContainer.appendChild(downloadContainer);
 
+  // Create image container
+  const imageContainer = document.createElement("div");
+  imageContainer.className = "absolute left-1/2 transform -translate-x-1/2 top-0 ml-20";
+  
+  const heroImage = document.createElement("img");
+  heroImage.src = heroTomImage;
+  heroImage.alt = "Hero Tom";
+  heroImage.className = "w-80 h-auto object-contain";
+  
+  imageContainer.appendChild(heroImage);
+
   header.appendChild(textContainer);
+  header.appendChild(imageContainer);
 
   return header;
 }
