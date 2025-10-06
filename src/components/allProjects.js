@@ -1,4 +1,5 @@
 import projectsData from "../content/projects.json";
+import githubIcon from "../assets/images/github-original.svg";
 
 export function allProjects() {
   const container = document.createElement("div");
@@ -30,10 +31,10 @@ export function allProjects() {
   const thead = document.createElement("thead");
   thead.innerHTML = `
     <tr class="bg-transparent">
-      <th class="border-b border-gray-300 px-4 py-2 text-left font-semibold">Project Name</th>
-      <th class="border-b border-gray-300 px-4 py-2 text-left font-semibold">Description</th>
-      <th class="border-b border-gray-300 px-4 py-2 text-left font-semibold">Technologies</th>
-      <th class="border-b border-gray-300 px-4 py-2 text-left font-semibold">GitHub repo</th>
+      <th class="border-b border-gray-300 px-4 py-4 text-left font-semibold w-1/3">Project Name</th>
+      <th class="border-b border-gray-300 px-4 py-4 text-left font-semibold w-2/5">Description</th>
+      <th class="border-b border-gray-300 px-4 py-4 text-left font-semibold w-1/6">Technologies</th>
+      <th class="border-b border-gray-300 px-4 py-4 text-left font-semibold w-1/12">GitHub repo</th>
     </tr>
   `;
 
@@ -46,18 +47,31 @@ export function allProjects() {
     row.className = "bg-transparent";
     
     const projectLink = project.HTMLlink && project.HTMLlink[0] ? project.HTMLlink[0] : "#";
+    const ghPageLink = project.ghPage && project.ghPage[0] ? project.ghPage[0] : "#";
     const technologies = project.tags ? project.tags.join(", ") : "";
     
     row.innerHTML = `
-      <td class="border-b border-gray-300 px-4 py-2 font-medium">${project.title}</td>
-      <td class="border-b border-gray-300 px-4 py-2">${project.description}</td>
-      <td class="border-b border-gray-300 px-4 py-2">
+      <td class="border-b border-gray-300 px-4 py-4 font-medium">
+        <div class="flex items-start gap-1">
+          <a href="${ghPageLink}" target="_blank" class="text-red-600 hover:text-orange-300 font-medium transition-colors duration-200 group leading-tight inline">
+            ${project.title}
+          </a>
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 -960 960 960" class="transition-transform duration-300 group-hover:translate-x-1 flex-shrink-0 text-red-600 group-hover:text-orange-300 ml-1" style="margin-top: 2px;">
+            <path d="m256-240-56-56 384-384H240v-80h480v480h-80v-344z"/>
+          </svg>
+        </div>
+      </td>
+      </td>
+      <td class="border-b border-gray-300 px-4 py-4">${project.description}</td>
+      <td class="border-b border-gray-300 px-4 py-4">
         <div class="flex flex-wrap gap-1">
           ${project.tags.map(tag => `<span class="px-2 py-1 bg-blue-100 text-blue-800 text-xs rounded">${tag}</span>`).join('')}
         </div>
       </td>
-      <td class="border-b border-gray-300 px-4 py-2">
-        <a href="${projectLink}" target="_blank" class="text-blue-600 hover:text-blue-800 underline">View Project</a>
+      <td class="border-b border-gray-300 px-4 py-4">
+        <a href="${projectLink}" target="_blank" class="inline-block hover:opacity-75 transition-opacity duration-200">
+          <img src="${githubIcon}" alt="GitHub" class="w-6 h-6">
+        </a>
       </td>
     `;
     

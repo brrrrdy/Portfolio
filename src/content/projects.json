@@ -7,6 +7,7 @@
       "image": "src/assets/images/WeatherApp.png",
       "tags": ["JavaScript", "API Integration", "CSS", "HTML", "Responsive"],
       "HTMLlink" : ["https://github.com/brrrrdy/Weather-App"],
+      "ghPage" : ["https://brrrrdy.github.io/Weather-App/"],
       "featured": ["y"]
     },
     {
@@ -16,6 +17,7 @@
       "image": "src/assets/images/AdminDash.png",
       "tags": ["HTML", "CSS", "JavaScript", "Responsive"],
       "HTMLlink" : ["https://github.com/brrrrdy/Dashboard"],
+            "ghPage" : ["https://brrrrdy.github.io/Dashboard/"],
       "featured": ["y"]
     },
     {
@@ -25,6 +27,7 @@
       "image": "calculator.png",
       "tags": ["JavaScript", "CSS", "HTML"],
       "HTMLlink" : ["https://github.com/brrrrdy/Calculator"],
+      "ghPage" : ["https://brrrrdy.github.io/Calculator/"],
       "featured": ["y"]
     },
 
@@ -35,6 +38,7 @@
       "image": "",
       "tags": ["JavaScript", "CSS", "HTML"],
       "HTMLlink" : ["https://github.com/brrrrdy/Library"],
+      "ghPage" : ["https://brrrrdy.github.io/Library/"],
       "featured": ["n"]
     },
 
@@ -45,6 +49,7 @@
       "image": "",
       "tags": ["JavaScript", "CSS", "HTML"],
       "HTMLlink" : ["https://github.com/brrrrdy/Sign-up-Form"],
+      "ghPage" : ["https://brrrrdy.github.io/Sign-up-Form/"],
       "featured": ["n"]
     },
 
@@ -55,6 +60,7 @@
       "image": "",
       "tags": ["JavaScript", "CSS", "HTML"],
       "HTMLlink" : ["https://github.com/brrrrdy/To-Do-List/tree/main"],
+       "ghPage" : ["https://brrrrdy.github.io/To-Do-List//"],
       "featured": ["n"]
     },
 
@@ -65,6 +71,7 @@
       "image": "",
       "tags": ["JavaScript", "CSS", "HTML"],
       "HTMLlink" : ["https://github.com/brrrrdy/restaurant-webpack"],
+       "ghPage" : ["https://brrrrdy.github.io/restaurant-webpack/"],
       "featured": ["n"]
     },
 
@@ -75,6 +82,7 @@
       "image": "",
       "tags": ["JavaScript", "CSS", "HTML"],
       "HTMLlink" : ["https://github.com/brrrrdy/Tic-Tac-Toe"],
+      "ghPage" : ["https://brrrrdy.github.io/Tic-Tac-Toe/"],
       "featured": ["n"]
     },
 
@@ -85,6 +93,7 @@
       "image": "",
       "tags": ["JavaScript", "CSS", "HTML"],
       "HTMLlink" : ["https://github.com/brrrrdy/Rock-Paper-Scissors"],
+      "ghPage" : ["https://brrrrdy.github.io/Rock-Paper-Scissors/"],
       "featured": ["n"]
     },
                             {
@@ -94,6 +103,7 @@
       "image": "",
       "tags": ["JavaScript", "CSS", "HTML"],
       "HTMLlink" : ["https://github.com/brrrrdy/Etch-a-Sketch"],
+      "ghPage" : ["https://brrrrdy.github.io/Etch-a-Sketch/"],
       "featured": ["n"]
     }
 
