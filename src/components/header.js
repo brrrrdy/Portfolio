@@ -5,15 +5,15 @@ export function header() {
   header.className = "w-full pl-50 flex justify-start items-start mb-20";
 
   const textContainer = document.createElement("div");
-  textContainer.className = "flex flex-col items-center";
+  textContainer.className = "flex flex-col items-start";
 
   const text1 = document.createElement("div");
   text1.textContent = headerContent.headerTitle;
-  text1.className = "text-6xl font-bold mb-10";
+  text1.className = "text-6xl font-bold mb-10 self-center";
 
   // Create animated subtitle container
   const animatedContainer = document.createElement("div");
-  animatedContainer.className = "text-lg text-gray-500 flex items-center gap-2";
+  animatedContainer.className = "text-lg text-gray-500 flex items-center gap-2 self-center";
 
   const staticText = document.createElement("span");
   staticText.textContent = "I am a ";
@@ -80,6 +80,26 @@ export function header() {
 
   textContainer.appendChild(text1);
   textContainer.appendChild(animatedContainer);
+
+  // download my cv link below animated subtitle
+  const downloadContainer = document.createElement("div");
+  downloadContainer.className = "block text-left mt-30";
+  
+  const downloadLink = document.createElement("a");
+  downloadLink.href = "#"; 
+  downloadLink.className = "inline-flex items-center gap-2 font-semibold text-base text-red-600 hover:text-orange-300 transition-colors duration-300 hover:underline group border-2 border-red-400 p-2.5";
+  
+  const downloadText = document.createElement("span");
+  downloadText.textContent = "download my cv";
+  
+  const downloadSvg = document.createElement("div");
+  downloadSvg.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 -960 960 960" class="mt-1 transition-transform duration-300 group-hover:translate-x-2"><path d="M440-240v-368L296-464l-56-56 240-240 240 240-56 56-144-144v368z"/></svg>`;
+  
+  downloadLink.appendChild(downloadText);
+  downloadLink.appendChild(downloadSvg);
+  downloadContainer.appendChild(downloadLink);
+  textContainer.appendChild(downloadContainer);
+
   header.appendChild(textContainer);
 
   return header;
