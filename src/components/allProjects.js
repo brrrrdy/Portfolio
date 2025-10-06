@@ -3,7 +3,7 @@ import githubIcon from "../assets/images/github-original.svg";
 
 export function allProjects() {
   const container = document.createElement("div");
-  container.className = "section-container scroll-mt-24";
+  container.className = "section-container scroll-mt-24 pt-24";
   container.id = "all-projects";
 
   const contentContainer = document.createElement("div");
