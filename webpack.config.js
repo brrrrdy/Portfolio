@@ -3,20 +3,36 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
   mode: "development",
-  entry: "./src/index.js",
+  entry: {
+    index: "./src/index.js",
+    projects: "./src/projects.js",
+  },
   output: {
-    filename: "main.js",
+    filename: "[name].js",
     path: path.resolve(__dirname, "dist"),
     clean: true,
   },
   devtool: "eval-source-map",
   devServer: {
     static: "./dist",
-    watchFiles: ["./src/index.html"],
+    watchFiles: ["./src/*.html"],
+    historyApiFallback: {
+      rewrites: [
+        { from: /^\/projects\.html$/, to: '/projects.html' },
+        { from: /./, to: '/index.html' }
+      ]
+    },
   },
   plugins: [
     new HtmlWebpackPlugin({
       template: "./src/index.html",
+      filename: "index.html",
+      chunks: ["index"],
+    }),
+    new HtmlWebpackPlugin({
+      template: "./src/projects.html",
+      filename: "projects.html", 
+      chunks: ["projects"],
     }),
   ],
   module: {

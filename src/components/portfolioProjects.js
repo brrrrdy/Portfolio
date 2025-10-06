@@ -53,14 +53,14 @@ export function portfolio() {
   viewAllContainer.className = "block text-left mt-6";
   
   const viewAllLink = document.createElement("a");
-  viewAllLink.href = "#"; 
+  viewAllLink.href = "/projects.html"; 
   viewAllLink.className = "inline-flex items-center gap-2 font-semibold text-base text-red-600 hover:text-orange-300 transition-colors duration-300 hover:underline group border-2 border-red-400 p-2.5";
   
   const linkText = document.createElement("span");
   linkText.textContent = "view all my projects";
   
   const arrowSvg = document.createElement("div");
-  arrowSvg.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 -960 960 960" class="mt-1 transition-transform duration-300 group-hover:translate-x-2"><path d="M504-480 320-664l56-56 240 240-240 240-56-56z"/></svg>`;
+  arrowSvg.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 -960 960 960" class="mt-1 transition-transform duration-300 group-hover:translate-x-1.5"><path d="M504-480 320-664l56-56 240 240-240 240-56-56z"/></svg>`;
   
   viewAllLink.appendChild(linkText);
   viewAllLink.appendChild(arrowSvg);

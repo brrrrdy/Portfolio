@@ -93,7 +93,7 @@ export function header() {
   downloadText.textContent = "download my cv";
   
   const downloadSvg = document.createElement("div");
-  downloadSvg.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 -960 960 960" class="mt-1 transition-transform duration-300 group-hover:translate-x-2"><path d="M440-240v-368L296-464l-56-56 240-240 240 240-56 56-144-144v368z"/></svg>`;
+  downloadSvg.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 -960 960 960" class="mt-1 transition-transform duration-300 group-hover:-translate-y-1.5"><path d="M440-240v-368L296-464l-56-56 240-240 240 240-56 56-144-144v368z"/></svg>`;
   
   downloadLink.appendChild(downloadText);
   downloadLink.appendChild(downloadSvg);
