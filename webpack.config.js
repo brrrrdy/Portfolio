@@ -4,8 +4,7 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 module.exports = {
   mode: "development",
   entry: {
-    index: "./src/pages/index.js",
-    projects: "./src/pages/projects.js",
+    main: "./src/pages/index.js",
   },
   output: {
     filename: "[name].js",
@@ -16,23 +15,14 @@ module.exports = {
   devServer: {
     static: "./dist",
     watchFiles: ["./src/pages/*.html"],
-    historyApiFallback: {
-      rewrites: [
-        { from: /^\/projects\.html$/, to: '/projects.html' },
-        { from: /./, to: '/index.html' }
-      ]
-    },
+    historyApiFallback: true,
+    hot: true,
   },
   plugins: [
     new HtmlWebpackPlugin({
       template: "./src/pages/index.html",
       filename: "index.html",
-      chunks: ["index"],
-    }),
-    new HtmlWebpackPlugin({
-      template: "./src/pages/projects.html",
-      filename: "projects.html", 
-      chunks: ["projects"],
+      chunks: ["main"],
     }),
   ],
   module: {

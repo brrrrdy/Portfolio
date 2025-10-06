@@ -1,26 +1,24 @@
-import "../styles.css";
 import { TopNavBar } from "../components/topNav.js";
 import { allProjects } from "../components/allProjects.js";
 import { FooterNav } from "../components/footer.js";
 
-// Create the projects page layout
-function createProjectsPage() {
-  const body = document.body;
-  body.innerHTML = ""; // Clear existing content
-  body.className = "bg-red-100 min-h-screen flex flex-col";
+/**
+ * Projects page component
+ * @returns {HTMLElement} Projects page element
+ */
+export function ProjectsPage() {
+  const container = document.createElement('div');
+  container.className = 'min-h-screen flex flex-col';
   
-  // Add components
-  const nav = TopNavBar();
-  const main = allProjects();
-  const footer = FooterNav();
-  
-  // Add flex-grow to main content to push footer down
-  main.style.flexGrow = "1";
-  
-  body.appendChild(nav);
-  body.appendChild(main);
-  body.appendChild(footer);
+  try {
+    // Add projects page components
+    container.appendChild(TopNavBar());
+    container.appendChild(allProjects());
+    container.appendChild(FooterNav());
+    
+    return container;
+  } catch (error) {
+    console.error('Error rendering projects page:', error);
+    throw error;
+  }
 }
-
-// Initialize the projects page
-createProjectsPage();

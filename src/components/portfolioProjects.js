@@ -36,6 +36,7 @@ export function portfolio() {
   };
 
   // Generate project cards from JSON data - only show featured projects
+  
   projectsData.projects
     .filter(project => project.featured && project.featured.includes("y"))
     .forEach(project => {
@@ -48,12 +49,13 @@ export function portfolio() {
       projectsContainer.appendChild(projectCard);
     });
 
-  // Add "view all my projects" link with arrow SVG at the bottom
+  // view all my projects link with arrow SVG at the bottom
+
   const viewAllContainer = document.createElement("div");
   viewAllContainer.className = "block text-left mt-6";
   
   const viewAllLink = document.createElement("a");
-  viewAllLink.href = "/projects.html"; 
+  viewAllLink.href = "/projects"; 
   viewAllLink.className = "inline-flex items-center gap-2 font-semibold text-base text-red-600 hover:text-orange-300 transition-colors duration-300 hover:underline group border-2 border-red-400 p-2.5";
   
   const linkText = document.createElement("span");

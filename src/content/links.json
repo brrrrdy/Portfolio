@@ -1,6 +1,6 @@
 [
-  { "text": "home", "href": "/index.html#top" },
-  { "text": "about me", "href": "/index.html#about" },
-  { "text": "projects", "href": "/index.html#projects" },
-  { "text": "contact", "href": "/index.html#contact" }
+  { "text": "home", "href": "/#top" },
+  { "text": "about me", "href": "/#about" },
+  { "text": "projects", "href": "/#projects" },
+  { "text": "contact", "href": "/#contact" }
 ]
