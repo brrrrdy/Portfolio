@@ -1,22 +1,21 @@
 import navLinks from "../content/links.json";
-import darkSwitchIcon from "../assets/images/darkswitchsvg.svg";
 
 export function TopNavBar() {
-  // Main nav container
+  // Main nav container - Fixed at top
   const nav = document.createElement("nav");
-  nav.className = "w-full text-black p-4";
+  nav.className = "fixed top-0 left-0 w-full text-black p-4 bg-red-100 z-50";
 
   // Flex container for links and language buttons
   const mainContainer = document.createElement("div");
   mainContainer.className =
-    "flex justify-center p-4 items-center w-full relative";
+    "flex justify-center p-4  items-center w-full relative";
 
   // Nav links container
   const linksContainer = document.createElement("div");
   linksContainer.className = "flex gap-6 justify-center items-center";
   navLinks.forEach((link) => {
     const a = document.createElement("a");
-    a.className = "text-black-600 hover:text-blue-600 font-medium";
+    a.className = "text-black-600 hover:text-yellow-600 font-medium";
     a.textContent = link.text;
     a.href = link.href;
     linksContainer.appendChild(a);
@@ -24,7 +23,7 @@ export function TopNavBar() {
 
   // Language buttons container
   const langContainer = document.createElement("div");
-  langContainer.className = "flex gap-2 absolute right-4";
+  langContainer.className = "flex gap-2 absolute right-20";
   const languages = ["EN", "ES", "GZ"];
   languages.forEach((lang) => {
     const btn = document.createElement("button");
@@ -36,10 +35,10 @@ export function TopNavBar() {
 
   // Light/Dark Mode Switch with SVG
   const darkModeToggle = document.createElement("div");
-  darkModeToggle.className = "flex gap-2 absolute left-4 pt-10";
+  darkModeToggle.className = "flex gap-2 absolute left-12 pt-2";
   
   const darkModeButton = document.createElement("button");
-  darkModeButton.className = "p-2 rounded bg-transparent ";
+  darkModeButton.className = "p-1 rounded bg-transparent ";
   
   // Create inline SVG for black color control
   const darkModeSvg = document.createElement("div");

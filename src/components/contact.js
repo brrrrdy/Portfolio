@@ -1,5 +1,4 @@
 import cardContent from "../content/contact.json";
-import githubIcon from "../assets/images/github-original.svg";
 
 export function contact() {
   const contact = document.createElement("div");
@@ -38,7 +37,7 @@ export function contact() {
 
   // GitHub link with inline SVG
   const githubLink = document.createElement("a");
-  githubLink.href = "https://github.com/brrrrdy"; // Replace with your GitHub username
+  githubLink.href = "https://github.com/brrrrdy"; 
   githubLink.target = "_blank";
   githubLink.rel = "noopener noreferrer";
   githubLink.className = "flex items-center gap-2 transition-transform duration-200 hover:scale-110";
@@ -54,7 +53,7 @@ export function contact() {
 
   // Email link with inline SVG
   const emailLink = document.createElement("a");
-  emailLink.href = "mailto:your.email@example.com"; // Replace with your email
+  emailLink.href = "mailto:your.email@example.com"; 
   emailLink.className = "flex items-center gap-2 transition-transform duration-200 hover:scale-110";
 
   const emailSvg = document.createElement("div");
