@@ -108,7 +108,7 @@ export function header() {
   const heroImage = document.createElement("img");
   heroImage.src = heroTomImage;
   heroImage.alt = "Hero Tom";
-  heroImage.className = "w-80 h-auto object-contain";
+  heroImage.className = "w-80 h-auto object-contain border-4 border-black-600 transform rotate-3";
   
   imageContainer.appendChild(heroImage);
 

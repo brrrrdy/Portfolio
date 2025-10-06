@@ -7,7 +7,7 @@ import calcImg from "../assets/images/calculator.png";
 
 export function portfolio() {
   const portfolio = document.createElement("div");
-  portfolio.className = "section-container scroll-mt-24";
+  portfolio.className = "section-container scroll-mt-15";
   portfolio.id = "projects";
 
   const textContainer = document.createElement("div");
