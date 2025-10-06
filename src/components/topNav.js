@@ -27,8 +27,13 @@ export function TopNavBar() {
   const languages = ["EN", "ES", "GZ"];
   languages.forEach((lang) => {
     const btn = document.createElement("button");
-    btn.className =
-      "px-2 py-1 rounded bg-transparent hover:bg-red-200 font-semibold";
+    if (lang === "EN") {
+      btn.className = "px-2 py-1 rounded bg-transparent font-semibold hover:text-blue-800 transition-colors duration-300";
+    } else if (lang === "ES") {
+      btn.className = "px-2 py-1 rounded bg-transparent font-semibold hover:text-red-600 transition-colors duration-300";
+    } else if (lang === "GZ") {
+      btn.className = "px-2 py-1 rounded bg-transparent font-semibold hover:text-sky-400 transition-colors duration-300";
+    }
     btn.textContent = lang;
     langContainer.appendChild(btn);
   });
