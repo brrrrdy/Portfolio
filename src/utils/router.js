@@ -120,8 +120,14 @@ export class Router {
     const targetElement = document.getElementById(hash);
     
     if (targetElement) {
-      // Use smooth scrolling with offset for fixed nav
-      const yOffset = -60; // offset for nav links to anchor
+      // Use different offsets based on the target
+      let yOffset;
+      if (hash === 'top') {
+        yOffset = -120; 
+      } else {
+        yOffset = -60; // Standard offset for other anchors
+      }
+      
       const y = targetElement.getBoundingClientRect().top + window.pageYOffset + yOffset;
       
       window.scrollTo({

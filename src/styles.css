@@ -25,7 +25,7 @@ nav {
   @apply text-sm text-gray-500;
 }
 
-/* Debug rule - green borders for flexbox visualization */
+/* green borders for flexbox debug */
 /* * {
   border: 1px solid green !important;
 } */

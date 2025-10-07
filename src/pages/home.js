@@ -13,7 +13,15 @@ import { FooterNav } from "../components/footer.js";
 export function HomePage() {
   const container = document.createElement('div');
   container.className = 'min-h-screen flex flex-col';
-  
+
+  // anchor for top navigation
+  const topAnchor = document.createElement('div');
+  topAnchor.id = 'top';
+  topAnchor.style.height = '1px';
+  topAnchor.style.width = '100%';
+  topAnchor.style.position = 'relative';
+  container.appendChild(topAnchor);
+
   try {
     // Add all homepage components
     container.appendChild(TopNavBar());
