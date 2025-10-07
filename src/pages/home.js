@@ -1,6 +1,7 @@
 import { TopNavBar } from "../components/topNav.js";
 import { header } from "../components/header.js";
 import { portfolio } from "../components/portfolioProjects.js";
+import { aboutCard} from "../components/about.js";
 import { toolkit } from "../components/toolkit.js";
 import { contact } from "../components/contact.js";
 import { FooterNav } from "../components/footer.js";
@@ -17,6 +18,7 @@ export function HomePage() {
     // Add all homepage components
     container.appendChild(TopNavBar());
     container.appendChild(header());
+    container.appendChild(aboutCard());
     container.appendChild(portfolio());
     container.appendChild(toolkit());
     container.appendChild(contact());

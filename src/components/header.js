@@ -103,12 +103,12 @@ export function header() {
 
   // Create image container
   const imageContainer = document.createElement("div");
-  imageContainer.className = "absolute left-1/2 transform -translate-x-1/2 top-0 ml-20";
+  imageContainer.className = "absolute left-1/3 transform -translate-x-1/2 top-0 ml-50";
   
   const heroImage = document.createElement("img");
   heroImage.src = heroTomImage;
   heroImage.alt = "Hero Tom";
-  heroImage.className = "w-80 h-auto object-contain border-4 border-black-600 transform rotate-3";
+  heroImage.className = "w-50 h-auto object-contain border-4 border-black-600 transform rotate-3";
   
   imageContainer.appendChild(heroImage);
 
