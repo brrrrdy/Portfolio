@@ -3,7 +3,7 @@ import heroTomImage from "../assets/images/heroTom.webp";
 
 export function header() {
   const header = document.createElement("header");
-  header.className = "w-full relative flex items-start px-20 mb-48";
+  header.className = "w-full relative flex items-start px-20 mb-10";
 
   const textContainer = document.createElement("div");
   textContainer.className = "flex flex-col items-start";
