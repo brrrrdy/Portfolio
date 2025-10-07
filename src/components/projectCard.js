@@ -8,20 +8,30 @@ export function createProjectCard({
   const card = document.createElement("div");
   card.className = "flex bg-transparent overflow-hidden mb-0 ml-5max-w-4xl h-64";
 
-  // Left half - Image
+  // Left half - Image with offset red border frame
   const imageContainer = document.createElement("div");
-  imageContainer.className = "w-[400px] h-[200px] flex-shrink-0";
+  imageContainer.className = "w-[280px] h-[180px] flex-shrink-0 relative p-3";
+
+  // Red border frame (offset to bottom left)
+  const borderFrame = document.createElement("div");
+  borderFrame.className = "absolute top-6 left-0 w-[260px] h-[160px] border-2 border-red-500 z-0";
+
+  // Image container (positioned above the border frame)
+  const imgWrapper = document.createElement("div");
+  imgWrapper.className = "relative z-10 w-[260px] h-[160px] bg-white";
 
   const img = document.createElement("img");
   img.src = image;
   img.alt = title;
-  img.className = "w-full h-full object-contain transition-transform duration-200 hover:scale-110";
+  img.className = "w-full h-full object-contain transition-transform duration-200 hover:scale-105";
 
-  imageContainer.appendChild(img);
+  imgWrapper.appendChild(img);
+  imageContainer.appendChild(borderFrame);
+  imageContainer.appendChild(imgWrapper);
 
   // Right half - Content
   const contentContainer = document.createElement("div");
-  contentContainer.className = "w-1/3 p-4 flex flex-col";
+  contentContainer.className = "flex-1 p-4 pl-8 flex flex-col";
 
   // Title section
   const titleElement = document.createElement("h3");
