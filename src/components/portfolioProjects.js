@@ -4,6 +4,7 @@ import { createProjectCard } from "./projectCard.js";
 import weatherAppImg from "../assets/images/WeatherApp.png";
 import adminDashboardImg from "../assets/images/AdminDash.png";
 import calcImg from "../assets/images/calculator.png";
+import etchImg from "../assets/images/etch.png";
 
 export function portfolio() {
   const portfolio = document.createElement("div");
@@ -33,6 +34,7 @@ export function portfolio() {
     1: weatherAppImg, // Weather App
     2: adminDashboardImg,
     3: calcImg,
+    10: etchImg, // Etch-a-Sketch
   };
 
   // Generate project cards from JSON data - show first 4 featured projects
