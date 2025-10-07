@@ -22,15 +22,15 @@ nav {
 }
 
 .about-content {
-  @apply flex flex-col items-start w-1/2;
+  @apply flex flex-col items-start w-2/3;
 }
 
 .about-section-subtitle {
-  @apply text-lg pl-10;
+  @apply text-lg italic pl-10;
 }
 
 .section-title {
-  @apply text-4xl font-bold mb-8;
+  @apply text-4xl font-bold  mb-8;
 }
 
 .section-subtitle {
