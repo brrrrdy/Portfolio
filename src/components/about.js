@@ -6,19 +6,19 @@ export function aboutCard() {
   aboutCard.id = "about";
 
   const textContainer = document.createElement("div");
-  textContainer.className = "section-content";
+  textContainer.className = "about-content";
 
   const text1 = document.createElement("div");
   text1.textContent = cardContent.cardTitle;
-  text1.className = "section-title";
+  text1.className = "section-title text-left";
 
   const text2 = document.createElement("div");
   text2.textContent = cardContent.cardText1;
-  text2.className = "section-subtitle mb-4";
+  text2.className = "about-section-subtitle mb-5";
 
   const text3 = document.createElement("div");
   text3.textContent = cardContent.cardText2;
-  text3.className = "section-subtitle";
+  text3.className = "about-section-subtitle";
 
   textContainer.appendChild(text1);
   textContainer.appendChild(text2);

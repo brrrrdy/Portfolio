@@ -17,8 +17,20 @@ nav {
   @apply flex flex-col items-start;
 }
 
+.section-content-center {
+  @apply flex flex-col items-center text-center ;
+}
+
+.about-content {
+  @apply flex flex-col items-start w-1/2;
+}
+
+.about-section-subtitle {
+  @apply text-lg pl-10;
+}
+
 .section-title {
-  @apply text-4xl font-bold mb-4;
+  @apply text-4xl font-bold mb-8;
 }
 
 .section-subtitle {
