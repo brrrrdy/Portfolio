@@ -55,7 +55,7 @@ export function portfolio() {
   // view all my projects link with arrow SVG at the bottom
 
   const viewAllContainer = document.createElement("div");
-  viewAllContainer.className = "block text-left mt-6";
+  viewAllContainer.className = "block text-left mt-0";
   
   const viewAllLink = document.createElement("a");
   viewAllLink.href = "/projects"; 

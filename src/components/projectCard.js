@@ -41,7 +41,7 @@ export function createProjectCard({
   // Text section
   const textElement = document.createElement("p");
   textElement.textContent = description;
-  textElement.className = "text-gray-600 text-sm leading-relaxed mb-4";
+  textElement.className = "text-gray-600 text-sm leading-relaxed mb-2";
 
   // Metadata tags section
   const tagsContainer = document.createElement("div");
