@@ -14,7 +14,7 @@ export function createProjectCard({
 
   // Red border frame (offset to bottom left)
   const borderFrame = document.createElement("div");
-  borderFrame.className = "absolute top-6 left-0 w-[260px] h-[160px] border-2 border-red-500 z-0";
+  borderFrame.className = "absolute top-6 left-0 w-[260px] h-[160px] border-2 border-red-500 z-0 bg-red-150";
 
   // Image container (positioned above the border frame)
   const imgWrapper = document.createElement("div");
