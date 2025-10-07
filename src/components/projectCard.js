@@ -2,7 +2,8 @@ export function createProjectCard({
   image = "https://via.placeholder.com/400x250/6b7280/ffffff?text=Project+Image", 
   title = "Project Title", 
   description = "Project description goes here. This is a brief overview of what the project does and its key features.", 
-  tags = ["JavaScript", "React", "CSS"] 
+  tags = ["JavaScript", "React", "CSS"],
+  ghPage = null
 }) {
   
   const card = document.createElement("div");
@@ -18,14 +19,25 @@ export function createProjectCard({
 
   // Image container (positioned above the border frame)
   const imgWrapper = document.createElement("div");
-  imgWrapper.className = "relative z-10 w-[260px] h-[160px] bg-white";
+  imgWrapper.className = "relative z-10 w-[260px] h-[160px] bg-transparent";
 
   const img = document.createElement("img");
   img.src = image;
   img.alt = title;
   img.className = "w-full h-full object-contain transition-transform duration-200 hover:scale-105";
 
-  imgWrapper.appendChild(img);
+  // Wrap image in link if ghPage is provided
+  if (ghPage && ghPage.length > 0) {
+    const imageLink = document.createElement("a");
+    imageLink.href = ghPage[0]; // ghPage is an array, take first element
+    imageLink.target = "_blank";
+    imageLink.rel = "noopener noreferrer";
+    imageLink.className = "block w-full h-full cursor-pointer";
+    imageLink.appendChild(img);
+    imgWrapper.appendChild(imageLink);
+  } else {
+    imgWrapper.appendChild(img);
+  }
   imageContainer.appendChild(borderFrame);
   imageContainer.appendChild(imgWrapper);
 

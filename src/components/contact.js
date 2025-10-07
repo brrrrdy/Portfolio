@@ -16,6 +16,10 @@ export function contact() {
   text2.textContent = cardContent.cardText;
   text2.className = "section-subtitle";
 
+  const text3 = document.createElement("div");
+  text3.textContent = cardContent.cardSubtitle;
+  text3.className = "section-subtitle mt-4 text-gray-600";
+
   // Social links container
   const socialContainer = document.createElement("div");
   socialContainer.className = "mt-6 flex pl-2 items-center gap-4";
@@ -54,7 +58,7 @@ export function contact() {
 
   // Email link with inline SVG
   const emailLink = document.createElement("a");
-  emailLink.href = "mailto:your.email@example.com"; 
+  emailLink.href = "mailto:tmlvrz@gmail.com"; 
   emailLink.className = "flex items-center gap-2 transition-transform duration-200 hover:scale-110";
 
   const emailSvg = document.createElement("div");
@@ -72,6 +76,7 @@ export function contact() {
 
   textContainer.appendChild(text1);
   textContainer.appendChild(text2);
+  textContainer.appendChild(text3);
   textContainer.appendChild(socialContainer);
   contact.appendChild(textContainer);
 

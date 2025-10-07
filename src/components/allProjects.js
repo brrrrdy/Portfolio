@@ -16,7 +16,7 @@ export function allProjects() {
 
   // Subtitle
   const subtitle = document.createElement("p");
-  subtitle.textContent = "here are all my projects so far";
+  subtitle.textContent = "The full archive of projects and associated technologies that I have completed so far.";
   subtitle.className = "section-subtitle mb-8 mt-4";
 
   // Table container
@@ -88,7 +88,7 @@ export function allProjects() {
   
   const backLink = document.createElement("a");
   backLink.href = "/";
-  backLink.textContent = "← Back to Home";
+  backLink.textContent = "< Back to Home";
   backLink.className = "inline-flex items-center gap-2 font-semibold text-lg text-red-600 hover:text-orange-300 transition-colors duration-300 hover:underline";
   
   backContainer.appendChild(backLink);

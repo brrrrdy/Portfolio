@@ -3,7 +3,7 @@
     {
       "id": 1,
       "title": "Weather App",
-      "description": "I made my own weather app that grabs data from a weather UPI and changes background according to whether it is night or day in the location.",
+      "description": "I made my own weather app that fetches real-time data from a weather API and dynamically updates the background to reflect day or night at the selected location.", 
       "image": "src/assets/images/WeatherApp.png",
       "tags": ["JavaScript", "API Integration", "CSS", "HTML", "Responsive"],
       "HTMLlink" : ["https://github.com/brrrrdy/Weather-App"],
@@ -13,7 +13,7 @@
     {
       "id": 2,
       "title": "Admin Dashboard",
-      "description": "An admin dashboard.",
+      "description": "A responsive admin dashboard that integrates the Last.fm API to display my currently playing music alongside other dynamic content.",
       "image": "src/assets/images/AdminDash.png",
       "tags": ["HTML", "CSS", "JavaScript", "Responsive"],
       "HTMLlink" : ["https://github.com/brrrrdy/Dashboard"],
@@ -23,7 +23,7 @@
     {
       "id": 3,
       "title": "Calculator",
-      "description": "A scientific calculator.",
+      "description": "A fully functional scientific calculator with support for advanced operations and a clean, intuitive interface.",
       "image": "calculator.png",
       "tags": ["JavaScript", "CSS", "HTML"],
       "HTMLlink" : ["https://github.com/brrrrdy/Calculator"],
@@ -34,7 +34,7 @@
     {
       "id": 4,
       "title": "Library",
-      "description": "A library management system.",
+      "description": "Simple library management app that lets users add, edit, and remove books, with data stored locally in the browser.",
       "image": "",
       "tags": ["JavaScript", "CSS", "HTML"],
       "HTMLlink" : ["https://github.com/brrrrdy/Library"],
@@ -45,7 +45,7 @@
         {
       "id": 5,
       "title": "Sign-up Form",
-      "description": "A sign up form page.",
+      "description": "A responsive sign-up form with real-time validation and clean, modern styling.",
       "image": "",
       "tags": ["JavaScript", "CSS", "HTML"],
       "HTMLlink" : ["https://github.com/brrrrdy/Sign-up-Form"],
@@ -56,7 +56,7 @@
             {
       "id": 6,
       "title": "To-Do-List",
-      "description": "A to-do-list application.",
+      "description": "Task management app that lets users add, edit, and delete tasks, with data saved in local storage.",
       "image": "",
       "tags": ["JavaScript", "CSS", "HTML"],
       "HTMLlink" : ["https://github.com/brrrrdy/To-Do-List/tree/main"],
@@ -67,7 +67,7 @@
                 {
       "id": 7,
       "title": "Smiling Salads Restaurant",
-      "description": "A restaurant website I made to practice using webpack.",
+      "description": "Single-page restaurant website built to practice using Webpack and SPA development techniques.",
       "image": "",
       "tags": ["JavaScript", "CSS", "HTML"],
       "HTMLlink" : ["https://github.com/brrrrdy/restaurant-webpack"],
@@ -78,7 +78,7 @@
                     {
       "id": 8,
       "title": "Noughts and Crosses",
-      "description": "I recreated the classic game Tic tac toe.",
+      "description": "The classic Tic-Tac-Toe (I speak British English!) game delivered in the browser with a simple and interactive interface.",
       "image": "",
       "tags": ["JavaScript", "CSS", "HTML", "Game"],
       "HTMLlink" : ["https://github.com/brrrrdy/Tic-Tac-Toe"],
@@ -89,7 +89,7 @@
                         {
       "id": 9,
       "title": "Rock, Paper, Scissors",
-      "description": "A Rock-Paper-Scissors game.",
+      "description": "A Pokémon-themed Rock, Paper, Scissors game with interactive gameplay and fun visuals.",
       "image": "",
       "tags": ["JavaScript", "CSS", "HTML", "Game"],
       "HTMLlink" : ["https://github.com/brrrrdy/Rock-Paper-Scissors"],
@@ -99,7 +99,7 @@
                             {
       "id": 10,
       "title": "Etch-a-Sketch",
-      "description": "Etch a sketch game.",
+      "description": "A browser-based Etch-a-Sketch game that lets users draw and erase using simple controls.",
       "image": "src/assets/images/etch.png",
       "tags": ["JavaScript", "CSS", "HTML", "Game"],
       "HTMLlink" : ["https://github.com/brrrrdy/Etch-a-Sketch"],

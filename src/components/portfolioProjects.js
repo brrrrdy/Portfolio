@@ -47,7 +47,8 @@ export function portfolio() {
       title: project.title,
       description: project.description,
       image: imageMap[project.id] || project.image,
-      tags: project.tags
+      tags: project.tags,
+      ghPage: project.ghPage
     });
     projectsContainer.appendChild(projectCard);
   });
@@ -59,7 +60,7 @@ export function portfolio() {
   
   const viewAllLink = document.createElement("a");
   viewAllLink.href = "/projects"; 
-  viewAllLink.className = "inline-flex items-center gap-2 font-semibold text-base text-red-600 hover:text-orange-300 transition-colors duration-300 hover:underline group border-2 border-red-400 p-2.5";
+  viewAllLink.className = "inline-flex items-center gap-2 font-semibold text-base text-red-600 hover:text-yellow-600 transition-colors duration-300 hover:underline group border-2 border-red-400 hover:border-yellow-600 p-2.5";
   
   const linkText = document.createElement("span");
   linkText.textContent = "view all my projects";

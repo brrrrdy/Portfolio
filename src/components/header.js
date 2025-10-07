@@ -88,7 +88,7 @@ export function header() {
   
   const downloadLink = document.createElement("a");
   downloadLink.href = "#"; 
-  downloadLink.className = "inline-flex items-center gap-2 font-semibold text-base text-red-600 hover:text-orange-300 transition-colors duration-300 hover:underline group border-2 border-red-400 p-2.5";
+  downloadLink.className = "inline-flex items-center gap-2 font-semibold text-base text-red-600 hover:text-green-600 transition-colors duration-300 hover:underline group border-2 border-red-600 hover:border-green-600 p-2.5";
   
   const downloadText = document.createElement("span");
   downloadText.textContent = "download my cv";

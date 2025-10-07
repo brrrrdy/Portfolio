@@ -9,9 +9,12 @@ export function FooterNav() {
   const leftSection = document.createElement("div");
   leftSection.className = "flex items-start gap-20";
   
-  const repoText = document.createElement("div");
+  const repoText = document.createElement("a");
   repoText.textContent = footerContent.footerText1;
-  repoText.className = "text-orange-200";
+  repoText.className = "text-orange-200 hover:text-white transition-colors duration-300";
+  repoText.href = "https://github.com/brrrrdy/Portfolio";
+  repoText.target = "_blank";
+  repoText.rel = "noopener noreferrer";
   
   // Sitemap links
   const sitemapLinks = document.createElement("div");
