@@ -24,9 +24,9 @@ export function portfolio() {
   textContainer.appendChild(text1);
   textContainer.appendChild(text2);
 
-  // Add project cards container
+  // Add project cards container with 2-column grid layout
   const projectsContainer = document.createElement("div");
-  projectsContainer.className = "mt-8 space-y-6";
+  projectsContainer.className = "mt-8 grid grid-cols-2 gap-6";
 
   // Image mapping for projects
   const imageMap = {
@@ -35,19 +35,20 @@ export function portfolio() {
     3: calcImg,
   };
 
-  // Generate project cards from JSON data - only show featured projects
-  
-  projectsData.projects
+  // Generate project cards from JSON data - show first 4 featured projects
+  const featuredProjects = projectsData.projects
     .filter(project => project.featured && project.featured.includes("y"))
-    .forEach(project => {
-      const projectCard = createProjectCard({
-        title: project.title,
-        description: project.description,
-        image: imageMap[project.id] || project.image,
-        tags: project.tags
-      });
-      projectsContainer.appendChild(projectCard);
+    .slice(0, 4); // Limit to 4 projects
+
+  featuredProjects.forEach(project => {
+    const projectCard = createProjectCard({
+      title: project.title,
+      description: project.description,
+      image: imageMap[project.id] || project.image,
+      tags: project.tags
     });
+    projectsContainer.appendChild(projectCard);
+  });
 
   // view all my projects link with arrow SVG at the bottom
 

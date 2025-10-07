@@ -100,11 +100,11 @@
       "id": 10,
       "title": "Etch-a-Sketch",
       "description": "Etch a sketch game.",
-      "image": "",
+      "image": "src/assets/images/etch.png",
       "tags": ["JavaScript", "CSS", "HTML", "Game"],
       "HTMLlink" : ["https://github.com/brrrrdy/Etch-a-Sketch"],
       "ghPage" : ["https://brrrrdy.github.io/Etch-a-Sketch/"],
-      "featured": ["n"]
+      "featured": ["y"]
     }
 
     
