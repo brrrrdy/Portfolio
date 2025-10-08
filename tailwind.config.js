@@ -5,6 +5,10 @@ module.exports = {
   ],
   theme: {
     screens: {
+      
+      'mobile': '320px',
+      // => @media (min-width: 320px) { ... }
+
       'tablet': '640px',
       // => @media (min-width: 640px) { ... }
 
