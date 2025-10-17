@@ -116,13 +116,13 @@ export function header() {
 
   // Create image container
   const imageContainer = document.createElement("div");
-  imageContainer.className = "flex justify-center items-start col-span-1";
+  imageContainer.className = "flex justify-start items-start pl-20 col-span-1";
 
   const heroImage = document.createElement("img");
   heroImage.src = heroTomImage;
   heroImage.alt = "Hero Tom";
   heroImage.className =
-    "w-50 h-auto object-contain border-4 border-black-600 transform rotate-3";
+    "w-70 h-auto object-contain border-4 border-black-600 transform rotate-3";
 
   imageContainer.appendChild(heroImage);
 
