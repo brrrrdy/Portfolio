@@ -1,7 +1,7 @@
 export function CodingBox() {
   const container = document.createElement("div");
   container.className =
-    "bg-gray-900 rounded-lg p-4 font-mono text-sm w-96 h-60 mx-auto shadow-lg";
+    "bg-gray-900 rounded-lg p-4 font-mono text-sm w-[50rem] h-60 mx-auto shadow-lg";
 
   // Terminal header
   const header = document.createElement("div");
@@ -30,7 +30,7 @@ export function CodingBox() {
     { text: "const developer = {", delay: 0 },
     { text: '  name: "Tom Alvarez",', delay: 800 },
     { text: '  role: "Full Stack Developer",', delay: 1600 },
-    { text: '  skills: ["JavaScript", "React", "Node.js"],', delay: 2400 },
+    { text: '  skills: ["JavaScript", "React", "CSS.js"],', delay: 2400 },
     { text: '  passion: "Building amazing web apps"', delay: 3200 },
     { text: "};", delay: 4000 },
     { text: "", delay: 4500 },
@@ -81,8 +81,7 @@ export function CodingBox() {
         );
       }
     } else {
-      // Animation complete, add cursor
-      codeContainer.appendChild(cursor);
+      // Animation complete, don't add cursor
 
       // Restart animation after delay
       setTimeout(() => {
