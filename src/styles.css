@@ -38,6 +38,6 @@ nav {
 }
 
 /* green borders for flexbox debug */
-/* * {
+* {
   border: 1px solid green !important;
-} */
+}

@@ -7,16 +7,16 @@ export function header() {
   header.className = "w-full grid grid-cols-3 gap-8 px-20 mb-10 items-start";
 
   const textContainer = document.createElement("div");
-  textContainer.className = "flex flex-col items-start col-span-1";
+  textContainer.className = "flex flex-col items-left col-span-1";
 
   const text1 = document.createElement("div");
   text1.textContent = headerContent.headerTitle;
-  text1.className = "text-6xl font-bold mb-10 self-left";
+  text1.className = "text-6xl font-bold mb-10 pl-50 self-left";
 
   // Create animated subtitle container
   const animatedContainer = document.createElement("div");
   animatedContainer.className =
-    "text-lg text-gray-500 pl-20 flex items-center gap-2 self-left";
+    "text-lg text-gray-500 pl-70 flex items-center gap-2 self-left";
 
   const staticText = document.createElement("span");
   staticText.textContent = "I am a ";
@@ -96,7 +96,7 @@ export function header() {
 
   // download my cv link below animated subtitle
   const downloadContainer = document.createElement("div");
-  downloadContainer.className = "block text-left mt-30";
+  downloadContainer.className = "flex justify-start mt-20 pl-50";
 
   const downloadLink = document.createElement("a");
   downloadLink.href = "#";
