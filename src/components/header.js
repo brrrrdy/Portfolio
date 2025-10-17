@@ -4,10 +4,10 @@ import { CodingBox } from "./codingBox.js";
 
 export function header() {
   const header = document.createElement("header");
-  header.className = "w-full relative flex items-start px-20 mb-10";
+  header.className = "w-full grid grid-cols-3 gap-8 px-20 mb-10 items-start";
 
   const textContainer = document.createElement("div");
-  textContainer.className = "flex flex-col items-start";
+  textContainer.className = "flex flex-col items-start col-span-1";
 
   const text1 = document.createElement("div");
   text1.textContent = headerContent.headerTitle;
@@ -116,7 +116,7 @@ export function header() {
 
   // Create image container
   const imageContainer = document.createElement("div");
-  imageContainer.className = "absolute right-8 top-20";
+  imageContainer.className = "flex justify-center items-start col-span-1";
 
   const heroImage = document.createElement("img");
   heroImage.src = heroTomImage;
@@ -128,13 +128,12 @@ export function header() {
 
   // Add coding box animation
   const codingBoxContainer = document.createElement("div");
-  codingBoxContainer.className =
-    "absolute left-1/3 transform -translate-x-1/2 top-0 ml-50";
+  codingBoxContainer.className = "flex justify-center items-start col-span-1";
   codingBoxContainer.appendChild(CodingBox());
 
   header.appendChild(textContainer);
-  header.appendChild(imageContainer);
   header.appendChild(codingBoxContainer);
+  header.appendChild(imageContainer);
 
   return header;
 }

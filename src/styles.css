@@ -18,7 +18,7 @@ nav {
 }
 
 .section-content-center {
-  @apply flex flex-col items-center text-center ;
+  @apply flex flex-col items-center text-center;
 }
 
 .about-content {
@@ -38,6 +38,6 @@ nav {
 }
 
 /* green borders for flexbox debug */
-/* * {
+* {
   border: 1px solid green !important;
-} */
+}
