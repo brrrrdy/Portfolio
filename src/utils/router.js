@@ -14,15 +14,26 @@ export class Router {
    */
   init() {
     // Handle browser back/forward buttons
-    window.addEventListener('popstate', (e) => {
+    window.addEventListener("popstate", (e) => {
       const fullPath = window.location.pathname + window.location.hash;
       this.handleRoute(fullPath);
     });
 
     // Handle initial page load
-    document.addEventListener('DOMContentLoaded', () => {
-      const fullPath = window.location.pathname + window.location.hash;
-      this.handleRoute(fullPath);
+    document.addEventListener("DOMContentLoaded", () => {
+      // Check for GitHub Pages redirect parameter
+      const urlParams = new URLSearchParams(window.location.search);
+      const redirect = urlParams.get("redirect");
+
+      if (redirect) {
+        // Remove redirect parameter and navigate to the intended route
+        const cleanUrl = window.location.origin + redirect;
+        window.history.replaceState({}, "", redirect);
+        this.handleRoute(redirect);
+      } else {
+        const fullPath = window.location.pathname + window.location.hash;
+        this.handleRoute(fullPath);
+      }
     });
   }
 
@@ -43,8 +54,8 @@ export class Router {
   addRoute(path, component, options = {}) {
     this.routes.set(path, {
       component,
-      title: options.title || 'Portfolio',
-      ...options
+      title: options.title || "Portfolio",
+      ...options,
     });
   }
 
@@ -55,9 +66,9 @@ export class Router {
    */
   navigate(path, replace = false) {
     if (replace) {
-      window.history.replaceState({}, '', path);
+      window.history.replaceState({}, "", path);
     } else {
-      window.history.pushState({}, '', path);
+      window.history.pushState({}, "", path);
     }
     this.handleRoute(path);
   }
@@ -68,11 +79,12 @@ export class Router {
    */
   handleRoute(path) {
     // Parse path and hash
-    const [routePath, hash] = path.split('#');
-    const normalizedPath = routePath === '/' ? '/' : routePath.replace(/\/$/, '');
-    
-    const route = this.routes.get(normalizedPath) || this.routes.get('*');
-    
+    const [routePath, hash] = path.split("#");
+    const normalizedPath =
+      routePath === "/" ? "/" : routePath.replace(/\/$/, "");
+
+    const route = this.routes.get(normalizedPath) || this.routes.get("*");
+
     if (!route) {
       console.error(`No route found for path: ${path}`);
       return;
@@ -80,7 +92,7 @@ export class Router {
 
     // Clear container
     if (this.container) {
-      this.container.innerHTML = '';
+      this.container.innerHTML = "";
     }
 
     // Update document title
@@ -92,9 +104,9 @@ export class Router {
       if (this.container && component) {
         this.container.appendChild(component);
       }
-      
+
       this.currentRoute = normalizedPath;
-      
+
       // Handle hash scrolling after component renders
       if (hash) {
         // Use requestAnimationFrame to ensure DOM is updated
@@ -105,34 +117,36 @@ export class Router {
         // Scroll to top on route change without hash
         window.scrollTo(0, 0);
       }
-      
     } catch (error) {
-      console.error('Error rendering component:', error);
+      console.error("Error rendering component:", error);
       this.handleError(error);
     }
   }
 
   /**
    * Scroll to hash element with smooth behavior
-   * @param {string} hash 
+   * @param {string} hash
    */
   scrollToHash(hash) {
     const targetElement = document.getElementById(hash);
-    
+
     if (targetElement) {
       // Use different offsets based on the target
       let yOffset;
-      if (hash === 'top') {
-        yOffset = -120; 
+      if (hash === "top") {
+        yOffset = -120;
       } else {
         yOffset = -60; // Standard offset for other anchors
       }
-      
-      const y = targetElement.getBoundingClientRect().top + window.pageYOffset + yOffset;
-      
+
+      const y =
+        targetElement.getBoundingClientRect().top +
+        window.pageYOffset +
+        yOffset;
+
       window.scrollTo({
         top: y,
-        behavior: 'smooth'
+        behavior: "smooth",
       });
     } else {
       console.warn(`Element with id '${hash}' not found`);
@@ -145,8 +159,8 @@ export class Router {
    */
   handleError(error) {
     if (this.container) {
-      const errorElement = document.createElement('div');
-      errorElement.className = 'flex items-center justify-center min-h-screen';
+      const errorElement = document.createElement("div");
+      errorElement.className = "flex items-center justify-center min-h-screen";
       errorElement.innerHTML = `
         <div class="text-center">
           <h1 class="text-2xl font-bold text-red-600 mb-4">Something went wrong</h1>
