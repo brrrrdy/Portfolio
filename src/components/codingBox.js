@@ -1,7 +1,7 @@
 export function CodingBox() {
   const container = document.createElement("div");
   container.className =
-    "bg-gray-900 rounded-lg p-4 font-mono text-sm w-80 h-48 mx-auto shadow-lg";
+    "bg-gray-900 rounded-lg p-4 font-mono text-sm w-96 h-60 mx-auto shadow-lg";
 
   // Terminal header
   const header = document.createElement("div");
@@ -24,7 +24,7 @@ export function CodingBox() {
 
   // Code content
   const codeContainer = document.createElement("div");
-  codeContainer.className = "text-green-400 h-36 overflow-hidden";
+  codeContainer.className = "text-green-400 h-44 overflow-hidden";
 
   const codeLines = [
     { text: "const developer = {", delay: 0 },

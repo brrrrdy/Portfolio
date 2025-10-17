@@ -116,8 +116,7 @@ export function header() {
 
   // Create image container
   const imageContainer = document.createElement("div");
-  imageContainer.className =
-    "absolute left-1/3 transform -translate-x-1/2 top-0 ml-50";
+  imageContainer.className = "absolute right-8 top-20";
 
   const heroImage = document.createElement("img");
   heroImage.src = heroTomImage;
@@ -129,7 +128,8 @@ export function header() {
 
   // Add coding box animation
   const codingBoxContainer = document.createElement("div");
-  codingBoxContainer.className = "absolute right-20 top-10";
+  codingBoxContainer.className =
+    "absolute left-1/3 transform -translate-x-1/2 top-0 ml-50";
   codingBoxContainer.appendChild(CodingBox());
 
   header.appendChild(textContainer);
