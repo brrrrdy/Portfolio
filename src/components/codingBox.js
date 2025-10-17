@@ -1,7 +1,7 @@
 export function CodingBox() {
   const container = document.createElement("div");
   container.className =
-    "bg-gray-900 rounded-lg p-4 font-mono text-sm w-[50rem] h-60 mx-auto shadow-lg";
+    "bg-red-200 rounded-lg p-4 font-mono text-sm w-[50rem] h-60 mx-auto";
 
   // Terminal header
   const header = document.createElement("div");
@@ -16,7 +16,7 @@ export function CodingBox() {
   });
 
   const title = document.createElement("span");
-  title.className = "text-gray-400 ml-4 text-xs";
+  title.className = "text-black-400 ml-4 text-xs";
   title.textContent = "portfolio.js";
 
   header.appendChild(dots);
@@ -24,13 +24,16 @@ export function CodingBox() {
 
   // Code content
   const codeContainer = document.createElement("div");
-  codeContainer.className = "text-green-400 h-44 overflow-hidden";
+  codeContainer.className = "text-black-400 h-44 overflow-hidden";
 
   const codeLines = [
-    { text: "const developer = {", delay: 0 },
+    { text: "const tomDev = {", delay: 0 },
     { text: '  name: "Tom Alvarez",', delay: 800 },
-    { text: '  role: "Full Stack Developer",', delay: 1600 },
-    { text: '  skills: ["JavaScript", "React", "CSS.js"],', delay: 2400 },
+    { text: '  role: "Full-Stack Developer",', delay: 1600 },
+    {
+      text: '  skills: ["JavaScript", "React", "CSS.js", "HTML", "XML", "Photoshop",],',
+      delay: 2400,
+    },
     { text: '  passion: "Building amazing web apps"', delay: 3200 },
     { text: "};", delay: 4000 },
     { text: "", delay: 4500 },
@@ -69,7 +72,7 @@ export function CodingBox() {
           currentChar + 1
         );
         currentChar++;
-        setTimeout(typeCode, 50); // Typing speed
+        setTimeout(typeCode, 20); // Typing speed
       } else {
         // Move to next line
         currentLine++;
@@ -81,15 +84,15 @@ export function CodingBox() {
         );
       }
     } else {
-      // Animation complete, don't add cursor
+      // Animation complete, don't restart
+      return;
 
-      // Restart animation after delay
-      setTimeout(() => {
-        codeContainer.innerHTML = "";
-        currentLine = 0;
-        currentChar = 0;
-        typeCode();
-      }, 3000);
+      //         setTimeout(() => {
+      //     codeContainer.innerHTML = "";
+      //     currentLine = 0;
+      //     currentChar = 0;
+      //     typeCode();
+      //   }, 3000);
     }
   }
 
