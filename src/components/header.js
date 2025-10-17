@@ -67,7 +67,7 @@ export function header() {
         setTimeout(() => {
           isDeleting = true;
           typeAnimation();
-        }, 4000); // pause duration
+        }, 15000); // pause duration - matches full coding box cycle
       }
     } else if (isDeleting) {
       // Deleting backward
