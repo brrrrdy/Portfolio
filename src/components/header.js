@@ -1,5 +1,6 @@
 import headerContent from "../content/header.json";
 import heroTomImage from "../assets/images/heroTom.webp";
+import { CodingBox } from "./codingBox.js";
 
 export function header() {
   const header = document.createElement("header");
@@ -14,14 +15,15 @@ export function header() {
 
   // Create animated subtitle container
   const animatedContainer = document.createElement("div");
-  animatedContainer.className = "text-lg text-gray-500 pl-20 flex items-center gap-2 self-left";
+  animatedContainer.className =
+    "text-lg text-gray-500 pl-20 flex items-center gap-2 self-left";
 
   const staticText = document.createElement("span");
   staticText.textContent = "I am a ";
 
   const typingText = document.createElement("span");
   typingText.className = "text-red-600 font-bold min-w-[200px]";
-  
+
   // Cursor element
   const cursor = document.createElement("span");
   cursor.textContent = "";
@@ -32,8 +34,12 @@ export function header() {
   animatedContainer.appendChild(cursor);
 
   // Typing animation logic
-  const phrases = ['full-stack developer', 'basketball player', 'pulpo enjoyer'];
-  const colors = ['text-red-600', 'text-orange-400', 'text-purple-600'];
+  const phrases = [
+    "full-stack developer",
+    "basketball player",
+    "pulpo enjoyer",
+  ];
+  const colors = ["text-red-600", "text-orange-400", "text-purple-600"];
   let currentPhraseIndex = 0;
   let currentCharIndex = 0;
   let isTyping = true;
@@ -42,14 +48,17 @@ export function header() {
   function typeAnimation() {
     const currentPhrase = phrases[currentPhraseIndex];
     const currentColor = colors[currentPhraseIndex];
-    
+
     // Update color for current phrase
     typingText.className = `${currentColor} font-bold min-w-[200px]`;
-    
+
     if (isTyping && !isDeleting) {
       // Typing forward
       if (currentCharIndex < currentPhrase.length) {
-        typingText.textContent = currentPhrase.substring(0, currentCharIndex + 1);
+        typingText.textContent = currentPhrase.substring(
+          0,
+          currentCharIndex + 1
+        );
         currentCharIndex++;
         setTimeout(typeAnimation, 80); // typing speed
       } else {
@@ -63,7 +72,10 @@ export function header() {
     } else if (isDeleting) {
       // Deleting backward
       if (currentCharIndex > 0) {
-        typingText.textContent = currentPhrase.substring(0, currentCharIndex - 1);
+        typingText.textContent = currentPhrase.substring(
+          0,
+          currentCharIndex - 1
+        );
         currentCharIndex--;
         setTimeout(typeAnimation, 20); // deleting speed
       } else {
@@ -85,17 +97,18 @@ export function header() {
   // download my cv link below animated subtitle
   const downloadContainer = document.createElement("div");
   downloadContainer.className = "block text-left mt-30";
-  
+
   const downloadLink = document.createElement("a");
-  downloadLink.href = "#"; 
-  downloadLink.className = "inline-flex items-center gap-2 font-semibold text-base text-red-600 hover:text-green-600 transition-colors duration-300 hover:underline group border-2 border-red-600 hover:border-green-600 p-2.5";
-  
+  downloadLink.href = "#";
+  downloadLink.className =
+    "inline-flex items-center gap-2 font-semibold text-base text-red-600 hover:text-green-600 transition-colors duration-300 hover:underline group border-2 border-red-600 hover:border-green-600 p-2.5";
+
   const downloadText = document.createElement("span");
   downloadText.textContent = "download my cv";
-  
+
   const downloadSvg = document.createElement("div");
   downloadSvg.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 -960 960 960" class="mt-1 transition-transform duration-300 group-hover:-translate-y-1.5"><path d="M440-240v-368L296-464l-56-56 240-240 240 240-56 56-144-144v368z"/></svg>`;
-  
+
   downloadLink.appendChild(downloadText);
   downloadLink.appendChild(downloadSvg);
   downloadContainer.appendChild(downloadLink);
@@ -103,17 +116,25 @@ export function header() {
 
   // Create image container
   const imageContainer = document.createElement("div");
-  imageContainer.className = "absolute left-1/3 transform -translate-x-1/2 top-0 ml-50";
-  
+  imageContainer.className =
+    "absolute left-1/3 transform -translate-x-1/2 top-0 ml-50";
+
   const heroImage = document.createElement("img");
   heroImage.src = heroTomImage;
   heroImage.alt = "Hero Tom";
-  heroImage.className = "w-50 h-auto object-contain border-4 border-black-600 transform rotate-3";
-  
+  heroImage.className =
+    "w-50 h-auto object-contain border-4 border-black-600 transform rotate-3";
+
   imageContainer.appendChild(heroImage);
+
+  // Add coding box animation
+  const codingBoxContainer = document.createElement("div");
+  codingBoxContainer.className = "absolute right-20 top-10";
+  codingBoxContainer.appendChild(CodingBox());
 
   header.appendChild(textContainer);
   header.appendChild(imageContainer);
+  header.appendChild(codingBoxContainer);
 
   return header;
 }
