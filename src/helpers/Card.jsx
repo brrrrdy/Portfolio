@@ -37,27 +37,36 @@ function Card({ project }) {
     };
   }, []);
 
+  const homepageUrl = project.ghPage?.[0];
+
   return (
     <div className={`card ${isInFocus ? "in-focus" : ""}`} ref={cardRef}>
-      {projectImage ? (
-        <img
-          src={projectImage}
-          alt={project.title[language] || project.title.en}
-        />
-      ) : (
-        <div className="image-placeholder">
-          <span>No Image Available</span>
+      <a
+        href={homepageUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="card-link"
+      >
+        {projectImage ? (
+          <img
+            src={projectImage}
+            alt={project.title[language] || project.title.en}
+          />
+        ) : (
+          <div className="image-placeholder">
+            <span>No Image Available</span>
+          </div>
+        )}
+        <h3>{project.title[language] || project.title.en}</h3>
+        <p>{project.description[language] || project.description.en}</p>
+        <div className="tags">
+          {project.tags.map((tag, index) => (
+            <span key={index} className="tag">
+              {tag}
+            </span>
+          ))}
         </div>
-      )}
-      <h3>{project.title[language] || project.title.en}</h3>
-      <p>{project.description[language] || project.description.en}</p>
-      <div className="tags">
-        {project.tags.map((tag, index) => (
-          <span key={index} className="tag">
-            {tag}
-          </span>
-        ))}
-      </div>
+      </a>
     </div>
   );
 }

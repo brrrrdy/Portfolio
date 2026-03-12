@@ -67,7 +67,7 @@
       "image": "/images/proj_images/scrn_portfolio.webp",
       "tags": ["JavaScript", "CSS", "HTML", "React", "Responsive Design"],
       "HTMLlink": ["https://github.com/brrrrdy/portfolioV2"],
-      "ghPage": ["https://brrrrdy.github.io/Etch-a-Sketch/"],
+      "ghPage": ["https://www.tomalvarez.xyz"],
       "featured": ["n"],
       "year": 2026
     },
@@ -188,25 +188,6 @@
       "tags": ["JavaScript", "CSS", "HTML"],
       "HTMLlink": ["https://github.com/brrrrdy/To-Do-List/tree/main"],
       "ghPage": ["https://brrrrdy.github.io/To-Do-List//"],
-      "featured": ["n"],
-      "year": 2025
-    },
-    {
-      "id": 7,
-      "title": {
-        "en": "Smiling Salads Restaurant",
-        "es": "Restaurante Smiling Salads",
-        "gz": "Restaurante Smiling Salads"
-      },
-      "description": {
-        "en": "Single-page restaurant website built to practice using Webpack and SPA development techniques.",
-        "es": "Sitio web de restaurante de una sola página construido para practicar el uso de Webpack y técnicas de desarrollo SPA.",
-        "gz": "Sitio web de restaurante dunha soa páxina construído para practicar o uso de Webpack e técnicas de desenvolvemento SPA."
-      },
-      "image": "/images/proj_images/scrn_restaurant.webp",
-      "tags": ["JavaScript", "CSS", "HTML"],
-      "HTMLlink": ["https://github.com/brrrrdy/restaurant-webpack"],
-      "ghPage": ["https://brrrrdy.github.io/restaurant-webpack/"],
       "featured": ["n"],
       "year": 2025
     },

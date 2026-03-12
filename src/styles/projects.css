@@ -50,6 +50,14 @@
     /* paper shadow */ -10px 10px 0 0 var(--card-border); /* border shadow */
 }
 
+.card-link {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
 .card::before {
   content: none;
 }
