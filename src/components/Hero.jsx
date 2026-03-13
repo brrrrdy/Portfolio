@@ -84,7 +84,11 @@ function Hero() {
           </div>
 
           <div className="image-container">
-            <img className="tomImage" src={tomImage} alt="Tom" />
+            <img
+              className="tomImage"
+              src={tomImage}
+              alt="stylized photo of Tom Alvarez"
+            />
           </div>
         </div>
       </div>
