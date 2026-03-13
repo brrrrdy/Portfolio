@@ -121,11 +121,13 @@
 }
 
 .open-in-new-icon {
-  width: 16px;
-  height: 16px;
-  margin-left: 4px;
-  opacity: 0.7;
+  width: 18px;
+  height: 18px;
+  margin-left: 6px;
+  opacity: 1;
   transition: all 0.2s ease;
+  background-color: red;
+  border: 1px solid blue;
 }
 
 .github-page-link:hover .open-in-new-icon {
