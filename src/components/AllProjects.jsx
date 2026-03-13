@@ -21,71 +21,74 @@ export default function AllProjects() {
   return (
     <div className="app">
       <TopNav />
-      <section id="all-projects">
-        <div className="projects-container">
-          <h1>{content.pageTitle}</h1>
-          <div className="intro-box">{content.intro}</div>
-          <div className="projects-table-wrapper">
-            <table className="projects-table">
-              <thead>
-                <tr>
-                  <th>{content.tableHeaders.title}</th>
-                  <th>{content.tableHeaders.description}</th>
-                  <th>{content.tableHeaders.tags}</th>
-                  <th>{content.tableHeaders.year}</th>
-                  <th>{content.tableHeaders.github}</th>
-                </tr>
-              </thead>
-              <tbody>
-                {projects.map((project) => (
-                  <tr key={project.id}>
-                    <td>
-                      <a
-                        href={project.ghPage[0]}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="project-title-link"
-                      >
-                        {project.title[language] || project.title.en}
-                      </a>
-                    </td>
-                    <td className="description-cell">
-                      {project.description[language] || project.description.en}
-                    </td>
-                    <td>
-                      <div className="tags-container">
-                        {project.tags.map((tag, index) => (
-                          <span key={index} className="tag">
-                            {tag}
-                          </span>
-                        ))}
-                      </div>
-                    </td>
-
-                    <td className="year-cell">{project.year}</td>
-
-                    <td>
-                      <a
-                        href={project.HTMLlink[0]}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="github-page-link"
-                        aria-label={`View live demo of ${project.title[language] || project.title.en}`}
-                      >
-                        <img
-                          src={githubIcon}
-                          alt="GitHub"
-                          className="github-icon"
-                        />
-                      </a>
-                    </td>
+      <main>
+        <section id="all-projects">
+          <div className="projects-container">
+            <h1>{content.pageTitle}</h1>
+            <div className="intro-box">{content.intro}</div>
+            <div className="projects-table-wrapper">
+              <table className="projects-table">
+                <thead>
+                  <tr>
+                    <th>{content.tableHeaders.title}</th>
+                    <th>{content.tableHeaders.description}</th>
+                    <th>{content.tableHeaders.tags}</th>
+                    <th>{content.tableHeaders.year}</th>
+                    <th>{content.tableHeaders.github}</th>
                   </tr>
-                ))}
-              </tbody>
-            </table>
+                </thead>
+                <tbody>
+                  {projects.map((project) => (
+                    <tr key={project.id}>
+                      <td>
+                        <a
+                          href={project.ghPage[0]}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="project-title-link"
+                        >
+                          {project.title[language] || project.title.en}
+                        </a>
+                      </td>
+                      <td className="description-cell">
+                        {project.description[language] ||
+                          project.description.en}
+                      </td>
+                      <td>
+                        <div className="tags-container">
+                          {project.tags.map((tag, index) => (
+                            <span key={index} className="tag">
+                              {tag}
+                            </span>
+                          ))}
+                        </div>
+                      </td>
+
+                      <td className="year-cell">{project.year}</td>
+
+                      <td>
+                        <a
+                          href={project.HTMLlink[0]}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="github-page-link"
+                          aria-label={`View live demo of ${project.title[language] || project.title.en}`}
+                        >
+                          <img
+                            src={githubIcon}
+                            alt="GitHub"
+                            className="github-icon"
+                          />
+                        </a>
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </main>
       <Footer />
     </div>
   );

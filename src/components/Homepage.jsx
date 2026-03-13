@@ -7,15 +7,17 @@ export default function HomePage() {
   return (
     <div className="app">
       <TopNav />
-      <section id="about">
-        <Hero />
-      </section>
-      <section id="projects">
-        <Projects />
-      </section>
-      <section id="contact">
-        <Footer />
-      </section>
+      <main>
+        <section id="about">
+          <Hero />
+        </section>
+        <section id="projects">
+          <Projects />
+        </section>
+        <section id="contact">
+          <Footer />
+        </section>
+      </main>
     </div>
   );
 }
