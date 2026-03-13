@@ -1,26 +1,26 @@
 {
   "en": {
     "copyright": "All rights reserved.",
-    "about": "About",
-    "projects": "Projects",
-    "toolkit": "Toolkit",
-    "contact": "Contact",
-    "connect": "Connect"
+    "about": "about",
+    "projects": "projects",
+    "toolkit": "toolkit",
+    "contact": "contact",
+    "connect": "connect"
   },
   "es": {
     "copyright": "Todos los derechos reservados.",
-    "about": "Sobre Mí",
-    "projects": "Proyectos",
-    "toolkit": "Herramientas",
-    "contact": "Contacto",
-    "connect": "Conectar"
+    "about": "sobre mí",
+    "projects": "proyectos",
+    "toolkit": "herramientas",
+    "contact": "contacto",
+    "connect": "conectar"
   },
   "gz": {
     "copyright": "Todos os dereitos reservados.",
-    "about": "Sobre Min",
-    "projects": "Proxectos",
-    "toolkit": "Ferramentas",
-    "contact": "Contacto",
-    "connect": "Conectar"
+    "about": "sobre min",
+    "projects": "proxectos",
+    "toolkit": "ferramentas",
+    "contact": "contacto",
+    "connect": "conectar"
   }
 }
