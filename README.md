@@ -33,6 +33,8 @@ If you are developing a production application, we recommend using TypeScript wi
 
 # Trigger workflow
 
+## WCAG
+
 1. Images & Alt Text
    All images have meaningful alt attributes
    Decorative images use alt="" (empty alt)
@@ -69,3 +71,7 @@ If you are developing a production application, we recommend using TypeScript wi
    Test with screen reader (NVDA/JAWS/VoiceOver)
    Check in high contrast mode
    Test on mobile devices
+
+## Bugs
+
+- bottom nav links and topnav links should use same json data.
