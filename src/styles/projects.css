@@ -53,9 +53,7 @@
 .card-link {
   text-decoration: none;
   color: inherit;
-  display: flex;
-  flex-direction: column;
-  flex: 1;
+  display: block;
 }
 
 .card::before {
@@ -122,6 +120,33 @@
   font-weight: 600;
   margin-bottom: 0.75rem;
   color: var(--dark-text);
+  margin: 0;
+}
+
+.project-title-link {
+  color: var(--dark-text);
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 0.75rem;
+}
+
+.project-title-link:hover {
+  color: orangered;
+}
+
+.open-in-new-icon {
+  width: 14px !important;
+  height: 14px !important;
+  transition: none;
+  flex-shrink: 0;
+  opacity: 0.8;
+  fill: #dc2626;
+}
+
+.app-dark .open-in-new-icon {
+  fill: white;
 }
 
 .card p {

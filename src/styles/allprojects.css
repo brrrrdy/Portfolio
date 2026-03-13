@@ -79,7 +79,7 @@
 
 .project-title-link:hover {
   color: orangered;
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 .project-title-link:hover .open-in-new-icon {

@@ -57,16 +57,33 @@ function Card({ project }) {
             <span>No Image Available</span>
           </div>
         )}
-        <h3>{project.title[language] || project.title.en}</h3>
-        <p>{project.description[language] || project.description.en}</p>
-        <div className="tags">
-          {project.tags.map((tag, index) => (
-            <span key={index} className="tag">
-              {tag}
-            </span>
-          ))}
-        </div>
       </a>
+      <a
+        href={homepageUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="project-title-link"
+      >
+        <h3>{project.title[language] || project.title.en}</h3>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          height="14px"
+          viewBox="0 -960 960 960"
+          width="14px"
+          fill="currentColor"
+          className="open-in-new-icon"
+        >
+          <path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h280v80H200v560h560v-280h80v280q0 33-23.5 56.5T760-120H200Zm188-212-56-56 372-372H560v-80h280v280h-80v-144L388-332Z" />
+        </svg>
+      </a>
+      <p>{project.description[language] || project.description.en}</p>
+      <div className="tags">
+        {project.tags.map((tag, index) => (
+          <span key={index} className="tag">
+            {tag}
+          </span>
+        ))}
+      </div>
     </div>
   );
 }
