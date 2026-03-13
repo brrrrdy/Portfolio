@@ -76,7 +76,7 @@ function Footer() {
               </div>
             </div>
             <div className="footer-social">
-              <h4>{content.connect}</h4>
+              <h2>{content.connect}</h2>
               <div className="social-links">
                 <a
                   href="https://www.linkedin.com/in/tom-alvarez-ryan-80423951/"
