@@ -5,6 +5,7 @@ import { useLanguage } from "./LanguageContext";
 import projectsData from "../content/projects.json";
 import "../styles/allprojects.css";
 import githubIcon from "../assets/images/github-original.svg?url";
+import openInNewIcon from "../assets/images/open_in_new_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg?url";
 
 export default function AllProjects() {
   const { projects, pageCopy } = projectsData;
@@ -72,12 +73,17 @@ export default function AllProjects() {
                           target="_blank"
                           rel="noopener noreferrer"
                           className="github-page-link"
-                          aria-label={`View live demo of ${project.title[language] || project.title.en}`}
+                          aria-label={`View live demo of ${project.title[language] || project.title.en} (opens in new window)`}
                         >
                           <img
                             src={githubIcon}
                             alt="GitHub"
                             className="github-icon"
+                          />
+                          <img
+                            src={openInNewIcon}
+                            alt="Opens in new window"
+                            className="open-in-new-icon"
                           />
                         </a>
                       </td>

@@ -39,7 +39,7 @@ https://tomalvarez.xyz
    Required fields are indicated
    Form validation doesn't rely solely on color
 4. Links & Buttons
-   Link text makes sense out of context ("Click here" → "View weather app project")
+   Link text makes sense out of context
    Touch targets are minimum 24x24px (AA)
    Links to external sites indicate they open in new windows
 5. Content Structure
