@@ -129,7 +129,7 @@
   line-height: 1.5;
   margin-bottom: 1rem;
   color: var(--dark-text);
-  opacity: 0.8;
+  opacity: 1;
   flex-grow: 1;
 }
 
