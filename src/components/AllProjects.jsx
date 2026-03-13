@@ -49,6 +49,11 @@ export default function AllProjects() {
                           className="project-title-link"
                         >
                           {project.title[language] || project.title.en}
+                          <img
+                            src={openInNewIcon}
+                            alt="Opens in new window"
+                            className="open-in-new-icon"
+                          />
                         </a>
                       </td>
                       <td className="description-cell">

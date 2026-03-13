@@ -72,11 +72,18 @@
   text-decoration: none;
   font-weight: 600;
   transition: color 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
 }
 
 .project-title-link:hover {
   color: orangered;
   text-decoration: underline;
+}
+
+.project-title-link:hover .open-in-new-icon {
+  opacity: 1;
 }
 
 .description-cell {
@@ -120,17 +127,28 @@
   transition: all 0.2s ease;
 }
 
-.open-in-new-icon {
-  width: 18px;
-  height: 18px;
-  margin-left: 6px;
-  opacity: 1;
-  transition: all 0.2s ease;
-  background-color: red;
-  border: 1px solid blue;
+.app-dark .github-icon {
+  filter: brightness(0) saturate(100%) invert(48%) sepia(79%) saturate(2476%)
+    hue-rotate(346deg) brightness(97%) contrast(97%);
 }
 
-.github-page-link:hover .open-in-new-icon {
+.open-in-new-icon {
+  width: 16px;
+  height: 12px;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+  opacity: 1;
+}
+
+.app-light .open-in-new-icon {
+  filter: brightness(0) saturate(100%) invert(18%) sepia(83%) saturate(6416%)
+    hue-rotate(358deg) brightness(99%) contrast(119%);
+}
+.app-dark .open-in-new-icon {
+  filter: brightness(0) saturate(100%) invert(100%);
+}
+
+.github-page-link:hover {
   opacity: 1;
 }
 
