@@ -69,12 +69,14 @@ function Toolkit({ selectedTechs, setSelectedTechs }) {
         <div className="section-content-wrapper">
           <div className="technologies-grid">
             {uniqueTechnologies.map((tech, index) => (
-              <div
+              <button
                 key={index}
                 className={`technology-item ${
                   selectedTechs.includes(tech) ? "selected" : ""
                 }`}
                 onClick={() => handleTechClick(tech)}
+                aria-pressed={selectedTechs.includes(tech)}
+                aria-label={`${selectedTechs.includes(tech) ? "Deselect" : "Select"} ${tech} technology`}
               >
                 {techLogos[tech] && (
                   <img
@@ -85,7 +87,7 @@ function Toolkit({ selectedTechs, setSelectedTechs }) {
                   />
                 )}
                 <span className="technology-name">{tech}</span>
-              </div>
+              </button>
             ))}
           </div>
         </div>
