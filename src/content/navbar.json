@@ -1,23 +1,23 @@
 {
   "en": {
-    "home": "Home",
-    "about": "About",
-    "projects": "Projects",
-    "toolkit": "Toolkit",
-    "contact": "Contact"
+    "home": "home",
+    "about": "about",
+    "projects": "projects",
+    "toolkit": "toolkit",
+    "contact": "contact"
   },
   "es": {
-    "home": "Inicio",
-    "about": "Sobre Mí",
-    "projects": "Proyectos",
-    "toolkit": "Herramientas",
-    "contact": "Contacto"
+    "home": "inicio",
+    "about": "sobre mí",
+    "projects": "proyectos",
+    "toolkit": "herramientas",
+    "contact": "contacto"
   },
   "gz": {
-    "home": "Inicio",
-    "about": "Sobre Min",
-    "projects": "Proxectos",
-    "toolkit": "Ferramentas",
-    "contact": "Contacto"
+    "home": "inicio",
+    "about": "sobre min",
+    "projects": "proxectos",
+    "toolkit": "ferramentas",
+    "contact": "contacto"
   }
 }
