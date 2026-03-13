@@ -36,9 +36,19 @@
 }
 
 .title {
-  font-size: 5rem;
+  font-size: 6rem;
   font-weight: bold;
+  background: linear-gradient(to right, #8218eb, #096170, #820e63);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   margin-bottom: 20px;
+}
+
+.app-dark .title {
+  background: none;
+  color: white;
+  -webkit-text-fill-color: white;
 }
 
 .subtitle {
