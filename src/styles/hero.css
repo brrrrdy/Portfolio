@@ -89,6 +89,18 @@
   color: yellow;
 }
 
+.app-dark .typing-text.red {
+  color: #d36868;
+}
+
+.app-dark .typing-text.purple {
+  color: #eda8e6;
+}
+
+.app-dark .typing-text.green {
+  color: #81e1c2;
+}
+
 .cursor {
   color: transparent;
 }
