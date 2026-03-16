@@ -184,6 +184,24 @@ body.app-light .app {
   text-decoration: none;
 }
 
+/* Utility classes */
+.top-anchor {
+  height: 1px;
+  width: 100%;
+  position: relative;
+}
+
+/* Dark mode button overrides */
+.app-dark .btn-primary {
+  color: var(--light-text);
+  border-color: var(--light-text);
+}
+
+.app-dark .btn-primary:hover {
+  color: #fbbf24; /* Golden yellow on hover */
+  border-color: #fbbf24;
+}
+
 /* DEBUG: Apply green borders to all elements */
 /* * {
   border: 2px solid green !important;

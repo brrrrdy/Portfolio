@@ -101,6 +101,11 @@
   color: #81e1c2;
 }
 
+/* Dark mode hero image styling */
+.app-dark .tomImage {
+  filter: invert(70%);
+}
+
 .cursor {
   color: transparent;
 }
