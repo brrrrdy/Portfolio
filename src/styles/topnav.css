@@ -201,6 +201,21 @@
   background: rgba(255, 69, 0, 0.05);
 }
 
+/* Dark mode dropdown styles to match desktop */
+.app-dark .language-dropdown-toggle:hover {
+  color: var(--button-border);
+}
+
+.app-dark .language-dropdown-item:hover {
+  background: rgba(201, 228, 227, 0.1);
+  color: var(--button-border);
+}
+
+.app-dark .language-dropdown-item.active {
+  color: var(--light-accent);
+  background: rgba(168, 234, 253, 0.05);
+}
+
 /* Burger Menu Styles */
 .burger-menu-button {
   display: none;
