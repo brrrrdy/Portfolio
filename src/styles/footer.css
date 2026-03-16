@@ -119,15 +119,22 @@
 }
 
 .footer-sitemap button {
-  color: var(--light-text);
+  color: var(--dark-text);
   text-decoration: none;
   opacity: 0.8;
-  transition: opacity 0.2s ease;
+  transition: all 0.2s ease;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: inherit;
+  font-family: inherit;
+  padding: 0;
 }
 
 .footer-sitemap button:hover {
+  color: orangered;
   opacity: 1;
-  text-decoration: underline;
+  transform: translateY(-2px);
 }
 
 .footer-social {

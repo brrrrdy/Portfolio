@@ -64,7 +64,6 @@ function Footer() {
                           cursor: "pointer",
                           fontSize: "inherit",
                           fontFamily: "inherit",
-                          color: "inherit",
                           padding: 0,
                         }}
                       >
