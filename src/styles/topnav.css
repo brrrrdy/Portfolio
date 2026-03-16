@@ -133,6 +133,14 @@
   color: orangered;
 }
 
+.app-dark .language-button:hover {
+  color: var(--button-border);
+}
+
+.app-dark .language-button.active {
+  color: var(--light-accent);
+}
+
 /* Dropdown styles for mobile */
 .language-dropdown-toggle {
   background: transparent;
