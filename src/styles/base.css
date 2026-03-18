@@ -1,6 +1,7 @@
 /* GOOGLE ICONS */
 
 @import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
 
 /* UNIVERSAL */
 
@@ -11,9 +12,7 @@
 }
 
 body {
-  font-family:
-    -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu",
-    "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-family: "Poppins", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -200,6 +199,120 @@ body.app-light .app {
 .app-dark .btn-primary:hover {
   color: #fbbf24; /* Golden yellow on hover */
   border-color: #fbbf24;
+}
+
+/* TEXT SIZE ACCESSIBILITY CLASSES */
+
+/* Small text size */
+.text-small,
+.text-small *,
+.text-small p,
+.text-small span,
+.text-small div,
+.text-small li,
+.text-small a,
+.text-small button {
+  font-size: 14px !important;
+}
+
+.text-small h1 {
+  font-size: 2rem !important;
+}
+
+.text-small h2 {
+  font-size: 1.5rem !important;
+}
+
+.text-small h3 {
+  font-size: 1.25rem !important;
+}
+
+.text-small .section-title {
+  font-size: 1.5rem !important;
+}
+
+/* Medium text size (default) */
+.text-medium,
+.text-medium *,
+.text-medium p,
+.text-medium span,
+.text-medium div,
+.text-medium li,
+.text-medium a,
+.text-medium button {
+  font-size: 16px !important;
+}
+
+.text-medium h1 {
+  font-size: 2.5rem !important;
+}
+
+.text-medium h2 {
+  font-size: 2rem !important;
+}
+
+.text-medium h3 {
+  font-size: 1.5rem !important;
+}
+
+.text-medium .section-title {
+  font-size: 2rem !important;
+}
+
+/* Large text size */
+.text-large,
+.text-large *,
+.text-large p,
+.text-large span,
+.text-large div,
+.text-large li,
+.text-large a,
+.text-large button {
+  font-size: 18px !important;
+}
+
+.text-large h1 {
+  font-size: 3rem !important;
+}
+
+.text-large h2 {
+  font-size: 2.25rem !important;
+}
+
+.text-large h3 {
+  font-size: 1.75rem !important;
+}
+
+.text-large .section-title {
+  font-size: 2.25rem !important;
+}
+
+/* Extra large text size */
+.text-extra-large,
+.text-extra-large *,
+.text-extra-large p,
+.text-extra-large span,
+.text-extra-large div,
+.text-extra-large li,
+.text-extra-large a,
+.text-extra-large button {
+  font-size: 20px !important;
+}
+
+.text-extra-large h1 {
+  font-size: 3.5rem !important;
+}
+
+.text-extra-large h2 {
+  font-size: 2.5rem !important;
+}
+
+.text-extra-large h3 {
+  font-size: 2rem !important;
+}
+
+.text-extra-large .section-title {
+  font-size: 2.5rem !important;
 }
 
 /* DEBUG: Apply green borders to all elements */
