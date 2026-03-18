@@ -1,16 +1,13 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import { useLanguage } from "../contexts/LanguageContext";
-import Colors from "./Colors";
+import { useTheme } from "../contexts/ThemeContext";
 import navContent from "../content/navbar.json";
 
 function TopNav() {
   const { language, switchLanguage } = useLanguage();
+  const { theme, toggleTheme } = useTheme();
   const content = navContent[language] || navContent.en;
-  const [theme, setTheme] = useState(() => {
-    // Initialize theme from localStorage or default to "light"
-    return localStorage.getItem("portfolio-theme") || "light";
-  });
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isLanguageDropdownOpen, setIsLanguageDropdownOpen] = useState(false);
   const navigate = useNavigate();
@@ -24,6 +21,10 @@ function TopNav() {
 
   const currentLanguage =
     languages.find((lang) => lang.code === language) || languages[0];
+
+  const getThemeIcon = () => {
+    return theme === "light" ? "dark_mode" : "light_mode";
+  };
 
   const navLinks = [
     { href: "#home", text: content.home, type: "scroll" },
@@ -40,15 +41,20 @@ function TopNav() {
 
   const handleNavClick = (link) => {
     // Close mobile menu when a link is clicked
+
     setIsMobileMenuOpen(false);
 
     if (link.type === "navigate") {
       // Navigate to a different page
+
       navigate(link.href);
     } else if (location.pathname !== "/") {
       // If not on homepage, navigate to homepage first, then scroll
+
       navigate("/");
+
       // Use setTimeout to wait for navigation to complete before scrolling
+
       setTimeout(() => {
         if (link.href === "#home") {
           window.scrollTo({ top: 0, behavior: "smooth" });
@@ -61,6 +67,7 @@ function TopNav() {
       }, 100);
     } else {
       // If already on homepage, scroll to section or top
+
       if (link.href === "#home") {
         window.scrollTo({ top: 0, behavior: "smooth" });
       } else {
@@ -72,21 +79,27 @@ function TopNav() {
     }
   };
 
-  // Apply theme to root element and save to localStorage
-  useEffect(() => {
-    document.body.className = `app-${theme}`;
-    localStorage.setItem("portfolio-theme", theme);
-  }, [theme]);
-
   return (
     <nav className="top-nav">
       <div className="top-nav-container">
         {/* left side - theme toggle and mobile home button */}
+
         <div className="nav-left">
           <div className="nav-theme-toggle">
-            <Colors theme={theme} setTheme={setTheme} />
+            <div className="theme-toggle">
+              <button
+                type="button"
+                onClick={toggleTheme}
+                className="theme-toggle-button"
+                title={`Switch to ${theme === "light" ? "dark" : "light"} mode`}
+              >
+                <span className="material-icons">{getThemeIcon()}</span>
+              </button>
+            </div>
           </div>
+
           {/* Home icon - mobile only */}
+
           <button
             className="mobile-home-button"
             onClick={() => handleNavClick({ href: "#home", type: "scroll" })}
@@ -105,6 +118,7 @@ function TopNav() {
         </div>
 
         {/* center - nav links (desktop) */}
+
         <div className="nav-links nav-links-desktop">
           {navLinks.map((link) => (
             <button
@@ -126,6 +140,7 @@ function TopNav() {
         </div>
 
         {/* right side - burger menu and language selector */}
+
         <div className="nav-right">
           {/* Burger menu button */}
           <button
