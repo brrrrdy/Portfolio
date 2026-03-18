@@ -1,35 +1,35 @@
 {
   "en": {
     "headerTitle": "tom alvarez",
-    "headerSubtitle": "and I",
+    "headerSubtitle": "I am",
     "headerLink": "download my cv",
     "typingPhrases": [
-      "am a full-stack developer",
-      "love basketball",
-      "eat a lot of octopus!🐙",
-      "make an amazing tortilla"
+      "a full-stack developer",
+      "a basketball player",
+      "eating pulpo!🐙",
+      "probably making tortilla"
     ]
   },
   "es": {
     "headerTitle": "tom alvarez",
-    "headerSubtitle": "y",
+    "headerSubtitle": "Soy",
     "headerLink": "descargar mi cv",
     "typingPhrases": [
-      "soy desarrollador full-stack",
+      "desarrollador full-stack",
       "jugador de baloncesto",
-      "amante del pulpo🐙",
-      "hago una tortilla increíble"
+      "comiendo pulpo!🐙",
+      "probablemente haciendo tortilla"
     ]
   },
   "gz": {
     "headerTitle": "tom alvarez",
-    "headerSubtitle": "e",
+    "headerSubtitle": "Eu son",
     "headerLink": "descargar o meu cv",
     "typingPhrases": [
-      "son desenvolvedor full-stack",
+      "desenvolvedor full-stack",
       "xogador de baloncesto",
-      "amante do polbo🐙",
-      "fago unha tortilla incrible"
+      "comendo polbo!🐙",
+      "probablemente facendo tortilla"
     ]
   }
 }
