@@ -148,10 +148,6 @@
   filter: brightness(0) saturate(100%) invert(100%);
 }
 
-.github-page-link:hover {
-  opacity: 1;
-}
-
 /* Responsive design */
 @media (max-width: 768px) {
   .projects-container {
