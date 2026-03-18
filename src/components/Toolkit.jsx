@@ -1,4 +1,3 @@
-import React from "react";
 import { useLanguage } from "../contexts/languageContext";
 import projectsData from "../content/projects.json";
 import toolkitContent from "../content/toolkit.json";
