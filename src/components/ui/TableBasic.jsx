@@ -1,6 +1,6 @@
-import { useLanguage } from "../contexts/LanguageContext";
-import githubIcon from "../assets/images/github-original.svg?url";
-import openInNewIcon from "../assets/images/open_in_new_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg?url";
+import { useLanguage } from "../../contexts/languageContext";
+import githubIcon from "../../assets/images/github-original.svg?url";
+import openInNewIcon from "../../assets/images/open_in_new_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg?url";
 
 function TableBasic({ projects, content }) {
   const { language } = useLanguage();

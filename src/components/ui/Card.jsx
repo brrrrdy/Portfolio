@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
-import { useLanguage } from "../contexts/LanguageContext";
-import { projectImages } from "../assets/images/projectImages";
+import { useLanguage } from "../../contexts/languageContext";
+import { projectImages } from "../../assets/images/projectImages";
 
 function Card({ project }) {
   const { language } = useLanguage();

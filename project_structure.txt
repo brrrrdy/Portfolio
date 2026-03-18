@@ -1,0 +1,136 @@
+.
+├── .env.local
+├── .github
+│   └── workflows
+│       └── deploy.yml
+├── .gitignore
+├── CNAME
+├── README.md
+├── docs
+│   ├── 404.html
+│   ├── CNAME
+│   ├── assets
+│   │   ├── Flag_of_Galicia_Flat_Round_Corner-64x64-DngAGYLn.png
+│   │   ├── heroTom-kdJtjGV6.webp
+│   │   ├── index--AKhPg2R.css
+│   │   ├── index-BAN1WP6y.js
+│   │   ├── index-Bz-gPWIf.css
+│   │   ├── index-C5kY4_g5.js
+│   │   ├── index-CAmfyC7M.js
+│   │   ├── index-DFn2MTPj.js
+│   │   ├── index-DVBleQ0Z.css
+│   │   ├── index-DwjEYOtH.js
+│   │   ├── scrn_calculator-CLjjlMTM.webp
+│   │   ├── scrn_dashboard-Cgh2UzaC.webp
+│   │   ├── scrn_etch-CiFOgRzL.webp
+│   │   ├── scrn_library-nT3yIy_R.webp
+│   │   ├── scrn_naughtscrosses-_v2iuxQM.webp
+│   │   ├── scrn_restaurant-DD3hh-38.webp
+│   │   ├── scrn_rps-DzNGhJLh.webp
+│   │   ├── scrn_signup-BjGWzG3L.webp
+│   │   ├── scrn_todo-BiP_SKLe.webp
+│   │   └── scrn_weather-CtXMEvM5.webp
+│   ├── favicon.svg
+│   ├── favicon.webp
+│   ├── images
+│   │   └── proj_images
+│   └── index.html
+├── eslint.config.js
+├── images
+│   └── proj_images
+├── index.html
+├── package-lock.json
+├── package.json
+├── project_structure.txt
+├── public
+│   ├── 404.html
+│   ├── CNAME
+│   ├── favicon.webp
+│   └── images
+│       └── proj_images
+├── src
+│   ├── App.jsx
+│   ├── assets
+│   │   └── images
+│   │       ├── apartment_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg
+│   │       ├── api.svg
+│   │       ├── call_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg
+│   │       ├── css3-plain.svg
+│   │       ├── darkswitchsvg.svg
+│   │       ├── eslint-plain.svg
+│   │       ├── figma-original.svg
+│   │       ├── git-original.svg
+│   │       ├── github-original.svg
+│   │       ├── globe_location_pin_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg
+│   │       ├── heroTom.webp
+│   │       ├── html5-plain-wordmark.svg
+│   │       ├── javascript-plain.svg
+│   │       ├── jest-plain.svg
+│   │       ├── jira-original.svg
+│   │       ├── json-plain.svg
+│   │       ├── linkedin.svg
+│   │       ├── mail_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg
+│   │       ├── open_in_new_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg
+│   │       ├── photoshop-plain.svg
+│   │       ├── proj_images
+│   │       │   ├── Flag_of_Galicia_Flat_Round_Corner-64x64.png
+│   │       │   ├── Flag_of_Spain_Flat_Round_Corner-64x64.png
+│   │       │   ├── Flag_of_United_Kingdom_Flat_Round_Corner-64x64.png
+│   │       │   ├── scrn_calculator.webp
+│   │       │   ├── scrn_dashboard.webp
+│   │       │   ├── scrn_etch.webp
+│   │       │   ├── scrn_library.webp
+│   │       │   ├── scrn_naughtscrosses.webp
+│   │       │   ├── scrn_restaurant.webp
+│   │       │   ├── scrn_rps.webp
+│   │       │   ├── scrn_signup.webp
+│   │       │   ├── scrn_todo.webp
+│   │       │   └── scrn_weather.webp
+│   │       ├── projectImages.js
+│   │       ├── react-original.svg
+│   │       ├── responsive.svg
+│   │       ├── tailwindcss-original.svg
+│   │       ├── webpack-plain.svg
+│   │       └── xml-plain.svg
+│   ├── components
+│   │   ├── Footer.jsx
+│   │   ├── Hero.jsx
+│   │   ├── LanguageChange.jsx
+│   │   ├── Layout.jsx
+│   │   ├── Projects.jsx
+│   │   ├── ThemeChange.jsx
+│   │   ├── Toolkit.jsx
+│   │   ├── TopNav.jsx
+│   │   ├── pages
+│   │   │   ├── AllProjects.jsx
+│   │   │   ├── Contact.jsx
+│   │   │   └── Homepage.jsx
+│   │   └── ui
+│   │       ├── Card.jsx
+│   │       └── TableBasic.jsx
+│   ├── content
+│   │   ├── contact.json
+│   │   ├── footer.json
+│   │   ├── hero.json
+│   │   ├── navbar.json
+│   │   ├── projects.json
+│   │   └── toolkit.json
+│   ├── contexts
+│   │   ├── languageContext.js
+│   │   └── themeContext.js
+│   ├── index.css
+│   ├── main.jsx
+│   └── styles
+│       ├── allprojects.css
+│       ├── base.css
+│       ├── contact.css
+│       ├── footer.css
+│       ├── hero.css
+│       ├── projects.css
+│       ├── themes.css
+│       ├── toolkit.css
+│       └── topnav.css
+├── styles.md
+└── vite.config.js
+
+21 directories, 112 files

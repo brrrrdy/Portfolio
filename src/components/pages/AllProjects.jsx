@@ -1,7 +1,7 @@
-import { useLanguage } from "../contexts/LanguageContext";
-import projectsData from "../content/projects.json";
-import TableBasic from "../helpers/TableBasic";
-import "../styles/allprojects.css";
+import { useLanguage } from "../../contexts/languageContext";
+import projectsData from "../../content/projects.json";
+import TableBasic from "../ui/TableBasic";
+import "../../styles/allprojects.css";
 
 export default function AllProjects() {
   const { projects, pageCopy } = projectsData;

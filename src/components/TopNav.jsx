@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
-import { useLanguage } from "../contexts/LanguageContext";
-import { useTheme } from "../contexts/ThemeContext";
+import { useLanguage } from "../contexts/languageContext";
+import { useTheme } from "../contexts/themeContext";
 import navContent from "../content/navbar.json";
 
 function TopNav() {

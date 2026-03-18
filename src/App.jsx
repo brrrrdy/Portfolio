@@ -1,11 +1,11 @@
 import "./index.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { LanguageProvider } from "./components/LanguageContext";
-import { ThemeProvider } from "./components/ThemeContext";
+import { LanguageProvider } from "./components/LanguageChange";
+import { ThemeProvider } from "./components/ThemeChange";
 import Layout from "./components/Layout";
-import HomePage from "./components/Homepage";
-import AllProjects from "./components/AllProjects";
-import Contact from "./components/Contact";
+import HomePage from "./components/pages/Homepage";
+import AllProjects from "./components/pages/AllProjects";
+import Contact from "./components/pages/Contact";
 
 function App() {
   return (
