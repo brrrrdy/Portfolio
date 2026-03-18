@@ -1,20 +1,29 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
-import { useLanguage } from "./LanguageContext";
+import { useLanguage } from "../contexts/LanguageContext";
 import Colors from "./Colors";
-import LanguageSelector from "./LanguageSelector";
 import navContent from "../content/navbar.json";
 
 function TopNav() {
-  const { language } = useLanguage();
+  const { language, switchLanguage } = useLanguage();
   const content = navContent[language] || navContent.en;
   const [theme, setTheme] = useState(() => {
     // Initialize theme from localStorage or default to "light"
     return localStorage.getItem("portfolio-theme") || "light";
   });
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isLanguageDropdownOpen, setIsLanguageDropdownOpen] = useState(false);
   const navigate = useNavigate();
   const location = useLocation();
+
+  const languages = [
+    { code: "en", label: "EN", name: "English" },
+    { code: "es", label: "ES", name: "Español" },
+    { code: "gz", label: "GZ", name: "Galego" },
+  ];
+
+  const currentLanguage =
+    languages.find((lang) => lang.code === language) || languages[0];
 
   const navLinks = [
     { href: "#home", text: content.home, type: "scroll" },
@@ -23,6 +32,11 @@ function TopNav() {
     { href: "#toolkit", text: content.toolkit, type: "scroll" },
     { href: "/contact", text: content.contact, type: "navigate" },
   ];
+
+  const handleLanguageSelect = (langCode) => {
+    switchLanguage(langCode);
+    setIsLanguageDropdownOpen(false);
+  };
 
   const handleNavClick = (link) => {
     // Close mobile menu when a link is clicked
@@ -133,7 +147,54 @@ function TopNav() {
             </svg>
           </button>
 
-          <LanguageSelector />
+          <div className="language-selector">
+            {/* Desktop: Button layout */}
+            <div className="language-selector-desktop">
+              {languages.map((lang) => (
+                <button
+                  key={lang.code}
+                  type="button"
+                  onClick={() => switchLanguage(lang.code)}
+                  className={`language-button ${language === lang.code ? "active" : ""}`}
+                  title={`Switch to ${lang.name}`}
+                >
+                  {lang.label}
+                </button>
+              ))}
+            </div>
+
+            {/* Mobile: Dropdown layout */}
+            <div className="language-selector-mobile">
+              <button
+                type="button"
+                onClick={() =>
+                  setIsLanguageDropdownOpen(!isLanguageDropdownOpen)
+                }
+                className="language-dropdown-toggle"
+                title="Select language"
+              >
+                {currentLanguage.label}
+                <span className="dropdown-arrow">
+                  {isLanguageDropdownOpen ? "▲" : "▼"}
+                </span>
+              </button>
+
+              {isLanguageDropdownOpen && (
+                <div className="language-dropdown-menu">
+                  {languages.map((lang) => (
+                    <button
+                      key={lang.code}
+                      type="button"
+                      onClick={() => handleLanguageSelect(lang.code)}
+                      className={`language-dropdown-item ${language === lang.code ? "active" : ""}`}
+                    >
+                      {lang.label}
+                    </button>
+                  ))}
+                </div>
+              )}
+            </div>
+          </div>
         </div>
       </div>
 

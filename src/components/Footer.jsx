@@ -1,5 +1,5 @@
 import { useNavigate, useLocation } from "react-router-dom";
-import { useLanguage } from "./LanguageContext";
+import { useLanguage } from "../contexts/LanguageContext";
 import githubLogo from "../assets/images/github-original.svg";
 import linkedinLogo from "../assets/images/linkedin.svg";
 import footerContent from "../content/footer.json";

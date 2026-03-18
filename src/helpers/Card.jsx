@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { useLanguage } from "../components/LanguageContext";
+import { useLanguage } from "../contexts/LanguageContext";
 import { projectImages } from "../assets/images/projectImages";
 
 function Card({ project }) {

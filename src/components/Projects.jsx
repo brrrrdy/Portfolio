@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { useLanguage } from "./LanguageContext";
+import { useLanguage } from "../contexts/LanguageContext";
 import projectsData from "../content/projects.json";
 import Card from "../helpers/Card";
 import Toolkit from "./Toolkit";

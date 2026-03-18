@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { useLanguage } from "./LanguageContext";
+import { useLanguage } from "../contexts/LanguageContext";
 import heroContent from "../content/hero.json";
 import tomImage from "../assets/images/heroTom.webp";
 
