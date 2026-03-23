@@ -9,6 +9,7 @@ import scrn_restaurant from "./proj_images/scrn_restaurant.webp";
 import scrn_naughtscrosses from "./proj_images/scrn_naughtscrosses.webp";
 import scrn_rps from "./proj_images/scrn_rps.webp";
 import scrn_etch from "./proj_images/scrn_etch.webp";
+import scrn_portfolio from "./proj_images/scrn_portfolio.webp";
 import flagSpain from "./proj_images/Flag_of_Spain_Flat_Round_Corner-64x64.png";
 import flagGalicia from "./proj_images/Flag_of_Galicia_Flat_Round_Corner-64x64.png";
 import flagUK from "./proj_images/Flag_of_United_Kingdom_Flat_Round_Corner-64x64.png";
@@ -25,7 +26,7 @@ export const projectImages = {
   8: scrn_naughtscrosses, // Noughts and Crosses
   9: scrn_rps, // Rock, Paper, Scissors
   10: scrn_etch, // Etch-a-Sketch
-  // 11: Add portfolio screenshot when available
+  11: scrn_portfolio, // Portfolio Page
 };
 
 export const flagImages = {
