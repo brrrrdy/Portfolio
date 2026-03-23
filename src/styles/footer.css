@@ -24,7 +24,6 @@
   opacity: 0.8;
 }
 
-/* Right side container for sitemap and social */
 .footer-right-section {
   display: flex;
   gap: 4rem;
@@ -142,6 +141,7 @@
   text-align: left;
 }
 
+.footer-social h2,
 .footer-social h4 {
   margin: 0 0 1rem 0;
   font-size: 1rem;
@@ -183,7 +183,6 @@
     align-items: flex-start;
   }
 
-  /* First row: sitemap and social sections (centered) */
   .footer-sitemap-container,
   .footer-social {
     flex: 1;
@@ -194,7 +193,6 @@
     max-width: 200px;
   }
 
-  /* Second row: footer-left (centered below) */
   .footer-left {
     flex: 1 1 100%;
     padding: 1rem;
@@ -217,17 +215,14 @@
     font-size: 1rem;
   }
 
-  /* Center align social links */
   .social-links {
     justify-content: center;
   }
 
-  /* Center align repo link */
   .repo-link {
     justify-content: center;
   }
 
-  /* Center align the footer-github container */
   .footer-github {
     justify-content: center;
   }
