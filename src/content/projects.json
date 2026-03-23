@@ -109,7 +109,13 @@
         "gz": "Un panel de administración responsivo que integra a API de Last.fm para amosar a música que estou escoitando xunto con outro contido dinámico."
       },
       "image": "/images/proj_images/scrn_dashboard.webp",
-      "tags": ["HTML", "CSS", "JavaScript", "Responsive Design"],
+      "tags": [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "Responsive Design",
+        "API Integration"
+      ],
       "HTMLlink": ["https://github.com/brrrrdy/Dashboard"],
       "ghPage": ["https://brrrrdy.github.io/Dashboard/"],
       "featured": ["y"],
