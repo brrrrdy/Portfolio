@@ -11,6 +11,18 @@ function Projects() {
   const ui = projectsData.ui[language] || projectsData.ui.en;
   const [selectedTechs, setSelectedTechs] = useState([]);
 
+  const matchesSelectedFilter = (project, filter) => {
+    if (filter === "Game") {
+      return project.tags.includes("Game");
+    }
+
+    if (filter === "Website") {
+      return !project.tags.includes("Game");
+    }
+
+    return project.tags.includes(filter);
+  };
+
   // shuffle array and get random projects
   const getRandomProjects = (projectsArray, count) => {
     const shuffled = [...projectsArray].sort(() => Math.random() - 0.5);
@@ -23,14 +35,10 @@ function Projects() {
   if (selectedTechs && selectedTechs.length > 0) {
     // filter projects that include all selected techs
     const filteredProjects = projects.filter((project) =>
-      selectedTechs.every((tech) => project.tags.includes(tech)),
+      selectedTechs.every((tech) => matchesSelectedFilter(project, tech)),
     );
     displayProjects = getRandomProjects(filteredProjects, 4);
-    if (selectedTechs.length === 1) {
-      galleryTitle = `${ui.myProjectsThatUse} ${selectedTechs[0]}`;
-    } else {
-      galleryTitle = `${ui.myProjectsThatUse} ${selectedTechs.join(", ")}`;
-    }
+    galleryTitle = `${ui.myProjects}: ${selectedTechs.join(", ")}`;
   } else {
     // show featured projects by default
     const featuredProjects = projects.filter(
@@ -46,6 +54,13 @@ function Projects() {
         <div className="section-container">
           <h2>{galleryTitle}</h2>
           <div className="section-content-wrapper">
+            <div id="toolkit" className="projects-toolkit">
+              <Toolkit
+                selectedTechs={selectedTechs}
+                setSelectedTechs={setSelectedTechs}
+                embedded
+              />
+            </div>
             <div className="gallery-grid">
               {displayProjects.map((project) => (
                 <Card key={project.id} project={project} />
@@ -58,12 +73,6 @@ function Projects() {
             </div>
           </div>
         </div>
-      </div>
-      <div className="Toolkit" id="toolkit">
-        <Toolkit
-          selectedTechs={selectedTechs}
-          setSelectedTechs={setSelectedTechs}
-        />
       </div>
     </>
   );

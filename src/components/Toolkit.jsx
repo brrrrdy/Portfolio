@@ -19,14 +19,18 @@ import tailwindLogo from "../assets/images/tailwindcss-original.svg";
 import webpackLogo from "../assets/images/webpack-plain.svg";
 import xmlLogo from "../assets/images/xml-plain.svg";
 import apiLogo from "../assets/images/api.svg";
+import gamepadLogo from "../assets/images/joystick_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg";
+import websiteLogo from "../assets/images/globe_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg";
 import responsiveLogo from "../assets/images/responsive.svg";
 
-function Toolkit({ selectedTechs, setSelectedTechs }) {
+function Toolkit({ selectedTechs, setSelectedTechs, embedded = false }) {
   const { language } = useLanguage();
   const { projects } = projectsData;
   const content = toolkitContent[language] || toolkitContent.en;
 
   const techLogos = {
+    Game: gamepadLogo,
+    Website: websiteLogo,
     CSS: cssLogo,
     ESLint: eslintLogo,
     Figma: figmaLogo,
@@ -47,6 +51,7 @@ function Toolkit({ selectedTechs, setSelectedTechs }) {
   };
   // Extract all unique tags from all projects, excluding 'Game'
   const allTags = projects.flatMap((project) => project.tags);
+  const projectTypeFilters = ["Game", "Website"];
   const uniqueTechnologies = [...new Set(allTags)]
     .filter((tech) => tech !== "Game")
     .sort();
@@ -61,33 +66,60 @@ function Toolkit({ selectedTechs, setSelectedTechs }) {
     }
   };
 
+  const renderFilterButton = (tech, index) => {
+    const isProjectType = projectTypeFilters.includes(tech);
+
+    return (
+      <button
+        key={`${tech}-${index}`}
+        className={`technology-item ${isProjectType ? "project-type-item" : ""} ${selectedTechs.includes(tech) ? "selected" : ""}`}
+        onClick={() => handleTechClick(tech)}
+        aria-pressed={selectedTechs.includes(tech)}
+        aria-label={`${selectedTechs.includes(tech) ? "Deselect" : "Select"} ${tech} technology`}
+      >
+        {techLogos[tech] && (
+          <img
+            src={techLogos[tech]}
+            alt={`${tech} logo`}
+            className={`technology-logo ${isProjectType ? "project-type-logo" : ""}`}
+            data-tech={tech.toLowerCase().replace(/\s+/g, "-")}
+          />
+        )}
+        <span className="technology-name">{tech}</span>
+      </button>
+    );
+  };
+
+  const technologyButtons = uniqueTechnologies.map(renderFilterButton);
+  const projectTypeButtons = projectTypeFilters.map(renderFilterButton);
+
+  if (embedded) {
+    return (
+      <div className="toolkit-filter">
+        <div className="toolkit-filter-layout">
+          <div className="technologies-grid toolkit-filter-grid toolkit-tech-grid">
+            {technologyButtons}
+          </div>
+          <div className="technologies-grid toolkit-filter-grid toolkit-type-grid">
+            {projectTypeButtons}
+          </div>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div className="toolkit-section">
       <div className="section-container">
         <h2>{content.myToolkit}</h2>
         <div className="section-content-wrapper">
-          <div className="technologies-grid">
-            {uniqueTechnologies.map((tech, index) => (
-              <button
-                key={index}
-                className={`technology-item ${
-                  selectedTechs.includes(tech) ? "selected" : ""
-                }`}
-                onClick={() => handleTechClick(tech)}
-                aria-pressed={selectedTechs.includes(tech)}
-                aria-label={`${selectedTechs.includes(tech) ? "Deselect" : "Select"} ${tech} technology`}
-              >
-                {techLogos[tech] && (
-                  <img
-                    src={techLogos[tech]}
-                    alt={`${tech} logo`}
-                    className="technology-logo"
-                    data-tech={tech.toLowerCase().replace(/\s+/g, "-")}
-                  />
-                )}
-                <span className="technology-name">{tech}</span>
-              </button>
-            ))}
+          <div className="toolkit-layout">
+            <div className="technologies-grid toolkit-tech-grid">
+              {technologyButtons}
+            </div>
+            <div className="technologies-grid toolkit-type-grid">
+              {projectTypeButtons}
+            </div>
           </div>
         </div>
       </div>

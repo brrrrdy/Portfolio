@@ -5,6 +5,21 @@
   margin-top: 1.25rem;
 }
 
+.projects-gallery .section-container > h2 {
+  font-style: italic;
+}
+
+.projects-toolkit {
+  margin-bottom: 1.5rem;
+  width: 100%;
+}
+
+.toolkit-filter-grid {
+  justify-content: flex-start;
+  align-content: flex-start;
+  margin-top: 0;
+}
+
 .projects-container {
   display: flex;
   flex-direction: column;
