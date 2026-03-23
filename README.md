@@ -16,4 +16,4 @@ The site works across all screen sizes from 320px to 1920px wide, with distinct 
 
 ## BUILT WITH
 
-React, Vite, CSS
+![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB) ![Vite](https://img.shields.io/badge/vite-%23646CFF.svg?style=for-the-badge&logo=vite&logoColor=white) ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
