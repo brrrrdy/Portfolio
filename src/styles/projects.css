@@ -7,6 +7,18 @@
 
 .projects-gallery .section-container > h2 {
   font-style: italic;
+  padding-bottom: 0.75rem;
+  width: 100%;
+}
+
+.projects-gallery .section-container > h2::after {
+  content: "";
+  display: block;
+  margin-top: 2rem;
+  height: 2px;
+  opacity: 50%;
+  width: 100%;
+  background: var(--card-border);
 }
 
 .projects-toolkit {
