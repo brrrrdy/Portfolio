@@ -1,17 +1,17 @@
 {
   "ui": {
     "en": {
-      "myProjects": "my projects",
+      "myProjects": "projects",
       "myProjectsThatUse": "my projects that use",
       "seeAllProjects": "see all my projects"
     },
     "es": {
-      "myProjects": "mis proyectos",
+      "myProjects": "proyectos",
       "myProjectsThatUse": "mis proyectos que usan",
       "seeAllProjects": "ver todos mis proyectos"
     },
     "gz": {
-      "myProjects": "os meus proxectos",
+      "myProjects": "proxectos",
       "myProjectsThatUse": "os meus proxectos que usan",
       "seeAllProjects": "ver todos os meus proxectos"
     }
