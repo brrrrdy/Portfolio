@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { useLanguage } from "../contexts/languageContext";
 import heroContent from "../content/hero.json";
 import tomImage from "../assets/images/heroTom.webp";
+import tomCvPdf from "../assets/images/docs/tomalvarezcv.pdf";
 
 const colors = ["red", "orange", "purple", "green", "blue", "yellow"];
 
@@ -68,7 +69,12 @@ function Hero() {
             </div>
 
             <div className="link-content">
-              <a href="#" className="btn-primary">
+              <a
+                href={tomCvPdf}
+                className="btn-primary"
+                target="_blank"
+                rel="noreferrer"
+              >
                 <span>{content.headerLink}</span>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
