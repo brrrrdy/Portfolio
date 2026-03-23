@@ -4,8 +4,6 @@ https://tomalvarez.xyz
 
 A responsive personal portfolio site built as one of the final Odin Project projects.
 
-## SCREENSHOT
-
 ![Portfolio screenshot](docs/assets/screenshotsite.png)
 
 ## REQUIREMENTS
