@@ -4,6 +4,10 @@ https://tomalvarez.xyz
 
 A responsive personal portfolio site built as one of the final Odin Project projects.
 
+## SCREENSHOT
+
+![Portfolio screenshot](docs/assets/screenshotsite.png)
+
 ## REQUIREMENTS
 
 The goal was to build something that showcases my front-end skills while staying true to a design philosophy of simplicity and accessibility — but with a playful and characterful edge rather than a generic dev portfolio look. What started as a single-page app evolved as usability considerations shaped the structure. Good design is iterative, and this project evolved many times as I learned more via study and user-testing.
