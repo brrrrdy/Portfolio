@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { useLanguage } from "../contexts/languageContext";
 import projectsData from "../content/projects.json";
 import Card from "./ui/Card";
+import Section from "./ui/Section";
 import Toolkit from "./Toolkit";
 
 function Projects() {
@@ -47,32 +48,25 @@ function Projects() {
   }
 
   return (
-    <>
-      <div className="projects-gallery">
-        <div className="section-container">
-          <h2>{galleryTitle}</h2>
-          <div className="section-content-wrapper">
-            <div id="toolkit" className="projects-toolkit">
-              <Toolkit
-                selectedTechs={selectedTechs}
-                setSelectedTechs={setSelectedTechs}
-                embedded
-              />
-            </div>
-            <div className="gallery-grid">
-              {displayProjects.map((project) => (
-                <Card key={project.id} project={project} />
-              ))}
-            </div>
-            <div className="see-more-container">
-              <Link to="/projects" className="btn-primary">
-                {ui.seeAllProjects}
-              </Link>
-            </div>
-          </div>
-        </div>
+    <Section title={galleryTitle} className="projects-gallery">
+      <div id="toolkit" className="projects-toolkit">
+        <Toolkit
+          selectedTechs={selectedTechs}
+          setSelectedTechs={setSelectedTechs}
+          embedded
+        />
       </div>
-    </>
+      <div className="gallery-grid">
+        {displayProjects.map((project) => (
+          <Card key={project.id} project={project} />
+        ))}
+      </div>
+      <div className="see-more-container">
+        <Link to="/projects" className="btn-primary">
+          {ui.seeAllProjects}
+        </Link>
+      </div>
+    </Section>
   );
 }
 

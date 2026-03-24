@@ -1,0 +1,25 @@
+/* ABOUT SECTION */
+
+.about-section {
+  padding-top: 2rem;
+}
+
+.about-copy {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.about-copy p {
+  max-width: 70ch;
+  font-size: 1rem;
+  line-height: 1.8;
+  color: var(--dark-text);
+}
+
+@media (max-width: 768px) {
+  .about-copy p {
+    max-width: 100%;
+    font-size: 0.95rem;
+    line-height: 1.7;
+  }
+}

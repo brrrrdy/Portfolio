@@ -96,6 +96,26 @@ body.app-light .app {
   max-width: 1200px;
 }
 
+.content-section {
+  width: 100%;
+}
+
+.content-section .section-container > h2 {
+  font-style: italic;
+  padding-bottom: 0.75rem;
+  width: 100%;
+}
+
+.content-section .section-container > h2::after {
+  content: "";
+  display: block;
+  margin-top: 2rem;
+  height: 2px;
+  opacity: 50%;
+  width: 100%;
+  background: var(--card-border);
+}
+
 /* Responsive - Universal container and header uniformity */
 @media (max-width: 768px) {
   .section-container {
