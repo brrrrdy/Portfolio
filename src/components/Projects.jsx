@@ -30,7 +30,7 @@ function Projects() {
   };
 
   let displayProjects;
-  let galleryTitle;
+  const galleryTitle = ui.myProjects;
 
   if (selectedTechs && selectedTechs.length > 0) {
     // filter projects that include all selected techs
@@ -38,14 +38,12 @@ function Projects() {
       selectedTechs.every((tech) => matchesSelectedFilter(project, tech)),
     );
     displayProjects = getRandomProjects(filteredProjects, 4);
-    galleryTitle = `${ui.myProjects}: ${selectedTechs.join(", ")}`;
   } else {
     // show featured projects by default
     const featuredProjects = projects.filter(
       (project) => project.featured[0] === "y",
     );
     displayProjects = featuredProjects.slice(0, 4);
-    galleryTitle = ui.myProjects;
   }
 
   return (

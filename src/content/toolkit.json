@@ -2,16 +2,22 @@
   "en": {
     "myToolkit": "my toolkit",
     "filterLabel": "Filter projects",
-    "filterAll": "All projects"
+    "filterAll": "All projects",
+    "filterExpand": "Open",
+    "filterCollapse": "Collapse"
   },
   "es": {
     "myToolkit": "mi caja de herramientas",
     "filterLabel": "Filtrar proyectos",
-    "filterAll": "Todos los proyectos"
+    "filterAll": "Todos los proyectos",
+    "filterExpand": "Abrir",
+    "filterCollapse": "Cerrar"
   },
   "gz": {
     "myToolkit": "a miña caixa de ferramentas",
     "filterLabel": "Filtrar proxectos",
-    "filterAll": "Todos os proxectos"
+    "filterAll": "Todos os proxectos",
+    "filterExpand": "Abrir",
+    "filterCollapse": "Pechar"
   }
 }

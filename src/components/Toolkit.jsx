@@ -96,15 +96,20 @@ function Toolkit({ selectedTechs, setSelectedTechs, embedded = false }) {
 
   const filterLabel = content.filterLabel || "Filter projects";
   const filterAll = content.filterAll || "All projects";
-  const summaryValue =
-    selectedTechs.length === 0 ? filterAll : selectedTechs.join(", ");
+  const filterExpand = content.filterExpand || "Open";
+  const filterCollapse = content.filterCollapse || "Collapse";
 
   const mobileFilterMenu = (
     <div className="toolkit-mobile-filter" aria-label={filterLabel}>
       <details className="toolkit-mobile-menu">
         <summary className="toolkit-mobile-summary">
           <span className="toolkit-mobile-summary-label">{filterLabel}</span>
-          <span className="toolkit-mobile-summary-value">{summaryValue}</span>
+          <span className="toolkit-mobile-toggle-btn" aria-hidden="true">
+            <span className="toolkit-mobile-toggle-open">{filterExpand}</span>
+            <span className="toolkit-mobile-toggle-close">
+              {filterCollapse}
+            </span>
+          </span>
         </summary>
         <div className="toolkit-mobile-menu-panel">
           <label
