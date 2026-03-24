@@ -228,12 +228,13 @@
     font-size: clamp(0.8rem, 2.5vw, 1rem);
     padding-left: 0;
     min-width: auto;
+    min-height: 1.6rem;
   }
 
   .link-content {
     order: 4;
     justify-content: center;
-    padding-top: 0.75rem;
+    padding-top: 1.15rem;
     padding-left: 0;
   }
 
@@ -243,12 +244,11 @@
   }
 
   .typing-text {
-    font-size: clamp(0.8rem, 2.2vw, 1rem);
     min-width: auto;
-    font-size: 0.65rem;
+    font-size: 0.95rem;
   }
 
-  .btn-primary {
-    font-size: 0.7rem;
+  .link-content .btn-primary {
+    font-size: 0.95rem;
   }
 }

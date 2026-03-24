@@ -3,6 +3,8 @@
     "myToolkit": "my toolkit",
     "filterLabel": "Filter projects",
     "filterAll": "All projects",
+    "filterByType": "by type",
+    "filterByTech": "by tech",
     "filterExpand": "Open",
     "filterCollapse": "Collapse"
   },
@@ -10,6 +12,8 @@
     "myToolkit": "mi caja de herramientas",
     "filterLabel": "Filtrar proyectos",
     "filterAll": "Todos los proyectos",
+    "filterByType": "por tipo",
+    "filterByTech": "por tecnología",
     "filterExpand": "Abrir",
     "filterCollapse": "Cerrar"
   },
@@ -17,6 +21,8 @@
     "myToolkit": "a miña caixa de ferramentas",
     "filterLabel": "Filtrar proxectos",
     "filterAll": "Todos os proxectos",
+    "filterByType": "por tipo",
+    "filterByTech": "por tecnoloxia",
     "filterExpand": "Abrir",
     "filterCollapse": "Pechar"
   }
