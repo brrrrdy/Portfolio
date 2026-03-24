@@ -113,76 +113,84 @@ function Toolkit({ selectedTechs, setSelectedTechs, embedded = false }) {
           </span>
         </summary>
         <div className="toolkit-mobile-menu-panel">
-          <label
-            className={`toolkit-mobile-option toolkit-mobile-all-option ${selectedTechs.length === 0 ? "selected" : ""}`}
-          >
-            <input
-              type="checkbox"
-              checked={selectedTechs.length === 0}
-              onChange={() => setSelectedTechs([])}
-              aria-label={filterAll}
-            />
-            <span className="toolkit-mobile-option-name">{filterAll}</span>
-          </label>
+          <div className="toolkit-mobile-group toolkit-mobile-all-group">
+            <div className="toolkit-mobile-group-options">
+              <label
+                className={`toolkit-mobile-option toolkit-mobile-all-option ${selectedTechs.length === 0 ? "selected" : ""}`}
+              >
+                <input
+                  type="checkbox"
+                  checked={selectedTechs.length === 0}
+                  onChange={() => setSelectedTechs([])}
+                  aria-label={filterAll}
+                />
+                <span className="toolkit-mobile-option-name">{filterAll}</span>
+              </label>
+            </div>
+          </div>
 
           <div className="toolkit-mobile-group">
             <span className="toolkit-mobile-group-label">{filterByType}</span>
-            {projectTypeFilters.map((tech) => {
-              const isSelected = selectedTechs.includes(tech);
-              const isProjectType = projectTypeFilters.includes(tech);
+            <div className="toolkit-mobile-group-options">
+              {projectTypeFilters.map((tech) => {
+                const isSelected = selectedTechs.includes(tech);
+                const isProjectType = projectTypeFilters.includes(tech);
 
-              return (
-                <label
-                  key={`mobile-${tech}`}
-                  className={`toolkit-mobile-option ${isProjectType ? "mobile-project-type-option" : ""} ${isSelected ? "selected" : ""}`}
-                >
-                  <input
-                    type="checkbox"
-                    checked={isSelected}
-                    onChange={() => handleTechClick(tech)}
-                    aria-label={tech}
-                  />
-                  {techLogos[tech] && (
-                    <img
-                      src={techLogos[tech]}
-                      alt={`${tech} logo`}
-                      className={`toolkit-mobile-option-logo ${isProjectType ? "toolkit-mobile-project-type-logo" : ""}`}
+                return (
+                  <label
+                    key={`mobile-${tech}`}
+                    className={`toolkit-mobile-option ${isProjectType ? "mobile-project-type-option" : ""} ${isSelected ? "selected" : ""}`}
+                  >
+                    <input
+                      type="checkbox"
+                      checked={isSelected}
+                      onChange={() => handleTechClick(tech)}
+                      aria-label={tech}
                     />
-                  )}
-                  <span className="toolkit-mobile-option-name">{tech}</span>
-                </label>
-              );
-            })}
+                    {techLogos[tech] && (
+                      <img
+                        src={techLogos[tech]}
+                        alt={`${tech} logo`}
+                        className={`toolkit-mobile-option-logo ${isProjectType ? "toolkit-mobile-project-type-logo" : ""}`}
+                      />
+                    )}
+                    <span className="toolkit-mobile-option-name">{tech}</span>
+                  </label>
+                );
+              })}
+            </div>
           </div>
 
           <div className="toolkit-mobile-group">
             <span className="toolkit-mobile-group-label">{filterByTech}</span>
-            {uniqueTechnologies.map((tech) => {
-              const isSelected = selectedTechs.includes(tech);
-              const isProjectType = projectTypeFilters.includes(tech);
+            <div className="toolkit-mobile-group-options">
+              {uniqueTechnologies.map((tech) => {
+                const isSelected = selectedTechs.includes(tech);
+                const isProjectType = projectTypeFilters.includes(tech);
 
-              return (
-                <label
-                  key={`mobile-${tech}`}
-                  className={`toolkit-mobile-option ${isProjectType ? "mobile-project-type-option" : ""} ${isSelected ? "selected" : ""}`}
-                >
-                  <input
-                    type="checkbox"
-                    checked={isSelected}
-                    onChange={() => handleTechClick(tech)}
-                    aria-label={tech}
-                  />
-                  {techLogos[tech] && (
-                    <img
-                      src={techLogos[tech]}
-                      alt={`${tech} logo`}
-                      className={`toolkit-mobile-option-logo ${isProjectType ? "toolkit-mobile-project-type-logo" : ""}`}
+                return (
+                  <label
+                    key={`mobile-${tech}`}
+                    className={`toolkit-mobile-option ${isProjectType ? "mobile-project-type-option" : ""} ${isSelected ? "selected" : ""}`}
+                  >
+                    <input
+                      type="checkbox"
+                      checked={isSelected}
+                      onChange={() => handleTechClick(tech)}
+                      aria-label={tech}
                     />
-                  )}
-                  <span className="toolkit-mobile-option-name">{tech}</span>
-                </label>
-              );
-            })}
+                    {techLogos[tech] && (
+                      <img
+                        src={techLogos[tech]}
+                        alt={`${tech} logo`}
+                        className={`toolkit-mobile-option-logo ${isProjectType ? "toolkit-mobile-project-type-logo" : ""}`}
+                      />
+                    )}
+                    <span className="toolkit-mobile-option-name">{tech}</span>
+                  </label>
+                );
+              })}
+            </div>
           </div>
         </div>
       </details>

@@ -52,8 +52,11 @@
 }
 
 .toolkit-mobile-filter {
-  display: none;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
   width: 100%;
+  margin-top: 0.25rem;
 }
 
 .toolkit-mobile-menu {
@@ -127,6 +130,12 @@
   padding: 0;
 }
 
+.toolkit-mobile-group-options {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
 .toolkit-mobile-group-label {
   display: block;
   margin: 0.25rem 0 0;
@@ -158,14 +167,6 @@
   cursor: pointer;
 }
 
-.toolkit-mobile-option:hover {
-  background: color-mix(
-    in srgb,
-    var(--alternate-background) 70%,
-    var(--accent)
-  );
-}
-
 .toolkit-mobile-option input[type="checkbox"] {
   margin: 0;
 }
@@ -190,10 +191,6 @@
 
 .toolkit-mobile-option.selected .toolkit-mobile-option-name {
   font-weight: 700;
-}
-
-.toolkit-mobile-option.selected {
-  background: color-mix(in srgb, var(--accent) 14%, transparent);
 }
 
 .toolkit-mobile-option.selected .toolkit-mobile-option-logo {
@@ -348,32 +345,60 @@
 
 /* responsive */
 @media (max-width: 768px) {
-  .toolkit-layout,
-  .toolkit-filter-layout {
-    flex-direction: column;
-  }
-
-  .toolkit-type-grid {
-    width: 100%;
-    margin-left: 0;
-    justify-content: flex-start;
-  }
-
   .toolkit-section .section-container h2 {
     padding-left: 1rem;
   }
 }
 
-@media (max-width: 431.98px) {
+.toolkit-layout,
+.toolkit-filter-layout {
+  display: none;
+}
+
+@media (min-width: 769px) {
+  .toolkit-filter,
   .toolkit-mobile-filter {
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-    margin-top: 0.25rem;
+    width: 100%;
   }
 
-  .toolkit-layout,
-  .toolkit-filter-layout {
-    display: none;
+  .toolkit-mobile-menu-panel {
+    max-height: none;
+    overflow-y: visible;
+    display: grid;
+    grid-template-columns: minmax(12rem, auto) minmax(12rem, auto) minmax(
+        0,
+        1fr
+      );
+    align-items: start;
+    gap: 0 1.5rem;
+    padding: 0.5rem 0.75rem 0.75rem;
+  }
+
+  .toolkit-mobile-all-group,
+  .toolkit-mobile-group {
+    align-self: start;
+  }
+
+  .toolkit-mobile-all-group {
+    min-width: 12rem;
+  }
+
+  .toolkit-mobile-group-options {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-rows: repeat(3, auto);
+    grid-auto-columns: minmax(12rem, max-content);
+    align-items: start;
+    column-gap: 0.75rem;
+    row-gap: 0;
+  }
+
+  .toolkit-mobile-all-group .toolkit-mobile-group-options {
+    display: flex;
+  }
+
+  .toolkit-mobile-option {
+    width: auto;
+    min-width: 12rem;
   }
 }
