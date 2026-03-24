@@ -51,6 +51,116 @@
   width: 100%;
 }
 
+.toolkit-mobile-filter {
+  display: none;
+  width: 100%;
+}
+
+.toolkit-mobile-menu {
+  width: 100%;
+  border: 1px solid var(--card-border);
+  border-radius: 8px;
+  background: var(--alternate-background);
+}
+
+.toolkit-mobile-summary {
+  list-style: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding: 0.6rem 0.75rem;
+}
+
+.toolkit-mobile-summary::-webkit-details-marker {
+  display: none;
+}
+
+.toolkit-mobile-summary-label {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--dark-text);
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+.toolkit-mobile-summary-value {
+  font-size: 0.8rem;
+  color: var(--dark-text);
+  opacity: 0.85;
+  text-align: right;
+  max-width: 70%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.toolkit-mobile-menu-panel {
+  border-top: 1px solid var(--card-border);
+  padding: 0.4rem;
+  max-height: 15rem;
+  overflow-y: auto;
+}
+
+.toolkit-mobile-option {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  width: 100%;
+  padding: 0.45rem 0.5rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.toolkit-mobile-option:hover {
+  background: color-mix(
+    in srgb,
+    var(--alternate-background) 70%,
+    var(--accent)
+  );
+}
+
+.toolkit-mobile-option input[type="checkbox"] {
+  margin: 0;
+}
+
+.toolkit-mobile-option-name {
+  font-size: 0.82rem;
+  color: var(--dark-text);
+}
+
+.toolkit-mobile-option-logo {
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
+  filter: brightness(0) saturate(100%) invert(27%) sepia(51%) saturate(2878%)
+    hue-rotate(346deg) brightness(104%) contrast(97%);
+}
+
+.toolkit-mobile-project-type-logo {
+  filter: brightness(0) saturate(100%) invert(20%) sepia(91%) saturate(1801%)
+    hue-rotate(196deg) brightness(94%) contrast(94%);
+}
+
+.toolkit-mobile-option.selected .toolkit-mobile-option-name {
+  font-weight: 700;
+}
+
+.toolkit-mobile-option.selected {
+  background: color-mix(in srgb, var(--accent) 14%, transparent);
+}
+
+.toolkit-mobile-option.selected .toolkit-mobile-option-logo {
+  filter: brightness(0) saturate(100%) invert(73%) sepia(8%) saturate(1919%)
+    hue-rotate(61deg) brightness(87%) contrast(85%);
+}
+
+.toolkit-mobile-option.selected .toolkit-mobile-project-type-logo {
+  filter: brightness(0) saturate(100%) invert(67%) sepia(60%) saturate(1288%)
+    hue-rotate(173deg) brightness(95%) contrast(95%);
+}
+
 .toolkit-layout,
 .toolkit-filter-layout {
   display: flex;
@@ -163,6 +273,32 @@
     hue-rotate(150deg) brightness(102%) contrast(101%);
 }
 
+.app-dark .toolkit-mobile-summary-label,
+.app-dark .toolkit-mobile-summary-value,
+.app-dark .toolkit-mobile-option-name {
+  color: var(--light-text);
+}
+
+.app-dark .toolkit-mobile-option-logo {
+  filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(7500%)
+    hue-rotate(109deg) brightness(119%) contrast(119%);
+}
+
+.app-dark .toolkit-mobile-project-type-logo {
+  filter: brightness(0) saturate(100%) invert(73%) sepia(28%) saturate(1113%)
+    hue-rotate(169deg) brightness(101%) contrast(97%);
+}
+
+.app-dark .toolkit-mobile-option.selected .toolkit-mobile-option-logo {
+  filter: brightness(0) saturate(100%) invert(75%) sepia(100%) saturate(1352%)
+    hue-rotate(87deg) brightness(119%) contrast(119%);
+}
+
+.app-dark .toolkit-mobile-option.selected .toolkit-mobile-project-type-logo {
+  filter: brightness(0) saturate(100%) invert(86%) sepia(27%) saturate(948%)
+    hue-rotate(150deg) brightness(102%) contrast(101%);
+}
+
 /* responsive */
 @media (max-width: 768px) {
   .toolkit-layout,
@@ -178,5 +314,19 @@
 
   .toolkit-section .section-container h2 {
     padding-left: 1rem;
+  }
+}
+
+@media (max-width: 431.98px) {
+  .toolkit-mobile-filter {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    margin-top: 0.25rem;
+  }
+
+  .toolkit-layout,
+  .toolkit-filter-layout {
+    display: none;
   }
 }

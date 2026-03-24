@@ -1,11 +1,17 @@
 {
   "en": {
-    "myToolkit": "my toolkit"
+    "myToolkit": "my toolkit",
+    "filterLabel": "Filter projects",
+    "filterAll": "All projects"
   },
   "es": {
-    "myToolkit": "mi caja de herramientas"
+    "myToolkit": "mi caja de herramientas",
+    "filterLabel": "Filtrar proyectos",
+    "filterAll": "Todos los proyectos"
   },
   "gz": {
-    "myToolkit": "a miña caixa de ferramentas"
+    "myToolkit": "a miña caixa de ferramentas",
+    "filterLabel": "Filtrar proxectos",
+    "filterAll": "Todos os proxectos"
   }
 }

@@ -92,10 +92,68 @@ function Toolkit({ selectedTechs, setSelectedTechs, embedded = false }) {
 
   const technologyButtons = uniqueTechnologies.map(renderFilterButton);
   const projectTypeButtons = projectTypeFilters.map(renderFilterButton);
+  const mobileFilterOptions = [...projectTypeFilters, ...uniqueTechnologies];
+
+  const filterLabel = content.filterLabel || "Filter projects";
+  const filterAll = content.filterAll || "All projects";
+  const summaryValue =
+    selectedTechs.length === 0 ? filterAll : selectedTechs.join(", ");
+
+  const mobileFilterMenu = (
+    <div className="toolkit-mobile-filter" aria-label={filterLabel}>
+      <details className="toolkit-mobile-menu">
+        <summary className="toolkit-mobile-summary">
+          <span className="toolkit-mobile-summary-label">{filterLabel}</span>
+          <span className="toolkit-mobile-summary-value">{summaryValue}</span>
+        </summary>
+        <div className="toolkit-mobile-menu-panel">
+          <label
+            className={`toolkit-mobile-option toolkit-mobile-all-option ${selectedTechs.length === 0 ? "selected" : ""}`}
+          >
+            <input
+              type="checkbox"
+              checked={selectedTechs.length === 0}
+              onChange={() => setSelectedTechs([])}
+              aria-label={filterAll}
+            />
+            <span className="toolkit-mobile-option-name">{filterAll}</span>
+          </label>
+
+          {mobileFilterOptions.map((tech) => {
+            const isSelected = selectedTechs.includes(tech);
+            const isProjectType = projectTypeFilters.includes(tech);
+
+            return (
+              <label
+                key={`mobile-${tech}`}
+                className={`toolkit-mobile-option ${isProjectType ? "mobile-project-type-option" : ""} ${isSelected ? "selected" : ""}`}
+              >
+                <input
+                  type="checkbox"
+                  checked={isSelected}
+                  onChange={() => handleTechClick(tech)}
+                  aria-label={tech}
+                />
+                {techLogos[tech] && (
+                  <img
+                    src={techLogos[tech]}
+                    alt={`${tech} logo`}
+                    className={`toolkit-mobile-option-logo ${isProjectType ? "toolkit-mobile-project-type-logo" : ""}`}
+                  />
+                )}
+                <span className="toolkit-mobile-option-name">{tech}</span>
+              </label>
+            );
+          })}
+        </div>
+      </details>
+    </div>
+  );
 
   if (embedded) {
     return (
       <div className="toolkit-filter">
+        {mobileFilterMenu}
         <div className="toolkit-filter-layout">
           <div className="technologies-grid toolkit-filter-grid toolkit-tech-grid">
             {technologyButtons}
@@ -113,6 +171,7 @@ function Toolkit({ selectedTechs, setSelectedTechs, embedded = false }) {
       <div className="section-container">
         <h2>{content.myToolkit}</h2>
         <div className="section-content-wrapper">
+          {mobileFilterMenu}
           <div className="toolkit-layout">
             <div className="technologies-grid toolkit-tech-grid">
               {technologyButtons}
