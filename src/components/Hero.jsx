@@ -3,7 +3,7 @@ import { useLanguage } from "../contexts/languageContext";
 import heroContent from "../content/hero.json";
 import tomImage from "../assets/images/heroTom.webp";
 import tomCvPdf from "../assets/images/docs/tomalvarezcv.pdf";
-import useLastFmTrack from "../hooks/useLastFmTrack";
+import useLastFmTrack from "./useLastFmTrack";
 
 const colors = ["red", "orange", "purple", "green", "blue", "yellow"];
 const lastFmProfileUrl = "https://www.last.fm/user/viptosomeone";
