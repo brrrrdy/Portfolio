@@ -128,6 +128,7 @@
   font-size: inherit;
   font-family: inherit;
   padding: 0;
+  white-space: nowrap;
 }
 
 .footer-sitemap button:hover {
@@ -190,7 +191,7 @@
     box-sizing: border-box;
     order: 1;
     text-align: center;
-    max-width: 200px;
+    max-width: 240px;
   }
 
   .footer-left {
