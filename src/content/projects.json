@@ -19,7 +19,7 @@
   "pageCopy": {
     "en": {
       "pageTitle": "all projects",
-      "intro": "A selection of the work I'm most proud of. Each project highlights my skills in web development, from clean, responsive design to interactive functionality. Here, you'll see how I turn ideas into practical solutions, experimenting with modern tools and frameworks like JavaScript, React, and Tailwind CSS. Whether it's a personal experiment, a portfolio piece, or a complex application, each project reflects my passion for problem-solving and continuous learning. Dive in to explore the projects and the code behind them.",
+      "intro": "Full archive of all the projects I've completed or currently working on",
       "tableHeaders": {
         "title": "Title",
         "description": "Description",
@@ -30,7 +30,7 @@
     },
     "es": {
       "pageTitle": "todos los proyectos",
-      "intro": "Una selección del trabajo del que estoy más orgulloso. Cada proyecto destaca mis habilidades en desarrollo web, desde diseño limpio y responsivo hasta funcionalidad interactiva. Aquí verás cómo convierto ideas en soluciones prácticas, experimentando con herramientas y frameworks modernos como JavaScript, React y Tailwind CSS. Ya sea un experimento personal, una pieza de portafolio o una aplicación compleja, cada proyecto refleja mi pasión por resolver problemas y el aprendizaje continuo. Sumérgete para explorar los proyectos y el código detrás de ellos.",
+      "intro": "Archivo completo de todos los proyectos que he completado o en los que estoy trabajando actualmente.",
       "tableHeaders": {
         "title": "Título",
         "description": "Descripción",
@@ -41,7 +41,7 @@
     },
     "gz": {
       "pageTitle": "todos os proxectos",
-      "intro": "Unha selección do traballo do que estou máis orgulloso. Cada proxecto destaca as miñas habilidades no desenvolvemento web, desde deseño limpo e responsivo ata funcionalidade interactiva. Aquí verás como converto ideas en solucións prácticas, experimentando con ferramentas e frameworks modernos como JavaScript, React e Tailwind CSS. Sexa un experimento persoal, unha peza de portafolio ou unha aplicación complexa, cada proxecto reflicte a miña paixón por resolver problemas e a aprendizaxe continua. Mergúllate para explorar os proxectos e o código detrás deles.",
+      "intro": "Arquivo completo de todos os proxectos que completei ou nos que estou a traballar actualmente.",
       "tableHeaders": {
         "title": "Título",
         "description": "Descrición",
