@@ -53,6 +53,31 @@
   },
   "projects": [
     {
+      "id": 12,
+      "title": {
+        "en": "pickup",
+        "es": "pickup",
+        "gz": "pickup"
+      },
+      "description": {
+        "en": "A cross-platform application that brings together users searching for casual, non-competitive 'pick-up' sports games.",
+        "es": "Un app multiplataforma que reúne a usuarios que buscan partidos deportivos informales y no competitivos.",
+        "gz": "Unha app multiplataforma que reúne usuarios que buscan xogos deportivos informais e non competitivos."
+      },
+      "image": "/images/proj_images/scrn_pickup.png",
+      "tags": [
+        "Supabase",
+        "Tailwind",
+        "TypeScript",
+        "React",
+        "Responsive Design"
+      ],
+      "HTMLlink": ["https://github.com/brrrrdy/pickup"],
+      "ghPage": ["in development"],
+      "featured": ["n"],
+      "year": 2026
+    },
+    {
       "id": 11,
       "title": {
         "en": "Portfolio Page",

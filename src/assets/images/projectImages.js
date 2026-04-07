@@ -10,6 +10,7 @@ import scrn_naughtscrosses from "./proj_images/scrn_naughtscrosses.webp";
 import scrn_rps from "./proj_images/scrn_rps.webp";
 import scrn_etch from "./proj_images/scrn_etch.webp";
 import scrn_portfolio from "./proj_images/scrn_portfolio.webp";
+import scrn_pickup from "./proj_images/scrn_pickup.png";
 import flagSpain from "./proj_images/Flag_of_Spain_Flat_Round_Corner-64x64.png";
 import flagGalicia from "./proj_images/Flag_of_Galicia_Flat_Round_Corner-64x64.png";
 import flagUK from "./proj_images/Flag_of_United_Kingdom_Flat_Round_Corner-64x64.png";
@@ -27,6 +28,7 @@ export const projectImages = {
   9: scrn_rps, // Rock, Paper, Scissors
   10: scrn_etch, // Etch-a-Sketch
   11: scrn_portfolio, // Portfolio Page
+  12: scrn_pickup, // Pickup
 };
 
 export const flagImages = {

@@ -15,7 +15,9 @@ import jiraLogo from "../assets/images/jira-original.svg";
 import jsonLogo from "../assets/images/json-plain.svg";
 import photoshopLogo from "../assets/images/photoshop-plain.svg";
 import reactLogo from "../assets/images/react-original.svg";
+import supabaseLogo from "../assets/images/supabase-logo-icon.svg";
 import tailwindLogo from "../assets/images/tailwindcss-original.svg";
+import typeScriptLogo from "../assets/images/ts-logo-512.svg";
 import webpackLogo from "../assets/images/webpack-plain.svg";
 import xmlLogo from "../assets/images/xml-plain.svg";
 import apiLogo from "../assets/images/api.svg";
@@ -43,7 +45,10 @@ function Toolkit({ selectedTechs, setSelectedTechs, embedded = false }) {
     JSON: jsonLogo,
     Photoshop: photoshopLogo,
     React: reactLogo,
+    Supabase: supabaseLogo,
+    Tailwind: tailwindLogo,
     "Tailwind CSS": tailwindLogo,
+    TypeScript: typeScriptLogo,
     Webpack: webpackLogo,
     XML: xmlLogo,
     "API Integration": apiLogo,
