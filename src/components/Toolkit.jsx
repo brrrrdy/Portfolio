@@ -18,6 +18,7 @@ import reactLogo from "../assets/images/react-original.svg";
 import supabaseLogo from "../assets/images/supabase-logo-icon.svg";
 import tailwindLogo from "../assets/images/tailwindcss-original.svg";
 import typeScriptLogo from "../assets/images/ts-logo-512.svg";
+import viteLogo from "../assets/images/vitelogo.svg";
 import webpackLogo from "../assets/images/webpack-plain.svg";
 import xmlLogo from "../assets/images/xml-plain.svg";
 import apiLogo from "../assets/images/api.svg";
@@ -49,6 +50,7 @@ function Toolkit({ selectedTechs, setSelectedTechs, embedded = false }) {
     Tailwind: tailwindLogo,
     "Tailwind CSS": tailwindLogo,
     TypeScript: typeScriptLogo,
+    Vite: viteLogo,
     Webpack: webpackLogo,
     XML: xmlLogo,
     "API Integration": apiLogo,

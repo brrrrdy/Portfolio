@@ -90,7 +90,14 @@
         "gz": "Este mesmo sitio web!"
       },
       "image": "/images/proj_images/scrn_portfolio.webp",
-      "tags": ["JavaScript", "CSS", "HTML", "React", "Responsive Design"],
+      "tags": [
+        "JavaScript",
+        "CSS",
+        "HTML",
+        "React",
+        "Responsive Design",
+        "Vite"
+      ],
       "HTMLlink": ["https://github.com/brrrrdy/Portfolio"],
       "ghPage": ["https://www.tomalvarez.xyz"],
       "featured": ["n"],
@@ -114,7 +121,8 @@
         "API Integration",
         "CSS",
         "HTML",
-        "Responsive Design"
+        "Responsive Design",
+        "Webpack"
       ],
       "HTMLlink": ["https://github.com/brrrrdy/Weather-App"],
       "ghPage": ["https://brrrrdy.github.io/Weather-App/"],
