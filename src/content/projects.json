@@ -70,11 +70,12 @@
         "Tailwind",
         "TypeScript",
         "React",
+        "Expo",
         "Responsive Design"
       ],
       "HTMLlink": ["https://github.com/brrrrdy/pickup"],
-      "ghPage": ["in development"],
-      "featured": ["n"],
+      "ghPage": ["https://pickup.tomalvarez.xyz"],
+      "featured": ["y"],
       "year": 2026
     },
     {
@@ -98,8 +99,8 @@
         "Responsive Design",
         "Vite"
       ],
-      "HTMLlink": ["https://github.com/brrrrdy/Portfolio"],
-      "ghPage": ["https://www.tomalvarez.xyz"],
+      "HTMLlink": ["https://www.tomalvarez.xyz"],
+      "ghPage": ["https://github.com/brrrrdy/Portfolio"],
       "featured": ["n"],
       "year": 2026
     },
@@ -151,7 +152,7 @@
       ],
       "HTMLlink": ["https://github.com/brrrrdy/Dashboard"],
       "ghPage": ["https://brrrrdy.github.io/Dashboard/"],
-      "featured": ["y"],
+      "featured": ["n"],
       "year": 2025
     },
     {
