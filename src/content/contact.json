@@ -5,7 +5,7 @@
     "emailLabel": "Email",
     "phoneLabel": "Phone",
     "locationLabel": "Location",
-    "location": "Monforte de Lemos, Galicia, Spain",
+    "location": "Spain",
     "email": {
       "address": "tom@tomalvarez.xyz"
     },
@@ -14,7 +14,7 @@
         "country": "Spain",
         "number": "+34 604049297",
         "telLink": "+34604049297",
-        "flags": ["spain", "galicia"]
+        "flags": ["spain"]
       },
       {
         "country": "UK",
@@ -30,7 +30,7 @@
     "emailLabel": "Correo electrónico",
     "phoneLabel": "Teléfono",
     "locationLabel": "Ubicación",
-    "location": "Monforte de Lemos, Galicia, España",
+    "location": "España",
     "email": {
       "address": "tom@tomalvarez.xyz"
     },
@@ -39,7 +39,7 @@
         "country": "España",
         "number": "+34 604049297",
         "telLink": "+34 604049297",
-        "flags": ["spain", "galicia"]
+        "flags": ["spain"]
       },
       {
         "country": "Reino Unido",
@@ -55,7 +55,7 @@
     "emailLabel": "Correo electrónico",
     "phoneLabel": "Teléfono",
     "locationLabel": "Localización",
-    "location": "Monforte de Lemos, Galicia, España",
+    "location": "España",
     "email": {
       "address": "tom@tomalvarez.xyz"
     },
@@ -64,7 +64,7 @@
         "country": "España",
         "number": "+34 604049297",
         "telLink": "+34 604049297",
-        "flags": ["spain", "galicia"]
+        "flags": ["spain"]
       },
       {
         "country": "Reino Unido",

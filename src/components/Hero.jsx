@@ -165,6 +165,40 @@ function Hero() {
                   <path d="M440-240v-368L296-464l-56-56 240-240 240 240-56 56-144-144v368z" />
                 </svg>
               </a>
+              <a
+                href="https://www.linkedin.com/in/tom-alvarez-ryan-80423951/"
+                className="btn-primary btn-secondary"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <span>{content.headerLink2}</span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  fill="currentColor"
+                  viewBox="0 -960 960 960"
+                >
+                  <path d="M440-240v-368L296-464l-56-56 240-240 240 240-56 56-144-144v368z" />
+                </svg>
+              </a>
+              <a
+                href="https://github.com/brrrrdy"
+                className="btn-primary btn-github"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <span>{content.headerLink3}</span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  fill="currentColor"
+                  viewBox="0 -960 960 960"
+                >
+                  <path d="M440-240v-368L296-464l-56-56 240-240 240 240-56 56-144-144v368z" />
+                </svg>
+              </a>
             </div>
           </div>
 

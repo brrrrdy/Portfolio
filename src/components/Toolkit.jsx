@@ -24,6 +24,7 @@ import xmlLogo from "../assets/images/xml-plain.svg";
 import apiLogo from "../assets/images/api.svg";
 import gamepadLogo from "../assets/images/joystick_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg";
 import websiteLogo from "../assets/images/globe_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg";
+import expoLogo from "../assets/images/logo-type-b.svg";
 import responsiveLogo from "../assets/images/responsive.svg";
 
 function Toolkit({ selectedTechs, setSelectedTechs, embedded = false }) {
@@ -36,6 +37,7 @@ function Toolkit({ selectedTechs, setSelectedTechs, embedded = false }) {
     Website: websiteLogo,
     CSS: cssLogo,
     ESLint: eslintLogo,
+    Expo: expoLogo,
     Figma: figmaLogo,
     Git: gitLogo,
     GitHub: githubLogo,

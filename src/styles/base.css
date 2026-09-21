@@ -172,6 +172,26 @@ body.app-light .app {
   text-decoration: underline;
 }
 
+.btn-secondary {
+  color: #2563eb;
+  border-color: #2563eb;
+}
+
+.btn-secondary:hover {
+  color: #7c3aed;
+  border-color: #7c3aed;
+}
+
+.btn-github {
+  color: #4c1d95;
+  border-color: #4c1d95;
+}
+
+.btn-github:hover {
+  color: #312e81;
+  border-color: #312e81;
+}
+
 .btn-primary svg {
   margin-top: 0.25rem;
   transition: transform 0.3s ease;
@@ -219,6 +239,46 @@ body.app-light .app {
 .app-dark .btn-primary:hover {
   color: #fbbf24; /* Golden yellow on hover */
   border-color: #fbbf24;
+}
+
+.app-dark .btn-secondary {
+  color: #93c5fd;
+  border-color: #93c5fd;
+}
+
+.app-dark .btn-secondary:hover {
+  color: #c4b5fd;
+  border-color: #c4b5fd;
+}
+
+.app-dark .btn-github {
+  color: #c4b5fd;
+  border-color: #c4b5fd;
+}
+
+.app-dark .btn-github:hover {
+  color: #a78bfa;
+  border-color: #a78bfa;
+}
+
+.app-dark .link-content .btn-primary {
+  color: #ffffff;
+  border-color: #ffffff;
+}
+
+.app-dark .link-content .btn-primary:hover {
+  color: #81e1c2;
+  border-color: #81e1c2;
+}
+
+.app-dark .link-content .btn-secondary:hover {
+  color: #3b82f6;
+  border-color: #3b82f6;
+}
+
+.app-dark .link-content .btn-github:hover {
+  color: #a855f7;
+  border-color: #a855f7;
 }
 
 /* DEBUG: Apply green borders to all elements */

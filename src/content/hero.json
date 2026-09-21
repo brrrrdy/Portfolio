@@ -3,8 +3,10 @@
     "headerTitle": "tom alvarez",
     "headerSubtitle": "I am",
     "headerLink": "download my cv",
+    "headerLink2": "LinkedIn",
+    "headerLink3": "GitHub",
     "typingPhrases": [
-      "product engineer and full-stack developer",
+      "a product engineer and full-stack developer",
       "a basketball player",
       "eating pulpo!🐙"
     ]
@@ -13,6 +15,8 @@
     "headerTitle": "tom alvarez",
     "headerSubtitle": "Soy",
     "headerLink": "descargar mi cv",
+    "headerLink2": "connect on LinkedIn",
+    "headerLink3": "connect on GitHub",
     "typingPhrases": [
       "ingeniero de producto y desarrollador full-stack",
       "jugador de baloncesto",
@@ -23,6 +27,8 @@
     "headerTitle": "tom alvarez",
     "headerSubtitle": "Eu son",
     "headerLink": "descargar o meu cv",
+    "headerLink2": "connect on LinkedIn",
+    "headerLink3": "connect on GitHub",
     "typingPhrases": [
       "enxeñeiro de produto e desenvolvedor full-stack",
       "xogador de baloncesto",
