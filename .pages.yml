@@ -4,6 +4,7 @@ content:
     type: file
     path: src/content/contact.json
     fields:
+      # --- English Section ---
       - name: en
         label: English (en)
         type: object
@@ -51,13 +52,15 @@ content:
                 type: list
                 field:
                   type: string
+                  label: Flag Key
 
+      # --- Spanish Section ---
       - name: es
         label: Spanish (es)
         type: object
         fields: *contact_fields
 
-
+      # --- Galician Section ---
       - name: gz
         label: Galician (gz)
         type: object
