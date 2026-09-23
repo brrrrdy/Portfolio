@@ -9,6 +9,14 @@
   margin: 0 auto;
 }
 
+.about-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: start;
+  gap: 2rem;
+  width: 100%;
+}
+
 .about-copy p {
   max-width: 70ch;
   font-size: 1rem;
@@ -16,7 +24,53 @@
   color: var(--dark-text);
 }
 
-@media (max-width: 768px) {
+.about-technologies {
+  display: grid;
+  grid-template-columns: repeat(5, 100px);
+  gap: 0;
+}
+
+.about-technology-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.15rem;
+  width: 100px;
+  height: 100px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--dark-text);
+  font: inherit;
+  font-size: 0.7rem;
+  font-weight: 600;
+  cursor: default;
+}
+
+.about-technology-button img {
+  width: 52px;
+  height: 52px;
+  object-fit: contain;
+}
+
+.app-dark .about-technology-button {
+  color: #ffffff;
+}
+
+.app-dark .about-technology-button img {
+  filter: brightness(0) invert(1);
+}
+
+@media (max-width: 870px) {
+  .about-technologies {
+    display: none;
+  }
+
+  .about-layout {
+    display: block;
+  }
+
   .about-copy p {
     max-width: 100%;
     font-size: 0.95rem;

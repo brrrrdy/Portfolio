@@ -1,6 +1,7 @@
 import { useLanguage } from "../contexts/languageContext";
 import footerContent from "../content/footer.json";
 import aboutContent from "../content/about.json";
+import AboutTechnologies from "./AboutTechnologies";
 import Section from "./ui/Section";
 
 function About() {
@@ -10,8 +11,11 @@ function About() {
 
   return (
     <Section title={footer.about} className="about-section">
-      <div className="about-copy">
-        <p>{content.body}</p>
+      <div className="about-layout">
+        <div className="about-copy">
+          <p>{content.body}</p>
+        </div>
+        <AboutTechnologies />
       </div>
     </Section>
   );
