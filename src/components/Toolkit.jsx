@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import { useLanguage } from "../contexts/languageContext";
 import projectsData from "../content/projects.json";
 import toolkitContent from "../content/toolkit.json";
@@ -27,10 +28,26 @@ import websiteLogo from "../assets/images/globe_24dp_E3E3E3_FILL0_wght400_GRAD0_
 import expoLogo from "../assets/images/logo-type-b.svg";
 import responsiveLogo from "../assets/images/responsive.svg";
 
-function Toolkit({ selectedTechs, setSelectedTechs, embedded = false }) {
+function Toolkit({
+  selectedTechs,
+  setSelectedTechs,
+  embedded = false,
+  desktopExpanded = false,
+}) {
   const { language } = useLanguage();
+  const [isDesktop, setIsDesktop] = useState(false);
   const { projects } = projectsData;
   const content = toolkitContent[language] || toolkitContent.en;
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia("(min-width: 871px)");
+    const updateViewport = () => setIsDesktop(mediaQuery.matches);
+
+    updateViewport();
+    mediaQuery.addEventListener("change", updateViewport);
+
+    return () => mediaQuery.removeEventListener("change", updateViewport);
+  }, []);
 
   const techLogos = {
     Game: gamepadLogo,
@@ -111,7 +128,10 @@ function Toolkit({ selectedTechs, setSelectedTechs, embedded = false }) {
 
   const mobileFilterMenu = (
     <div className="toolkit-mobile-filter" aria-label={filterLabel}>
-      <details className="toolkit-mobile-menu">
+      <details
+        className="toolkit-mobile-menu"
+        open={desktopExpanded && isDesktop ? true : undefined}
+      >
         <summary className="toolkit-mobile-summary">
           <span className="toolkit-mobile-summary-label">{filterLabel}</span>
           <span className="toolkit-mobile-toggle-btn" aria-hidden="true">

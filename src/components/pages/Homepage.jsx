@@ -1,6 +1,6 @@
 import About from "../About";
 import Hero from "../Hero";
-import Projects from "../Projects";
+import ProjectsTimeline from "../ProjectsTimeline";
 import Footer from "../Footer";
 
 export default function HomePage() {
@@ -13,7 +13,7 @@ export default function HomePage() {
         <About />
       </section>
       <section id="projects">
-        <Projects />
+        <ProjectsTimeline />
       </section>
       <section id="contact">
         <Footer />

@@ -66,6 +66,10 @@
   background: var(--alternate-background);
 }
 
+.app-light .toolkit-mobile-menu {
+  background: var(--accent);
+}
+
 .toolkit-mobile-summary {
   list-style: none;
   cursor: pointer;
