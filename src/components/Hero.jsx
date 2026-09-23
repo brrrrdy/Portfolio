@@ -6,6 +6,14 @@ import tomCvPdf from "../assets/images/docs/tomalvarezcv.pdf";
 import useLastFmTrack from "./useLastFmTrack";
 
 const colors = ["red", "orange", "purple", "green", "blue", "yellow"];
+const phraseColors = {
+  "a Deportivo A Coruña supporter 🍍": "deportivo",
+  "a painter of miniature monsters 🎨": "monsters",
+  "seguidor del Deportivo de A Coruña 🍍": "deportivo",
+  "pintor de miniaturas de monstruos 🎨": "monsters",
+  "afeccionado do Deportivo da Coruña 🍍": "deportivo",
+  "pintor de miniaturas de monstros 🎨": "monsters",
+};
 const lastFmProfileUrl = "https://www.last.fm/user/viptosomeone";
 
 function Hero() {
@@ -43,6 +51,9 @@ function Hero() {
   const isLastFmPhraseActive =
     Boolean(listeningTrack) &&
     typingPhrases[currentPhraseIndex] === listeningTrack;
+  const currentColor =
+    phraseColors[typingPhrases[currentPhraseIndex]] ||
+    colors[currentPhraseIndex % colors.length];
 
   useEffect(() => {
     const titleElement = titleRef.current;
@@ -127,20 +138,14 @@ function Hero() {
               {isLastFmPhraseActive ? (
                 <a
                   href={lastFmProfileUrl}
-                  className={`typing-text typing-link ${
-                    colors[currentPhraseIndex % colors.length]
-                  }`}
+                  className={`typing-text typing-link ${currentColor}`}
                   target="_blank"
                   rel="noreferrer"
                 >
                   {displayedText}
                 </a>
               ) : (
-                <span
-                  className={`typing-text ${
-                    colors[currentPhraseIndex % colors.length]
-                  }`}
-                >
+                <span className={`typing-text ${currentColor}`}>
                   {displayedText}
                 </span>
               )}

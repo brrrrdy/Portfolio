@@ -127,6 +127,12 @@
 .typing-text.yellow {
   color: yellow;
 }
+.typing-text.deportivo {
+  color: #0284c7;
+}
+.typing-text.monsters {
+  color: #16a34a;
+}
 
 .app-dark .typing-text.red {
   color: #d36868;
@@ -137,13 +143,21 @@
 .app-dark .typing-text.green {
   color: #81e1c2;
 }
+.app-dark .typing-text.deportivo {
+  color: #7dd3fc;
+}
+.app-dark .typing-text.monsters {
+  color: #86efac;
+}
 
 /* IMAGE STACK */
 
 .image-container {
   --img-size: clamp(180px, 20vw, 300px);
   position: relative;
-  display: inline-block;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   order: 2;
   flex: 0 0 auto;
 }
