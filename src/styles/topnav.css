@@ -113,6 +113,14 @@
   align-items: center;
 }
 
+/* Buttons don't inherit the page font by default; use Poppins like the rest of the site */
+.language-button,
+.language-dropdown-toggle,
+.language-dropdown-item {
+  font-family: inherit;
+  font-size: inherit;
+}
+
 .language-button {
   background: transparent;
   border: 1px solid transparent;

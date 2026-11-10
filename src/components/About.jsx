@@ -15,7 +15,7 @@ function About() {
         <div className="about-copy">
           <p>{content.body}</p>
         </div>
-        <AboutTechnologies />
+        <AboutTechnologies label={content.technologiesLabel} />
       </div>
     </Section>
   );

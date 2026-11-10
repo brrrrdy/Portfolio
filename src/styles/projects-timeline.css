@@ -64,6 +64,12 @@
   opacity: 0.7;
 }
 
+/* All projects shown: the line ends solid instead of fading out */
+.projects-timeline-complete::before {
+  -webkit-mask-image: none;
+  mask-image: none;
+}
+
 .timeline-item {
   position: relative;
   min-height: 5.5rem;

@@ -31,7 +31,8 @@ function ProjectsTimeline() {
     .sort(
       (firstProject, secondProject) => secondProject.year - firstProject.year,
     );
-  const visibleProjects = isExpanded
+  const showsAllProjects = isExpanded || filteredProjects.length <= 4;
+  const visibleProjects = showsAllProjects
     ? filteredProjects
     : filteredProjects.slice(0, 4);
 
@@ -39,7 +40,9 @@ function ProjectsTimeline() {
     <Section title={ui.myProjects} className="projects-timeline-section">
       <div className="projects-timeline-layout">
         <div className="projects-timeline-content">
-          <div className="projects-timeline">
+          <div
+            className={`projects-timeline ${showsAllProjects ? "projects-timeline-complete" : ""}`}
+          >
             {visibleProjects.map((project, index) => {
               const title = project.title[language] || project.title.en;
               const description =
