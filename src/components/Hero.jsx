@@ -15,6 +15,12 @@ const phraseColors = {
   "pintor de miniaturas de monstros 🎨": "monsters",
 };
 const lastFmProfileUrl = "https://www.last.fm/user/viptosomeone";
+const instagramUrl = "https://www.instagram.com/ddcwby/";
+const phraseLinks = {
+  "a painter of miniature monsters 🎨": instagramUrl,
+  "pintor de miniaturas de monstruos 🎨": instagramUrl,
+  "pintor de miniaturas de monstros 🎨": instagramUrl,
+};
 
 function Hero() {
   const { language } = useLanguage();
@@ -51,6 +57,9 @@ function Hero() {
   const isLastFmPhraseActive =
     Boolean(listeningTrack) &&
     typingPhrases[currentPhraseIndex] === listeningTrack;
+  const currentPhraseLink = isLastFmPhraseActive
+    ? lastFmProfileUrl
+    : phraseLinks[typingPhrases[currentPhraseIndex]];
   const currentColor =
     phraseColors[typingPhrases[currentPhraseIndex]] ||
     colors[currentPhraseIndex % colors.length];
@@ -135,9 +144,9 @@ function Hero() {
 
             <div className="subtitle" style={subtitleStyle}>
               <span className="intro-text">{content.headerSubtitle} </span>
-              {isLastFmPhraseActive ? (
+              {currentPhraseLink ? (
                 <a
-                  href={lastFmProfileUrl}
+                  href={currentPhraseLink}
                   className={`typing-text typing-link ${currentColor}`}
                   target="_blank"
                   rel="noreferrer"
