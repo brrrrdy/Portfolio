@@ -103,6 +103,10 @@
   text-decoration: none;
 }
 
+.typing-toggle {
+  cursor: pointer;
+}
+
 .typing-link:hover {
   text-decoration: underline;
   text-decoration-thickness: 3px;
@@ -171,6 +175,32 @@
   z-index: 2;
   transform: rotateZ(5deg);
   border: solid black;
+}
+
+/* Depor photo: stacked on top of the main photo, cross-fades in */
+
+.hero-photo {
+  position: relative;
+}
+
+.image-container img.tomImage-depor {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+}
+
+.image-container img.tomImage-depor.is-visible {
+  opacity: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .image-container img.tomImage-depor {
+    transition: none;
+  }
 }
 
 /* Post-it layers */

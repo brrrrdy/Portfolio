@@ -2,6 +2,7 @@ import { useState, useEffect, useMemo, useRef } from "react";
 import { useLanguage } from "../contexts/languageContext";
 import heroContent from "../content/hero.json";
 import tomImage from "../assets/images/heroTom.webp";
+import tomDeporImage from "../assets/images/heroTomDepor.webp";
 import tomCvPdf from "../assets/images/docs/tomalvarezcv.pdf";
 import useLastFmTrack from "./useLastFmTrack";
 
@@ -35,6 +36,8 @@ function Hero() {
   const [displayedText, setDisplayedText] = useState("");
   const [titleWidth, setTitleWidth] = useState(null);
   const titleRef = useRef(null);
+  const [isDeporHovered, setIsDeporHovered] = useState(false);
+  const [deporClickedIndex, setDeporClickedIndex] = useState(null);
 
   const typingPhrases = useMemo(
     () =>
@@ -63,6 +66,17 @@ function Hero() {
   const currentColor =
     phraseColors[typingPhrases[currentPhraseIndex]] ||
     colors[currentPhraseIndex % colors.length];
+
+  const isDeporPhraseActive = currentColor === "deportivo";
+  const showDeporImage =
+    isDeporPhraseActive &&
+    (isDeporHovered || deporClickedIndex === currentPhraseIndex);
+
+  const toggleDeporImage = () => {
+    setDeporClickedIndex((prev) =>
+      prev === currentPhraseIndex ? null : currentPhraseIndex,
+    );
+  };
 
   useEffect(() => {
     const titleElement = titleRef.current;
@@ -153,6 +167,24 @@ function Hero() {
                 >
                   {displayedText}
                 </a>
+              ) : isDeporPhraseActive ? (
+                <span
+                  className={`typing-text typing-toggle ${currentColor}`}
+                  role="button"
+                  tabIndex={0}
+                  aria-pressed={showDeporImage}
+                  onMouseEnter={() => setIsDeporHovered(true)}
+                  onMouseLeave={() => setIsDeporHovered(false)}
+                  onClick={toggleDeporImage}
+                  onKeyDown={(e) => {
+                    if (e.key === "Enter" || e.key === " ") {
+                      e.preventDefault();
+                      toggleDeporImage();
+                    }
+                  }}
+                >
+                  {displayedText}
+                </span>
               ) : (
                 <span className={`typing-text ${currentColor}`}>
                   {displayedText}
@@ -217,11 +249,20 @@ function Hero() {
           </div>
 
           <div className="image-container">
-            <img
-              className="tomImage"
-              src={tomImage}
-              alt="stylized photo of Tom Alvarez"
-            />
+            <div className="hero-photo">
+              <img
+                className="tomImage"
+                src={tomImage}
+                alt="stylized photo of Tom Alvarez"
+                aria-hidden={showDeporImage}
+              />
+              <img
+                className={`tomImage tomImage-depor${showDeporImage ? " is-visible" : ""}`}
+                src={tomDeporImage}
+                alt="stylized photo of Tom Alvarez in a Deportivo A Coruña shirt"
+                aria-hidden={!showDeporImage}
+              />
+            </div>
           </div>
         </div>
       </div>
