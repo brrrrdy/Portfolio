@@ -11,7 +11,9 @@
 
 .about-layout {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) auto;
+  /* Icon column is at most 500px but never more than 40% of the row,
+     so the text keeps a readable width near the 870px breakpoint */
+  grid-template-columns: minmax(0, 1fr) min(500px, 40%);
   align-items: start;
   gap: 2rem;
   width: 100%;
@@ -26,7 +28,7 @@
 
 .about-technologies {
   display: grid;
-  grid-template-columns: repeat(5, 100px);
+  grid-template-columns: repeat(5, minmax(0, 1fr));
   gap: 0;
   margin: 0;
   padding: 0;
@@ -39,8 +41,7 @@
   align-items: center;
   justify-content: center;
   gap: 0.15rem;
-  width: 100px;
-  height: 100px;
+  aspect-ratio: 1;
   padding: 0;
   color: var(--dark-text);
   font-size: 0.7rem;
@@ -48,8 +49,9 @@
 }
 
 .about-technology img {
-  width: 52px;
-  height: 52px;
+  width: 52%;
+  max-width: 52px;
+  aspect-ratio: 1;
   object-fit: contain;
 }
 
@@ -72,6 +74,12 @@
 
   .about-copy p {
     max-width: 100%;
+  }
+}
+
+/* Text sizing switches at 768px, like the rest of the site */
+@media (max-width: 768px) {
+  .about-copy p {
     font-size: 0.95rem;
     line-height: 1.7;
   }
