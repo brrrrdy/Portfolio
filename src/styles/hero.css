@@ -243,6 +243,10 @@
   filter: invert(70%);
 }
 
+.app-dark .tomImage.tomImage-depor {
+  filter: none;
+}
+
 /* CURSOR */
 
 .cursor {
